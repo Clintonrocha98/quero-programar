@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="h-auto bg-gradient-to-b from-slate-50 to-slate-100 py-10">
+      <main className="h-auto py-10">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />

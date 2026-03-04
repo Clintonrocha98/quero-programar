@@ -12,7 +12,7 @@ export default function ArticlesPage() {
   return (
     <div className="container mx-auto px-4 max-w-4xl">
       <header className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
+        <h1 className="text-3xl md:text-4xl font-bold mb-2">
           {meta.title}
         </h1>
         <p className="text-slate-600 max-w-2xl">
