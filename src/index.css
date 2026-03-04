@@ -2,12 +2,109 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* Metallic Color Palette */
+    --metal-950: #0a0a0f;
+    --metal-900: #111118;
+    --metal-850: #16161f;
+    --metal-800: #1c1c27;
+    --metal-700: #2a2a38;
+    --metal-600: #3d3d4d;
+    --metal-500: #5a5a6e;
+    --metal-400: #7a7a8f;
+    --metal-300: #9d9db0;
+    --metal-200: #c4c4d4;
+    --metal-100: #e8e8f0;
+    
+    /* Accent Colors */
+    --steel-blue: #4a6fa5;
+    --steel-blue-light: #6b8fc5;
+    --cyan-accent: #22d3ee;
+    --amber-accent: #fbbf24;
+    --emerald-accent: #34d399;
+    --rose-accent: #fb7185;
+    
+    /* Base Theme */
+    --background: var(--metal-950);
+    --foreground: var(--metal-100);
+    
+    --card: var(--metal-900);
+    --card-foreground: var(--metal-100);
+    
+    --popover: var(--metal-850);
+    --popover-foreground: var(--metal-100);
+    
+    --primary: var(--steel-blue);
+    --primary-foreground: var(--metal-100);
+    
+    --secondary: var(--metal-800);
+    --secondary-foreground: var(--metal-200);
+    
+    --muted: var(--metal-800);
+    --muted-foreground: var(--metal-400);
+    
+    --accent: var(--metal-700);
+    --accent-foreground: var(--metal-100);
+    
+    --destructive: var(--rose-accent);
+    --destructive-foreground: var(--metal-950);
+    
+    --border: var(--metal-700);
+    --input: var(--metal-800);
+    --ring: var(--steel-blue);
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Custom Typography Overrides */
+.prose h1, .prose h2, .prose h3 {
+  @apply font-bold text-metal-100 mt-8 mb-4;
+}
+
+.prose p {
+  @apply text-metal-300 mb-6 leading-relaxed;
+}
+
+.prose strong {
+  @apply text-metal-100 font-bold;
+}
+
+.prose ul {
+  @apply my-6 list-disc list-outside ml-6;
+}
+
+.prose li {
+  @apply text-metal-300 mb-2 pl-2;
+}
+
+.prose a {
+  @apply text-steel-blue-light font-medium hover:text-cyan-accent no-underline hover:underline transition-colors;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-metal-600 pl-4 italic text-metal-400 my-6;
+}
+
+/* Global resets/defaults */
 h2 {
-  @apply text-3xl mb-4;
+  @apply text-3xl mb-4 font-bold text-metal-100;
 }
 a {
-  @apply font-bold hover:text-blue-500 hover:underline;
+  @apply hover:text-steel-blue-light hover:underline transition-colors;
 }
-li{
-  @apply mb-2
+
+.prose p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
