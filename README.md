@@ -4,7 +4,7 @@ Uma plataforma web open-source projetada para guiar desenvolvedores iniciantes c
 
 ![Tech Stack](https://img.shields.io/badge/stack-React_18_|_Vite_|_TypeScript_|_Tailwind_v4-blue)
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 Este projeto utiliza uma arquitetura moderna focada em performance e experiência de desenvolvimento (DX).
 
@@ -16,7 +16,7 @@ Este projeto utiliza uma arquitetura moderna focada em performance e experiênci
 - **Ícones:** Lucide React
 - **Gerenciador de Pacotes:** `pnpm`
 
-## 🚀 Começando
+## Começando
 
 1. **Clone o repositório:**
    ```bash
@@ -39,7 +39,7 @@ Este projeto utiliza uma arquitetura moderna focada em performance e experiênci
    pnpm build
    ```
 
-## 📂 Arquitetura do Projeto
+## Arquitetura do Projeto
 
 ```text
 src/
@@ -54,7 +54,7 @@ src/
 └── App.tsx           # Configuração de rotas principal
 ```
 
-## 🎨 Design System "Dark Metallic"
+## Design System "Dark Metallic"
 
 O projeto utiliza um tema personalizado escuro com tons metálicos.
 
@@ -62,7 +62,7 @@ O projeto utiliza um tema personalizado escuro com tons metálicos.
 - **Acentos:** `steel-blue`, `cyan-accent`, `amber-accent`, `emerald-accent`, `rose-accent`.
 - **Tipografia:** Configurada via `@tailwindcss/typography` para renderização elegante de arquivos Markdown.
 
-## 📝 Guia de Contribuição de Conteúdo (MDX)
+## Guia de Contribuição de Conteúdo (MDX)
 
 Toda a documentação de tecnologias e trilhas vive em arquivos `.mdx` dentro de `src/data/content`.
 
@@ -150,5 +150,3 @@ Toda a documentação de tecnologias e trilhas vive em arquivos `.mdx` dentro de
 *   **`<QuoteBlock variant="default|primary|accent">`**: Citações estilizadas.
 
 ---
-
-Feito com ❤️ pela comunidade.
