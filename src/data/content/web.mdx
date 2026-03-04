@@ -1,0 +1,47 @@
+export const frontmatter = {
+  id: "web",
+  title: "Desenvolvimento Web",
+  description: "Fundamentos e conceitos basicos para comecar no desenvolvimento web.",
+  icon: "WEB",
+  color: "bg-green-500"
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { Tip } from '@/components/tip'
+import { Section } from '@/components/section'
+
+# Desenvolvimento Web
+
+Aprenda os fundamentos para criar sites e aplicacoes web do zero.
+
+<Section title="Primeiros Passos" level="beginner">
+
+<ResourceCard 
+  title="Introducao a Web (MDN)" 
+  url="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website"
+  type="artigo"
+>
+  Guia oficial da Mozilla para criar seu primeiro site.
+</ResourceCard>
+
+<ResourceCard 
+  title="Aprendendo Desenvolvimento Web (MDN)" 
+  url="https://developer.mozilla.org/pt-BR/docs/Learn_web_development"
+  type="artigo"
+>
+  Trilha completa de aprendizado de desenvolvimento web pela Mozilla.
+</ResourceCard>
+
+<ResourceCard 
+  title="Web Development Roadmap - GeeksforGeeks" 
+  url="https://www.geeksforgeeks.org/web-development/"
+  type="roadmap"
+>
+  Um guia completo com o que voce precisa aprender para se tornar um desenvolvedor web.
+</ResourceCard>
+
+<Tip type="tip">
+  Desenvolvimento web envolve HTML, CSS e JavaScript. Comece por HTML, depois CSS e por fim JavaScript!
+</Tip>
+
+</Section>
