@@ -13,7 +13,6 @@ import WebContent, { frontmatter as webMeta } from './web.mdx'
 import ArtigosContent, { frontmatter as artigosMeta } from './artigos.mdx'
 import ResourcesContent, { frontmatter as resourcesMeta } from './resources.mdx'
 import InicianteContent, { frontmatter as inicianteMeta } from './iniciante.mdx'
-import CategoriesContent, { frontmatter as categoriesMeta } from './categories.mdx'
 
 export interface TechnologyMeta {
   id: string
@@ -87,10 +86,6 @@ export const pages: Record<string, ContentItem<PageMeta>> = {
   iniciante: {
     meta: inicianteMeta,
     Content: InicianteContent,
-  },
-  categories: {
-    meta: categoriesMeta,
-    Content: CategoriesContent,
   },
 }
 
