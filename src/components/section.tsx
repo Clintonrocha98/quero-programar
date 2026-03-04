@@ -31,7 +31,7 @@ export function Section({ title, level, children }: SectionProps) {
   return (
     <section className="mb-8">
       <div className="flex items-center gap-3 mb-4">
-        <h2 className="text-xl font-bold text-metal-100 mb-0">{title}</h2>
+        <h2 className="text-xl font-bold text-metal-100">{title}</h2>
         {levelStyle && (
           <span className={cn("inline-block rounded-full border px-3 py-1 text-xs font-medium", levelStyle.badge)}>
             {levelStyle.label}
