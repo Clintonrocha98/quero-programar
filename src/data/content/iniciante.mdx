@@ -1,0 +1,99 @@
+export const frontmatter = {
+  id: "iniciante",
+  title: "Por Onde Comecar",
+  description: "Recursos essenciais para quem esta dando os primeiros passos na programacao."
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { Tip } from '@/components/tip'
+import { Section } from '@/components/section'
+
+# Por Onde Comecar
+
+Se voce nunca programou antes, comece por aqui. Esses recursos vao te dar uma base solida.
+
+<Section title="Logica de Programacao">
+
+Antes de aprender qualquer linguagem, entenda como pensar como um programador.
+
+<ResourceCard 
+  title="Curso de Logica de Programacao e Algoritmo" 
+  url="https://www.youtube.com/watch?v=8mei6uVttho&list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV"
+  type="curso"
+>
+  Curso introdutorio que ensina logica de programacao e algoritmos de forma clara e didatica, essencial para quem esta comecando no mundo da programacao.
+</ResourceCard>
+
+<Tip type="tip">
+  Logica de programacao e a base de tudo. Dedique tempo aqui antes de pular para uma linguagem especifica!
+</Tip>
+
+</Section>
+
+<Section title="Git e GitHub">
+
+Aprenda a versionar seu codigo e colaborar com outros desenvolvedores.
+
+<ResourceCard 
+  title="Curso de Git e GitHub" 
+  url="https://www.youtube.com/watch?v=xEKo29OWILE&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA"
+  type="curso"
+>
+  Aprenda a utilizar o Git e o GitHub para versionar seus projetos e colaborar com outros desenvolvedores, mesmo sem experiencia previa.
+</ResourceCard>
+
+<ResourceCard 
+  title="git4noobs" 
+  url="https://github.com/DanielHe4rt/git4noobs"
+  type="leitura"
+>
+  Material introdutorio em formato de repositorio no GitHub que explica os principais comandos e conceitos do Git de forma acessivel.
+</ResourceCard>
+
+<ResourceCard 
+  title="Introducao ao Git - Microsoft Learn" 
+  url="https://learn.microsoft.com/pt-br/training/modules/intro-to-git/"
+  type="curso"
+>
+  Aprenda os conceitos basicos do Git, como versionamento de arquivos, repositorios e controle de mudancas, ideal para quem esta comecando.
+</ResourceCard>
+
+<ResourceCard 
+  title="Explorar ganchos do Git - Microsoft Learn" 
+  url="https://learn.microsoft.com/pt-br/training/modules/explore-git-hooks/"
+  type="curso"
+>
+  Entenda como funcionam os ganchos do Git e como usa-los para automatizar tarefas antes ou depois de acoes como commits ou push.
+</ResourceCard>
+
+<ResourceCard 
+  title="Como o Git gerencia o controle do codigo-fonte - Microsoft Learn" 
+  url="https://learn.microsoft.com/pt-br/training/modules/describe-how-git-manages-source-control/"
+  type="curso"
+>
+  Veja como o Git organiza e gerencia o historico de codigo-fonte, explorando conceitos como commits, branches e merges.
+</ResourceCard>
+
+<Tip type="warning">
+  Git e essencial para qualquer desenvolvedor. Toda empresa usa algum sistema de versionamento, e Git e o padrao da industria!
+</Tip>
+
+</Section>
+
+<Section title="Carreira e Motivacao">
+
+Artigos para entender o caminho e se manter motivado.
+
+<ResourceCard 
+  title="Quero ser dev" 
+  url="https://felipperegazio.com/posts/entao-vc-quer-ser-dev/"
+  type="artigo"
+>
+  Artigo que compartilha uma visao honesta e motivadora sobre os primeiros passos e desafios de quem quer entrar no mundo da programacao.
+</ResourceCard>
+
+<Tip type="insight">
+  A jornada de aprendizado e longa, mas vale a pena. Seja paciente consigo mesmo e celebre cada pequena vitoria!
+</Tip>
+
+</Section>

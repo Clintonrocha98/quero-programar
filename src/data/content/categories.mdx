@@ -1,0 +1,64 @@
+export const frontmatter = {
+  id: "categories",
+  title: "Categorias de Recursos",
+  description: "Categorias para organizar os recursos de aprendizado."
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { Section } from '@/components/section'
+
+# Categorias de Recursos
+
+Explore os recursos organizados por categoria.
+
+<Section title="Categorias Disponiveis">
+
+<ResourceCard 
+  title="Cursos Online" 
+  url="/recursos/cursos"
+  type="categoria"
+>
+  Plataformas e cursos gratuitos e pagos para aprender programacao de forma estruturada.
+</ResourceCard>
+
+<ResourceCard 
+  title="Documentacoes" 
+  url="/recursos/documentacoes"
+  type="categoria"
+>
+  Guias oficiais e referencias para linguagens de programacao e frameworks.
+</ResourceCard>
+
+<ResourceCard 
+  title="Ferramentas de Desenvolvimento" 
+  url="/recursos/ferramentas"
+  type="categoria"
+>
+  IDEs, editores de codigo e outras ferramentas essenciais para programadores.
+</ResourceCard>
+
+<ResourceCard 
+  title="Bancos de Dados" 
+  url="/recursos/bancos-de-dados"
+  type="categoria"
+>
+  Recursos para aprender SQL, NoSQL e outros sistemas de gerenciamento de dados.
+</ResourceCard>
+
+<ResourceCard 
+  title="DevOps e Infraestrutura" 
+  url="/recursos/devops"
+  type="categoria"
+>
+  Recursos para aprender sobre CI/CD, containers, cloud e infraestrutura.
+</ResourceCard>
+
+<ResourceCard 
+  title="Desafios e Exercicios" 
+  url="/recursos/desafios"
+  type="categoria"
+>
+  Sites com problemas e desafios para praticar suas habilidades de programacao.
+</ResourceCard>
+
+</Section>
