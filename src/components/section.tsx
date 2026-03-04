@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils"
+
 interface SectionProps {
   title: string
   level?: "beginner" | "intermediate" | "advanced" | "tools"
@@ -7,19 +9,19 @@ interface SectionProps {
 export function Section({ title, level, children }: SectionProps) {
   const levelStyles: Record<string, { badge: string; label: string }> = {
     beginner: {
-      badge: "bg-green-100 text-green-800 border-green-200",
+      badge: "bg-emerald-accent/20 text-emerald-accent border-emerald-accent/30",
       label: "Iniciante",
     },
     intermediate: {
-      badge: "bg-yellow-100 text-yellow-800 border-yellow-200",
-      label: "Intermediario",
+      badge: "bg-amber-accent/20 text-amber-accent border-amber-accent/30",
+      label: "Intermediário",
     },
     advanced: {
-      badge: "bg-red-100 text-red-800 border-red-200",
-      label: "Avancado",
+      badge: "bg-rose-accent/20 text-rose-accent border-rose-accent/30",
+      label: "Avançado",
     },
     tools: {
-      badge: "bg-slate-100 text-slate-800 border-slate-200",
+      badge: "bg-steel-blue/20 text-steel-blue-light border-steel-blue/30",
       label: "Ferramentas",
     },
   }
@@ -29,14 +31,14 @@ export function Section({ title, level, children }: SectionProps) {
   return (
     <section className="mb-8">
       <div className="flex items-center gap-3 mb-4">
-        <h2 className="text-xl font-bold text-slate-800 mb-0">{title}</h2>
+        <h2 className="text-xl font-bold text-metal-100 mb-0">{title}</h2>
         {levelStyle && (
-          <span className={`inline-block rounded-full border px-3 py-1 text-xs font-medium ${levelStyle.badge}`}>
+          <span className={cn("inline-block rounded-full border px-3 py-1 text-xs font-medium", levelStyle.badge)}>
             {levelStyle.label}
           </span>
         )}
       </div>
-      <div className="space-y-2">
+      <div className="space-y-4">
         {children}
       </div>
     </section>

@@ -1,50 +1,53 @@
 import { ExternalLink } from "lucide-react"
 import { ResourceProps } from "@/types"
+import { cn } from "@/lib/utils"
 
 export function ResourceLink({ resource }: { resource: ResourceProps }) {
   const getBadgeColor = (type: string) => {
-    const colors = {
-      curso: "bg-emerald-100 text-emerald-800",
-      leitura: "bg-blue-100 text-blue-800",
-      artigo: "bg-purple-100 text-purple-800",
-      ferramenta: "bg-amber-100 text-amber-800",
-      repositório: "bg-gray-100 text-gray-800",
-      modelo: "bg-pink-100 text-pink-800",
-      quiz: "bg-red-100 text-red-800",
-      desafio: "bg-red-100 text-red-600",
-      youtube: "bg-red-100 text-red-600",
-      exercício: "bg-red-100 text-red-600",
-      documentação: "bg-indigo-100 text-indigo-800",
-      recursos: "bg-teal-100 text-teal-800",
-      roadmap: "bg-teal-100 text-teal-800",
-      livro: "bg-orange-100 text-orange-800",
-      tutorial: "bg-cyan-100 text-cyan-800",
-      site: "bg-violet-100 text-violet-800",
+    const colors: Record<string, string> = {
+      curso: "bg-emerald-accent/20 text-emerald-accent border border-emerald-accent/30",
+      leitura: "bg-steel-blue/20 text-steel-blue-light border border-steel-blue/30",
+      artigo: "bg-amber-accent/20 text-amber-accent border border-amber-accent/30",
+      ferramenta: "bg-cyan-accent/20 text-cyan-accent border border-cyan-accent/30",
+      repositório: "bg-metal-600/50 text-metal-300 border border-metal-500/30",
+      modelo: "bg-rose-accent/20 text-rose-accent border border-rose-accent/30",
+      quiz: "bg-rose-accent/20 text-rose-accent border border-rose-accent/30",
+      desafio: "bg-rose-accent/20 text-rose-accent border border-rose-accent/30",
+      youtube: "bg-rose-accent/20 text-rose-accent border border-rose-accent/30",
+      exercício: "bg-amber-accent/20 text-amber-accent border border-amber-accent/30",
+      documentação: "bg-cyan-accent/20 text-cyan-accent border border-cyan-accent/30",
+      recursos: "bg-steel-blue/20 text-steel-blue-light border border-steel-blue/30",
+      roadmap: "bg-steel-blue/20 text-steel-blue-light border border-steel-blue/30",
+      livro: "bg-amber-accent/20 text-amber-accent border border-amber-accent/30",
+      tutorial: "bg-steel-blue/20 text-steel-blue-light border border-steel-blue/30",
+      site: "bg-cyan-accent/20 text-cyan-accent border border-cyan-accent/30",
     }
 
-    return colors[type as keyof typeof colors] || "bg-slate-100 text-slate-800"
+    return colors[type.toLowerCase()] || "bg-metal-700/50 text-metal-300 border border-metal-600/30"
   }
 
   return (
-    <div className="border border-slate-200 rounded-lg p-3 hover:bg-slate-50">
+    <div className="border border-metal-700/50 rounded-lg p-3 hover:bg-metal-800/50 hover:border-metal-600 transition-all duration-200">
       <a
         href={resource.url}
         target="_blank"
-        className="hover:no-underline"
+        rel="noopener noreferrer"
+        className="block hover:no-underline group"
       >
-        <div className="flex items-start gap-2 mb-2">
-          <span className={`inline-flex px-2 py-1 text-xs font-medium rounded ${getBadgeColor(resource.type)}`}>
+        <div className="flex items-center gap-2 mb-2">
+          <span className={cn("inline-flex px-2 py-0.5 text-xs font-medium rounded whitespace-nowrap", getBadgeColor(resource.type))}>
             {resource.type}
           </span>
-          <div
-
-            className="flex-1 font-medium text-slate-800 hover:text-slate-900 hover:underline flex items-center gap-1"
-          >
+          <div className="flex-1 font-medium text-metal-200 group-hover:text-steel-blue-light flex items-center gap-1 transition-colors">
             {resource.title}
-            <ExternalLink className="h-3 w-3 inline opacity-70" />
+            <ExternalLink className="h-3 w-3 inline opacity-50 group-hover:opacity-100 transition-opacity" />
           </div>
         </div>
-        <p className="text-sm text-slate-600 pl-1 font-normal">{resource.description}</p>
+        {resource.description && (
+            <p className="text-sm text-metal-400 group-hover:text-metal-300 transition-colors font-normal">
+                {resource.description}
+            </p>
+        )}
       </a>
     </div>
   )
