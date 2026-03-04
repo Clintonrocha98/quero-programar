@@ -5,8 +5,8 @@ import TechnologiesPage from "./pages/technologies";
 import Footer from "./components/footer";
 import ResourcesPage from "./pages/resources";
 import NotFound from "./pages/not-found";
-import LinksForTechnologie from "./pages/technologies/[nome]";
 import ArticlesPage from "./pages/articles";
+import TechnologyMdxPage from "./pages/technology-mdx";
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/tecnologias" element={<TechnologiesPage />} />
-            <Route path="/tecnologias/:nome" element={<LinksForTechnologie />} />
+            <Route path="/tecnologias/:nome" element={<TechnologyMdxPage />} />
             <Route path="/recursos" element={<ResourcesPage />} />
             <Route path="/artigos" element={<ArticlesPage />} />
             <Route path="*" element={<NotFound />} />

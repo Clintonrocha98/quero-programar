@@ -1,29 +1,28 @@
-import { ResourceSection } from "@/components/resource-section";
-import { iniciante } from "@/data/iniciante";
-import { Lightbulb } from "lucide-react"
+import { getPage } from "@/data/content"
 
 export default function HomePage() {
+  const page = getPage("iniciante")
+  
+  if (!page) {
+    return <div>Conteudo nao encontrado</div>
+  }
+
+  const { Content, meta } = page
+
   return (
-    <div className="container min-h-screen mx-auto px-4 max-w-5xl">
-      {/* <header className="mb-10 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-          Recursos para Iniciantes na Programação
+    <div className="container min-h-screen mx-auto px-4 max-w-4xl">
+      <header className="mb-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
+          {meta.title}
         </h1>
-        <p className="text-slate-600 max-w-2xl mx-auto">
-          Recursos essenciais para quem está começando na programação. Cursos, leituras e ferramentas que ajudam a entender os fundamentos e dar os primeiros passos.
+        <p className="text-slate-600 max-w-2xl">
+          {meta.description}
         </p>
-      </header> */}
+      </header>
 
-      <div className="grid gap-8">
-        <ResourceSection
-          title="Recursos para Iniciantes na Programação"
-          resources={iniciante}
-          description="Recursos essenciais para quem está começando na programação. Cursos, leituras e ferramentas que ajudam a entender os fundamentos e dar os primeiros passos."
-          icon={<Lightbulb className="h-5 w-5" />}
-        />
-      </div>
+      <article className="prose prose-slate max-w-none">
+        <Content />
+      </article>
     </div>
-
-
   )
 }
