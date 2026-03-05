@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils"
 import type { ReactNode } from "react"
 
 const tagVariants = cva(
-  "inline-flex items-center font-medium transition-all duration-200 border",
+  "inline-flex items-center font-medium transition-all duration-200 border h-fit shrink-0 whitespace-nowrap",
   {
     variants: {
       variant: {
@@ -17,7 +17,7 @@ const tagVariants = cva(
         outline: "bg-transparent text-metal-300 border-metal-600 hover:border-metal-500",
       },
       size: {
-        sm: "px-2 py-0.5 text-xs rounded",
+        sm: "px-2 py-0.5 text-xs rounded-md",
         md: "px-2.5 py-1 text-sm rounded-md",
         lg: "px-3 py-1.5 text-base rounded-md",
       },
