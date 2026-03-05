@@ -96,6 +96,19 @@
   @apply border-l-4 border-metal-600 pl-4 italic text-metal-400 my-6;
 }
 
+/* Inline Code Styling */
+.prose :not(pre) > code {
+  @apply bg-metal-800 text-emerald-accent px-1.5 py-0.5 rounded text-sm font-mono border border-metal-700 mx-1;
+}
+
+.prose :not(pre) > code::before {
+  content: "" !important;
+}
+
+.prose :not(pre) > code::after {
+  content: "" !important;
+}
+
 /* Global resets/defaults */
 h2 {
   @apply text-3xl mb-4 font-bold text-metal-100;
@@ -111,4 +124,8 @@ a {
 .prose h2 {
   margin-top: 0;
   margin-bottom: 0;
+}
+.prose ul {
+  margin-top: 0;
+  margin-left: 0;
 }
