@@ -76,6 +76,7 @@ export function CodeBlock({
     <div
       className={cn(
         "relative overflow-hidden rounded-lg border border-metal-700 bg-[#1e1e1e]",
+        "w-full min-w-0 hidden md:block",
         className
       )}
       {...props}
@@ -116,7 +117,7 @@ export function CodeBlock({
       {/* Code */}
       <div
         className={cn(
-          "overflow-auto p-4 font-mono text-sm",
+          "overflow-auto font-mono text-sm",
           maxHeight && "overflow-y-auto"
         )}
         style={style}
@@ -131,11 +132,12 @@ export function CodeBlock({
               {tokens.map((line, i) => {
                 const lineNumber = i + 1
                 const isHighlighted = highlightLines.includes(lineNumber)
+                const { key, ...lineProps } = getLineProps({line, key: i})
 
                 return (
                   <div
-                    key={i}
-                    {...getLineProps({line, key: i})}
+                    key={key as React.Key}
+                    {...lineProps}
                     className={cn(
                       "table-row",
                       isHighlighted && "bg-steel-blue/15 block -mx-4 px-4 w-[calc(100%+2rem)]"
@@ -152,9 +154,10 @@ export function CodeBlock({
                       </span>
                     )}
                     <span className="table-cell">
-                      {line.map((token, key) => (
-                        <span key={key} {...getTokenProps({token, key})} />
-                      ))}
+                      {line.map((token, key) => {
+                         const { key: tokenKey, ...tokenProps } = getTokenProps({token, key})
+                         return <span key={tokenKey as React.Key} {...tokenProps} />
+                      })}
                     </span>
                   </div>
                 )
