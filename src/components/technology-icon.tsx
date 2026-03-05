@@ -1,6 +1,6 @@
 import { Code, Globe } from "lucide-react"
 
-export function getLanguageIcon(name: string, className?: string) {
+export function getTechnologyIcon(name: string, className?: string) {
   const normalizedName = name.toLowerCase()
   const sizeClass = "w-12 h-12"
   const combinedClass = className ? `${sizeClass} ${className}` : sizeClass

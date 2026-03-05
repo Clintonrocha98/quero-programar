@@ -13,7 +13,7 @@ export interface ResourceSectionProps {
 }
 
 
-export interface TecnologiesInformationsInterface {
+export interface Technology {
   id?: string
   name: string
   description: string

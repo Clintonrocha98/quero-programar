@@ -1,19 +1,19 @@
 // Importacao dos arquivos MDX de tecnologias
-import JavaScriptContent, { frontmatter as javascriptMeta } from './javascript.mdx'
-import HtmlContent, { frontmatter as htmlMeta } from './html.mdx'
-import CssContent, { frontmatter as cssMeta } from './css.mdx'
-import GoContent, { frontmatter as goMeta } from './go.mdx'
-import JavaContent, { frontmatter as javaMeta } from './java.mdx'
-import PhpContent, { frontmatter as phpMeta } from './php.mdx'
-import PythonContent, { frontmatter as pythonMeta } from './python.mdx'
-import TypescriptContent, { frontmatter as typescriptMeta } from './typescript.mdx'
-import WebContent, { frontmatter as webMeta } from './web.mdx'
+import JavaScriptContent, { frontmatter as javascriptMeta } from './technologies/javascript.mdx'
+import HtmlContent, { frontmatter as htmlMeta } from './technologies/html.mdx'
+import CssContent, { frontmatter as cssMeta } from './technologies/css.mdx'
+import GoContent, { frontmatter as goMeta } from './technologies/go.mdx'
+import JavaContent, { frontmatter as javaMeta } from './technologies/java.mdx'
+import PhpContent, { frontmatter as phpMeta } from './technologies/php.mdx'
+import PythonContent, { frontmatter as pythonMeta } from './technologies/python.mdx'
+import TypescriptContent, { frontmatter as typescriptMeta } from './technologies/typescript.mdx'
+import WebContent, { frontmatter as webMeta } from './technologies/web.mdx'
 
 // Importacao dos arquivos MDX de paginas
-import ArtigosContent, { frontmatter as artigosMeta } from './artigos.mdx'
-import ResourcesContent, { frontmatter as resourcesMeta } from './resources.mdx'
-import InicianteContent, { frontmatter as inicianteMeta } from './iniciante.mdx'
-import StudyPlanContent, { frontmatter as studyPlanMeta } from './study-plan.mdx'
+import ArtigosContent, { frontmatter as artigosMeta } from './pages/artigos.mdx'
+import ResourcesContent, { frontmatter as resourcesMeta } from './pages/resources.mdx'
+import InicianteContent, { frontmatter as inicianteMeta } from './pages/iniciante.mdx'
+import StudyPlanContent, { frontmatter as studyPlanMeta } from './pages/study-plan.mdx'
 
 export interface TechnologyMeta {
   id: string
@@ -94,7 +94,7 @@ export const pages: Record<string, ContentItem<PageMeta>> = {
   },
 }
 
-// Interface compativel com LanguageCard
+// Interface compativel com TechnologyCard
 export interface TechnologyCardInfo {
   id: string
   name: string
@@ -107,7 +107,7 @@ export interface TechnologyCardInfo {
 // Lista de metadados das tecnologias para exibir na pagina de listagem
 export const technologiesList: TechnologyMeta[] = Object.values(technologies).map(t => t.meta)
 
-// Lista formatada para uso com LanguageCard
+// Lista formatada para uso com TechnologyCard
 export const technologiesForCards: TechnologyCardInfo[] = Object.values(technologies).map(t => ({
   id: t.meta.id,
   name: t.meta.title,

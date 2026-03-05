@@ -7,11 +7,11 @@ export const frontmatter = {
 }
 
 import { ResourceCard } from '@/components/resource-card'
-import { Tip } from '@/components/tip'
-import { Section } from '@/components/section'
+import { Callout } from '@/components/callout'
+import { ContentSection } from '@/components/content-section'
 import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Começando do Zero" level="beginner">
+<ContentSection title="Começando do Zero" level="beginner">
 
 <ResourceGroup>
   <ResourceCard 
@@ -39,13 +39,13 @@ import { ResourceGroup } from '@/components/resource-group'
   </ResourceCard>
 </ResourceGroup>
 
-<Tip type="tip">
+<Callout type="tip">
   PHP é muito usado com WordPress. Se você quer trabalhar com sites e blogs, PHP é essencial!
-</Tip>
+ </Callout>
 
-</Section>
+ </ContentSection>
 
-<Section title="Orientação a Objetos" level="intermediate">
+<ContentSection title="Orientação a Objetos" level="intermediate">
 
 <ResourceGroup>
   <ResourceCard 
@@ -73,9 +73,9 @@ import { ResourceGroup } from '@/components/resource-group'
   </ResourceCard>
 </ResourceGroup>
 
-</Section>
+ </ContentSection>
 
-<Section title="Boas Práticas e Padrões" level="advanced">
+<ContentSection title="Boas Práticas e Padrões" level="advanced">
 
 <ResourceGroup>
   <ResourceCard 
@@ -103,8 +103,8 @@ import { ResourceGroup } from '@/components/resource-group'
   </ResourceCard>
 </ResourceGroup>
 
-<Tip type="insight">
+<Callout type="insight">
   PHP moderno é muito diferente do PHP antigo. Frameworks como Laravel tornaram o desenvolvimento muito mais organizado e produtivo!
-</Tip>
+ </Callout>
 
-</Section>
+ </ContentSection>

@@ -1,4 +1,4 @@
-import LanguageCard from "@/components/language-card";
+import TechnologyCard from "@/components/technology-card";
 import { technologiesForCards } from "@/data/content";
 
 
@@ -8,7 +8,7 @@ export default function TechnologiesPage() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {technologiesForCards.map((language) => (
-            <LanguageCard key={language.name} language={language} />
+            <TechnologyCard key={language.name} language={language} />
           ))}
         </div>
       </div>

@@ -24,14 +24,14 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
           <Link 
             to="/plano-de-estudos" 
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all bg-steel-blue rounded-lg hover:bg-steel-blue-light hover:text-white hover:shadow-lg hover:shadow-steel-blue/20 group"
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all bg-steel-blue rounded-lg hover:bg-steel-blue-light hover:text-white hover:shadow-lg hover:shadow-steel-blue/20 group hover:no-underline"
           >
             Plano de Estudos
             <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </Link>
           <Link 
             to="/tecnologias" 
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-metal-200 transition-all bg-metal-800 border border-metal-700 rounded-lg hover:bg-metal-700 hover:border-metal-600"
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-metal-200 transition-all bg-metal-800 border border-metal-700 rounded-lg hover:bg-metal-700 hover:border-metal-600 hover:no-underline"
           >
             Explorar Tecnologias
           </Link>

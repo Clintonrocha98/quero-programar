@@ -7,7 +7,7 @@ export const frontmatter = {
 import { LearningPath, LearningPathItem, LearningPathContent } from '@/components/learning-path'
 import { CodeBlock } from '@/components/code-block'
 import { ResourceCard } from '@/components/resource-card'
-import { Tip } from '@/components/tip'
+import { Callout } from '@/components/callout'
 import { ResourceGroup } from '@/components/resource-group'
 
 <LearningPath>
@@ -208,9 +208,9 @@ JOIN orders ON users.id = orders.user_id;`}
       - Fluxo de dados: usuário → sistema → banco → resposta
       - Erros comuns de arquitetura
 
-      <Tip type="insight">
+      <Callout type="insight">
         Antes de escrever uma linha de código, desenhe. Entender o fluxo de dados economiza horas de programação.
-      </Tip>
+       </Callout>
 
       ### Entregáveis
       - Desenhar arquitetura de um sistema simples
@@ -416,9 +416,9 @@ console.log(userList);`}
       - Interface funcional
       - Explicar o projeto de ponta a ponta
 
-      <Tip type="insight">
+      <Callout type="insight">
         Ao completar esta fase, você terá uma base sólida em web, dados e programação, usando a linguagem apenas como ferramenta e não como muleta.
-      </Tip>
+       </Callout>
       
       ### Conclusão e Próximos Passos
       

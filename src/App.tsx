@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 import HomePage from "./pages/home";
-import TechnologiesPage from "./pages/technologies";
+import TechnologiesPage from "./pages/technologies-list";
 import Footer from "./components/footer";
 import ResourcesPage from "./pages/resources";
 import NotFound from "./pages/not-found";
 import ArticlesPage from "./pages/articles";
 import StudyPlanPage from "./pages/study-plan";
-import TechnologyMdxPage from "./pages/technology-mdx";
+import TechnologyDetailsPage from "./pages/technology-details";
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/tecnologias" element={<TechnologiesPage />} />
             <Route path="/plano-de-estudos" element={<StudyPlanPage />} />
-            <Route path="/tecnologias/:nome" element={<TechnologyMdxPage />} />
+            <Route path="/tecnologias/:nome" element={<TechnologyDetailsPage />} />
             <Route path="/recursos" element={<ResourcesPage />} />
             <Route path="/artigos" element={<ArticlesPage />} />
             <Route path="*" element={<NotFound />} />

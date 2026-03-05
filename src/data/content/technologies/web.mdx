@@ -7,11 +7,11 @@ export const frontmatter = {
 }
 
 import { ResourceCard } from '@/components/resource-card'
-import { Tip } from '@/components/tip'
-import { Section } from '@/components/section'
+import { Callout } from '@/components/callout'
+import { ContentSection } from '@/components/content-section'
 import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Primeiros Passos" level="beginner">
+<ContentSection title="Primeiros Passos" level="beginner">
 
 <ResourceGroup>
   <ResourceCard 
@@ -39,8 +39,8 @@ import { ResourceGroup } from '@/components/resource-group'
   </ResourceCard>
 </ResourceGroup>
 
-<Tip type="tip">
+<Callout type="tip">
   Desenvolvimento web envolve HTML, CSS e JavaScript. Comece por HTML, depois CSS e por fim JavaScript!
-</Tip>
+ </Callout>
 
-</Section>
+ </ContentSection>

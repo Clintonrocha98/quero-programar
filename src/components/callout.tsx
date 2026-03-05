@@ -2,15 +2,15 @@ import { cn } from "@/lib/utils"
 import { Lightbulb, AlertTriangle, Star, Info } from "lucide-react"
 import type { ReactNode } from "react"
 
-type TipType = "tip" | "warning" | "insight" | "info"
+type CalloutType = "tip" | "warning" | "insight" | "info"
 
-interface TipProps {
-  type?: TipType | string
+interface CalloutProps {
+  type?: CalloutType | string
   children: ReactNode
 }
 
-const tipStyles: Record<
-  TipType,
+const calloutStyles: Record<
+  CalloutType,
   {
     container: string
     iconWrapper: string
@@ -44,10 +44,10 @@ const tipStyles: Record<
   },
 }
 
-export function Tip({ type = "tip", children }: TipProps) {
+export function Callout({ type = "tip", children }: CalloutProps) {
   // Use a type guard or fallback for unknown types
-  const tipType = (tipStyles[type as TipType] ? type : "tip") as TipType
-  const style = tipStyles[tipType]
+  const calloutType = (calloutStyles[type as CalloutType] ? type : "tip") as CalloutType
+  const style = calloutStyles[calloutType]
 
   return (
     <div

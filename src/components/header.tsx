@@ -46,8 +46,8 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-metal-900 border-b border-metal-800 shadow-lg">
+        <div className="md:hidden relative">
+          <div className="absolute top-full left-0 w-full px-2 pt-2 pb-3 space-y-1 bg-metal-900 border-b border-metal-800 shadow-lg">
             <MobileNavLink href="/" icon={<Home className="h-5 w-5 mr-2" />} label="Início" />
             <MobileNavLink href="/plano-de-estudos" icon={<Map className="h-5 w-5 mr-2" />} label="Plano de Estudos" />
             <MobileNavLink href="/tecnologias" icon={<Code className="h-5 w-5 mr-2" />} label="Tecnologias" />

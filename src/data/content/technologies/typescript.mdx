@@ -7,11 +7,11 @@ export const frontmatter = {
 }
 
 import { ResourceCard } from '@/components/resource-card'
-import { Tip } from '@/components/tip'
-import { Section } from '@/components/section'
+import { Callout } from '@/components/callout'
+import { ContentSection } from '@/components/content-section'
 import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Começando" level="beginner">
+<ContentSection title="Começando" level="beginner">
 
 <ResourceGroup>
   <ResourceCard 
@@ -31,13 +31,13 @@ import { ResourceGroup } from '@/components/resource-group'
   </ResourceCard>
 </ResourceGroup>
 
-<Tip type="warning">
+<Callout type="warning">
   Antes de aprender TypeScript, tenha uma boa base de JavaScript. TypeScript é uma extensão do JS!
-</Tip>
+ </Callout>
 
-</Section>
+ </ContentSection>
 
-<Section title="Documentação e Trilhas" level="intermediate">
+<ContentSection title="Documentação e Trilhas" level="intermediate">
 
 <ResourceGroup>
   <ResourceCard 
@@ -57,8 +57,8 @@ import { ResourceGroup } from '@/components/resource-group'
   </ResourceCard>
 </ResourceGroup>
 
-<Tip type="insight">
+<Callout type="insight">
   TypeScript é quase obrigatório em projetos React modernos. Se você quer trabalhar com frontend, invista tempo aqui!
-</Tip>
+ </Callout>
 
-</Section>
+ </ContentSection>

@@ -7,11 +7,11 @@ export const frontmatter = {
 }
 
 import { ResourceCard } from '@/components/resource-card'
-import { Tip } from '@/components/tip'
-import { Section } from '@/components/section'
+import { Callout } from '@/components/callout'
+import { ContentSection } from '@/components/content-section'
 import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Começando do Zero" level="beginner">
+<ContentSection title="Começando do Zero" level="beginner">
 
 <ResourceGroup>
   <ResourceCard 
@@ -39,13 +39,13 @@ import { ResourceGroup } from '@/components/resource-group'
   </ResourceCard>
 </ResourceGroup>
 
-<Tip type="tip">
+<Callout type="tip">
   Python é conhecida pela sintaxe limpa e legível. É uma ótima primeira linguagem para quem está começando!
-</Tip>
+ </Callout>
 
-</Section>
+ </ContentSection>
 
-<Section title="Documentação e Referências" level="intermediate">
+<ContentSection title="Documentação e Referências" level="intermediate">
 
 <ResourceGroup>
   <ResourceCard 
@@ -73,13 +73,13 @@ import { ResourceGroup } from '@/components/resource-group'
   </ResourceCard>
 </ResourceGroup>
 
-<Tip type="warning">
+<Callout type="warning">
   Python tem muitas áreas de atuação (web, dados, automação, IA). Escolha uma área para focar no início!
-</Tip>
+ </Callout>
 
-</Section>
+ </ContentSection>
 
-<Section title="Web com Python" level="advanced">
+<ContentSection title="Web com Python" level="advanced">
 
 <ResourceGroup>
   <ResourceCard 
@@ -91,8 +91,8 @@ import { ResourceGroup } from '@/components/resource-group'
   </ResourceCard>
 </ResourceGroup>
 
-<Tip type="insight">
+<Callout type="insight">
   FastAPI é um dos frameworks mais modernos e rápidos para criar APIs em Python. Se você quer trabalhar com backend, vale muito a pena aprender!
-</Tip>
+ </Callout>
 
-</Section>
+ </ContentSection>

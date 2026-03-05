@@ -44,14 +44,16 @@ Este projeto utiliza uma arquitetura moderna focada em performance e experiênci
 ```text
 src/
 ├── components/
-│   ├── ui/           # Componentes base reutilizáveis (Card, Tag, Skeleton...)
-│   └── ...           # Componentes de negócio (ResourceCard, LanguageCard...)
+│   ├── ui/               # Componentes base reutilizáveis (Card, Tag, Skeleton...)
+│   └── ...               # Componentes de negócio (ResourceCard, TechnologyCard...)
 ├── data/
-│   └── content/      # Arquivos MDX (O coração do conteúdo)
-├── pages/            # Componentes de página e rotas
-├── lib/              # Utilitários (cn, formatação)
-├── types/            # Definições de tipos globais
-└── App.tsx           # Configuração de rotas principal
+│   └── content/
+│       ├── technologies/ # Arquivos MDX de tecnologias
+│       └── pages/        # Arquivos MDX de páginas soltas
+├── pages/                # Componentes de página e rotas
+├── lib/                  # Utilitários (cn, formatação)
+├── types/                # Definições de tipos globais
+└── App.tsx               # Configuração de rotas principal
 ```
 
 ## Design System "Dark Metallic"
@@ -89,8 +91,8 @@ Toda a documentação de tecnologias e trilhas vive em arquivos `.mdx` dentro de
 
     ```tsx
     import { ResourceCard } from '@/components/resource-card'
-    import { Tip } from '@/components/tip'
-    import { Section } from '@/components/section'
+    import { Callout } from '@/components/callout'
+    import { ContentSection } from '@/components/content-section'
     import { CodeBlock } from '@/components/code-block'
     ```
 
@@ -109,7 +111,7 @@ Toda a documentação de tecnologias e trilhas vive em arquivos `.mdx` dentro de
       }`} 
     />
 
-    <Section title="Recursos Básicos">
+    <ContentSection title="Recursos Básicos">
       <ResourceCard 
         title="O Livro de Rust" 
         url="https://doc.rust-lang.org/book/" 
@@ -117,9 +119,9 @@ Toda a documentação de tecnologias e trilhas vive em arquivos `.mdx` dentro de
       >
         A documentação oficial.
       </ResourceCard>
-    </Section>
+    </ContentSection>
 
-    <Tip type="insight">Comece pelo Ownership e Borrowing!</Tip>
+    <Callout type="insight">Comece pelo Ownership e Borrowing!</Callout>
     ```
 
 5.  **Registre o Conteúdo:**
@@ -127,7 +129,7 @@ Toda a documentação de tecnologias e trilhas vive em arquivos `.mdx` dentro de
 
     ```typescript
     // 1. Importe o conteúdo e o frontmatter
-    import RustContent, { frontmatter as rustMeta } from './rust.mdx'
+    import RustContent, { frontmatter as rustMeta } from './technologies/rust.mdx'
 
     // ...
 
@@ -143,9 +145,9 @@ Toda a documentação de tecnologias e trilhas vive em arquivos `.mdx` dentro de
 
 ### Componentes Disponíveis no MDX
 
-*   **`<Section title="Título" level="beginner|intermediate|advanced">`**: Agrupa conteúdo com um título e badge de nível opcional.
+*   **`<ContentSection title="Título" level="beginner|intermediate|advanced">`**: Agrupa conteúdo com um título e badge de nível opcional.
 *   **`<ResourceCard title="" url="" type="curso|leitura|..." >`**: Card para links externos. O `type` define a cor da tag automaticamente.
-*   **`<Tip type="tip|warning|insight|info">`**: Caixas de destaque para dicas ou avisos.
+*   **`<Callout type="tip|warning|insight|info">`**: Caixas de destaque para dicas ou avisos.
 *   **`<CodeBlock code="" language="" filename="">`**: Bloco de código com syntax highlighting e botão de copiar.
 *   **`<QuoteBlock variant="default|primary|accent">`**: Citações estilizadas.
 
