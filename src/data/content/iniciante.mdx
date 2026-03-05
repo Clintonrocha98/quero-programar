@@ -1,95 +1,102 @@
 export const frontmatter = {
   id: "iniciante",
-  title: "Por Onde Comecar",
-  description: "Recursos essenciais para quem esta dando os primeiros passos na programacao."
+  title: "Por Onde Começar",
+  description: "Recursos essenciais para quem está dando os primeiros passos na programação."
 }
 
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Logica de Programacao">
+<Section title="Lógica de Programação">
 
 Antes de aprender qualquer linguagem, entenda como pensar como um programador.
 
-<ResourceCard 
-  title="Curso de Logica de Programacao e Algoritmo" 
-  url="https://www.youtube.com/watch?v=8mei6uVttho&list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV"
-  type="curso"
->
-  Curso introdutorio que ensina logica de programacao e algoritmos de forma clara e didatica, essencial para quem esta comecando no mundo da programacao.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Curso de Lógica de Programação e Algoritmo" 
+    url="https://www.youtube.com/watch?v=8mei6uVttho&list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV"
+    type="curso"
+  >
+    Curso introdutório que ensina lógica de programação e algoritmos de forma clara e didática, essencial para quem está começando no mundo da programação.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="tip">
-  Logica de programacao e a base de tudo. Dedique tempo aqui antes de pular para uma linguagem especifica!
+  Lógica de programação é a base de tudo. Dedique tempo aqui antes de pular para uma linguagem específica!
 </Tip>
 
 </Section>
 
 <Section title="Git e GitHub">
 
-Aprenda a versionar seu codigo e colaborar com outros desenvolvedores.
+Aprenda a versionar seu código e colaborar com outros desenvolvedores.
 
-<ResourceCard 
-  title="Curso de Git e GitHub" 
-  url="https://www.youtube.com/watch?v=xEKo29OWILE&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA"
-  type="curso"
->
-  Aprenda a utilizar o Git e o GitHub para versionar seus projetos e colaborar com outros desenvolvedores, mesmo sem experiencia previa.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Curso de Git e GitHub" 
+    url="https://www.youtube.com/watch?v=xEKo29OWILE&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA"
+    type="curso"
+  >
+    Aprenda a utilizar o Git e o GitHub para versionar seus projetos e colaborar com outros desenvolvedores, mesmo sem experiência prévia.
+  </ResourceCard>
 
-<ResourceCard 
-  title="git4noobs" 
-  url="https://github.com/DanielHe4rt/git4noobs"
-  type="leitura"
->
-  Material introdutorio em formato de repositorio no GitHub que explica os principais comandos e conceitos do Git de forma acessivel.
-</ResourceCard>
+  <ResourceCard 
+    title="git4noobs" 
+    url="https://github.com/DanielHe4rt/git4noobs"
+    type="leitura"
+  >
+    Material introdutório em formato de repositório no GitHub que explica os principais comandos e conceitos do Git de forma acessível.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Introducao ao Git - Microsoft Learn" 
-  url="https://learn.microsoft.com/pt-br/training/modules/intro-to-git/"
-  type="curso"
->
-  Aprenda os conceitos basicos do Git, como versionamento de arquivos, repositorios e controle de mudancas, ideal para quem esta comecando.
-</ResourceCard>
+  <ResourceCard 
+    title="Introdução ao Git - Microsoft Learn" 
+    url="https://learn.microsoft.com/pt-br/training/modules/intro-to-git/"
+    type="curso"
+  >
+    Aprenda os conceitos básicos do Git, como versionamento de arquivos, repositórios e controle de mudanças, ideal para quem está começando.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Explorar ganchos do Git - Microsoft Learn" 
-  url="https://learn.microsoft.com/pt-br/training/modules/explore-git-hooks/"
-  type="curso"
->
-  Entenda como funcionam os ganchos do Git e como usa-los para automatizar tarefas antes ou depois de acoes como commits ou push.
-</ResourceCard>
+  <ResourceCard 
+    title="Explorar ganchos do Git - Microsoft Learn" 
+    url="https://learn.microsoft.com/pt-br/training/modules/explore-git-hooks/"
+    type="curso"
+  >
+    Entenda como funcionam os ganchos do Git e como usá-los para automatizar tarefas antes ou depois de ações como commits ou push.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Como o Git gerencia o controle do codigo-fonte - Microsoft Learn" 
-  url="https://learn.microsoft.com/pt-br/training/modules/describe-how-git-manages-source-control/"
-  type="curso"
->
-  Veja como o Git organiza e gerencia o historico de codigo-fonte, explorando conceitos como commits, branches e merges.
-</ResourceCard>
+  <ResourceCard 
+    title="Como o Git gerencia o controle do código-fonte - Microsoft Learn" 
+    url="https://learn.microsoft.com/pt-br/training/modules/describe-how-git-manages-source-control/"
+    type="curso"
+  >
+    Veja como o Git organiza e gerencia o histórico de código-fonte, explorando conceitos como commits, branches e merges.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="warning">
-  Git e essencial para qualquer desenvolvedor. Toda empresa usa algum sistema de versionamento, e Git e o padrao da industria!
+  Git é essencial para qualquer desenvolvedor. Toda empresa usa algum sistema de versionamento, e Git é o padrão da indústria!
 </Tip>
 
 </Section>
 
-<Section title="Carreira e Motivacao">
+<Section title="Carreira e Motivação">
 
 Artigos para entender o caminho e se manter motivado.
 
-<ResourceCard 
-  title="Quero ser dev" 
-  url="https://felipperegazio.com/posts/entao-vc-quer-ser-dev/"
-  type="artigo"
->
-  Artigo que compartilha uma visao honesta e motivadora sobre os primeiros passos e desafios de quem quer entrar no mundo da programacao.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Quero ser dev" 
+    url="https://felipperegazio.com/posts/entao-vc-quer-ser-dev/"
+    type="artigo"
+  >
+    Artigo que compartilha uma visão honesta e motivadora sobre os primeiros passos e desafios de quem quer entrar no mundo da programação.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  A jornada de aprendizado e longa, mas vale a pena. Seja paciente consigo mesmo e celebre cada pequena vitoria!
+  A jornada de aprendizado é longa, mas vale a pena. Seja paciente consigo mesmo e celebre cada pequena vitória!
 </Tip>
 
 </Section>

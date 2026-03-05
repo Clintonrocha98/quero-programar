@@ -1,7 +1,7 @@
 export const frontmatter = {
   id: "java",
   title: "Java",
-  description: "Linguagem robusta para aplicacoes empresariais, Android e sistemas de grande escala.",
+  description: "Linguagem robusta para aplicações empresariais, Android e sistemas de grande escala.",
   icon: "JV",
   color: "bg-red-500"
 }
@@ -9,111 +9,120 @@ export const frontmatter = {
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Comecando do Zero" level="beginner">
+<Section title="Começando do Zero" level="beginner">
 
-<ResourceCard 
-  title="Java para Iniciantes (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR"
-  type="curso"
->
-  Curso introdutorio de Java do canal Curso em Video para quem esta comecando.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Java para Iniciantes (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR"
+    type="curso"
+  >
+    Curso introdutório de Java do canal Curso em Vídeo para quem está começando.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Java4Noobs" 
-  url="https://github.com/paulorievrs/java4noobs"
-  type="leitura"
->
-  Repositorio com material introdutorio de Java voltado para iniciantes.
-</ResourceCard>
+  <ResourceCard 
+    title="Java4Noobs" 
+    url="https://github.com/paulorievrs/java4noobs"
+    type="leitura"
+  >
+    Repositório com material introdutório de Java voltado para iniciantes.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Java e Orientacao a Objetos (Alura)" 
-  url="https://www.alura.com.br/apostila-java-orientacao-objetos"
-  type="leitura"
->
-  Apostila gratuita da Alura que ensina Java com foco em programacao orientada a objetos.
-</ResourceCard>
+  <ResourceCard 
+    title="Java e Orientação a Objetos (Alura)" 
+    url="https://www.alura.com.br/apostila-java-orientacao-objetos"
+    type="leitura"
+  >
+    Apostila gratuita da Alura que ensina Java com foco em programação orientada a objetos.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="tip">
-  Java e verboso por natureza. Nao se assuste com a quantidade de codigo - com o tempo voce se acostuma!
+  Java é verboso por natureza. Não se assuste com a quantidade de código - com o tempo você se acostuma!
 </Tip>
 
 </Section>
 
-<Section title="Programacao Orientada a Objetos" level="intermediate">
+<Section title="Programação Orientada a Objetos" level="intermediate">
 
-<ResourceCard 
-  title="POO com Java (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=KlIL63MeyMY&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY"
-  type="curso"
->
-  Curso focado em Programacao Orientada a Objetos com Java.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="POO com Java (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=KlIL63MeyMY&list=PLHz_AreHm4dkqe2aR0tQK74m8SFe-aGsY"
+    type="curso"
+  >
+    Curso focado em Programação Orientada a Objetos com Java.
+  </ResourceCard>
 
-<ResourceCard 
-  title="W3Schools - Java" 
-  url="https://www.w3schools.com/java/"
-  type="leitura"
->
-  Tutorial basico de Java com explicacoes simples e exemplos praticos.
-</ResourceCard>
+  <ResourceCard 
+    title="W3Schools - Java" 
+    url="https://www.w3schools.com/java/"
+    type="leitura"
+  >
+    Tutorial básico de Java com explicações simples e exemplos práticos.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="warning">
-  Entender POO e fundamental em Java. Nao pule essa etapa - conceitos como heranca, polimorfismo e encapsulamento sao essenciais!
+  Entender POO é fundamental em Java. Não pule essa etapa - conceitos como herança, polimorfismo e encapsulamento são essenciais!
 </Tip>
 
 </Section>
 
 <Section title="Cursos Completos" level="intermediate">
 
-<ResourceCard 
-  title="Java - Curso Completo" 
-  url="https://www.youtube.com/watch?v=LnORjqZUMIQ&list=PLGxZ4Rq3BOBq0KXHsp5J3PxyFaBIXVs3r"
-  type="curso"
->
-  Curso completo de Java desde o basico ate conceitos mais avancados.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Java - Curso Completo" 
+    url="https://www.youtube.com/watch?v=LnORjqZUMIQ&list=PLGxZ4Rq3BOBq0KXHsp5J3PxyFaBIXVs3r"
+    type="curso"
+  >
+    Curso completo de Java desde o básico até conceitos mais avançados.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Java Intermediario" 
-  url="https://www.youtube.com/watch?v=EdEKx24xHGc&list=PLGxZ4Rq3BOBoqYyFWOV_YbfBW80YGAGEI"
-  type="curso"
->
-  Curso intermediario de Java com exemplos praticos e topicos modernos.
-</ResourceCard>
+  <ResourceCard 
+    title="Java Intermediário" 
+    url="https://www.youtube.com/watch?v=EdEKx24xHGc&list=PLGxZ4Rq3BOBoqYyFWOV_YbfBW80YGAGEI"
+    type="curso"
+  >
+    Curso intermediário de Java com exemplos práticos e tópicos modernos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Maratona Java (DevDojo)" 
-  url="https://www.youtube.com/watch?v=VKjFuX91G5Q&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW"
-  type="curso"
->
-  Serie de videos com diversos conceitos de Java do canal DevDojo.
-</ResourceCard>
+  <ResourceCard 
+    title="Maratona Java (DevDojo)" 
+    url="https://www.youtube.com/watch?v=VKjFuX91G5Q&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW"
+    type="curso"
+  >
+    Série de vídeos com diversos conceitos de Java do canal DevDojo.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
-<Section title="Estruturas de Dados e Pratica" level="advanced">
+<Section title="Estruturas de Dados e Prática" level="advanced">
 
-<ResourceCard 
-  title="Estrutura de Dados e Algoritmos com Java" 
-  url="https://www.youtube.com/watch?v=N3K8PjFOhy4&list=PLGxZ4Rq3BOBrgumpzz-l8kFMw2DLERdxi"
-  type="curso"
->
-  Curso sobre estruturas de dados e algoritmos utilizando Java.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Estrutura de Dados e Algoritmos com Java" 
+    url="https://www.youtube.com/watch?v=N3K8PjFOhy4&list=PLGxZ4Rq3BOBrgumpzz-l8kFMw2DLERdxi"
+    type="curso"
+  >
+    Curso sobre estruturas de dados e algoritmos utilizando Java.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Exercism - Java Track" 
-  url="https://exercism.org/tracks/java"
-  type="exercicio"
->
-  Plataforma de exercicios interativos para praticar programacao com Java.
-</ResourceCard>
+  <ResourceCard 
+    title="Exercism - Java Track" 
+    url="https://exercism.org/tracks/java"
+    type="exercicio"
+  >
+    Plataforma de exercícios interativos para praticar programação com Java.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  Java e muito requisitado no mercado enterprise. Se voce quer trabalhar em grandes empresas, Java e uma otima escolha!
+  Java é muito requisitado no mercado enterprise. Se você quer trabalhar em grandes empresas, Java é uma ótima escolha!
 </Tip>
 
 </Section>

@@ -7,140 +7,149 @@ export const frontmatter = {
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
 <Section title="Trilhas e Roadmaps">
 
 Guias para entender o que estudar e em qual ordem.
 
-<ResourceCard 
-  title="Roadmap.sh" 
-  url="https://roadmap.sh"
-  type="ferramenta"
->
-  Mapas de aprendizado para diversas areas da tecnologia, como front-end, back-end, DevOps, entre outras.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Roadmap.sh" 
+    url="https://roadmap.sh"
+    type="ferramenta"
+  >
+    Mapas de aprendizado para diversas áreas da tecnologia, como front-end, back-end, DevOps, entre outras.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Trilha.info" 
-  url="https://www.trilha.info"
-  type="ferramenta"
->
-  Trilhas de estudos organizadas para quem quer comecar na area de tecnologia e programacao.
-</ResourceCard>
+  <ResourceCard 
+    title="Trilha.info" 
+    url="https://www.trilha.info"
+    type="ferramenta"
+  >
+    Trilhas de estudos organizadas para quem quer começar na área de tecnologia e programação.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Techguide.sh" 
-  url="https://techguide.sh"
-  type="ferramenta"
->
-  Guia interativo de carreira com caminhos sugeridos, tecnologias e habilidades por area da programacao.
-</ResourceCard>
+  <ResourceCard 
+    title="Techguide.sh" 
+    url="https://techguide.sh"
+    type="ferramenta"
+  >
+    Guia interativo de carreira com caminhos sugeridos, tecnologias e habilidades por área da programação.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="tip">
-  Use os roadmaps como bussola, nao como checklist. Foque em uma coisa de cada vez!
+  Use os roadmaps como bússola, não como checklist. Foque em uma coisa de cada vez!
 </Tip>
 
 </Section>
 
-<Section title="Repositorios e Materiais">
+<Section title="Repositórios e Materiais">
 
-Conteudos abertos e colaborativos para aprender.
+Conteúdos abertos e colaborativos para aprender.
 
-<ResourceCard 
-  title="4noobs - O basico de varias tecnologias" 
-  url="https://github.com/he4rt/4noobs"
-  type="repositorio"
->
-  Repositorio colaborativo com introducoes e conteudos basicos sobre diversas linguagens e ferramentas.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="4noobs - O básico de várias tecnologias" 
+    url="https://github.com/he4rt/4noobs"
+    type="repositorio"
+  >
+    Repositório colaborativo com introduções e conteúdos básicos sobre diversas linguagens e ferramentas.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Learn X in Y minutes" 
-  url="https://learnxinyminutes.com"
-  type="ferramenta"
->
-  Tutoriais rapidos e praticos para aprender uma linguagem de programacao em poucos minutos.
-</ResourceCard>
+  <ResourceCard 
+    title="Learn X in Y minutes" 
+    url="https://learnxinyminutes.com"
+    type="ferramenta"
+  >
+    Tutoriais rápidos e práticos para aprender uma linguagem de programação em poucos minutos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Padroes de projeto para front-end" 
-  url="https://www.patterns.dev"
-  type="documentacao"
->
-  Guia moderno com padroes e boas praticas voltados especialmente para projetos front-end.
-</ResourceCard>
+  <ResourceCard 
+    title="Padrões de projeto para front-end" 
+    url="https://www.patterns.dev"
+    type="documentacao"
+  >
+    Guia moderno com padrões e boas práticas voltados especialmente para projetos front-end.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
 <Section title="Modelos e Templates">
 
-Recursos prontos para usar em seus projetos e curriculo.
+Recursos prontos para usar em seus projetos e currículo.
 
-<ResourceCard 
-  title="Modelo de curriculo para devs" 
-  url="https://github.com/sspacecoding/curriculodasguria/tree/main"
-  type="modelo"
->
-  Exemplos e modelos de curriculos voltados para quem esta buscando vaga na area de desenvolvimento.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Modelo de currículo para devs" 
+    url="https://github.com/sspacecoding/curriculodasguria/tree/main"
+    type="modelo"
+  >
+    Exemplos e modelos de currículos voltados para quem está buscando vaga na área de desenvolvimento.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Templates de README para projetos" 
-  url="https://github.com/Fernanda-Kipper/Readme-Templates"
-  type="modelo"
->
-  Modelos prontos de arquivos README para documentar seus projetos de forma clara e atrativa.
-</ResourceCard>
+  <ResourceCard 
+    title="Templates de README para projetos" 
+    url="https://github.com/Fernanda-Kipper/Readme-Templates"
+    type="modelo"
+  >
+    Modelos prontos de arquivos README para documentar seus projetos de forma clara e atrativa.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Acervo de Figmas para praticar front-end" 
-  url="https://leovargas.notion.site/ae7f8ce3605c486ab9437216e8b41ff6?v=307eebb71b34464389b93702da9bec72"
-  type="recursos"
->
-  Colecao de arquivos Figma gratuitos para praticar a conversao de layouts em codigo.
-</ResourceCard>
+  <ResourceCard 
+    title="Acervo de Figmas para praticar front-end" 
+    url="https://leovargas.notion.site/ae7f8ce3605c486ab9437216e8b41ff6?v=307eebb71b34464389b93702da9bec72"
+    type="recursos"
+  >
+    Coleção de arquivos Figma gratuitos para praticar a conversão de layouts em código.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  Um bom README faz toda a diferenca no seu portfolio. Dedique tempo para documentar bem seus projetos!
+  Um bom README faz toda a diferença no seu portfólio. Dedique tempo para documentar bem seus projetos!
 </Tip>
 
 </Section>
 
-<Section title="Ferramentas Uteis">
+<Section title="Ferramentas Úteis">
 
 Ferramentas online para ajudar no dia a dia do desenvolvedor.
 
-<ResourceCard 
-  title="Mermaid Live Editor" 
-  url="https://mermaid.live/"
-  type="ferramenta"
->
-  Editor online para criar e visualizar diagramas com sintaxe Mermaid.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Mermaid Live Editor" 
+    url="https://mermaid.live/"
+    type="ferramenta"
+  >
+    Editor online para criar e visualizar diagramas com sintaxe Mermaid.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Excalidraw" 
-  url="https://excalidraw.com/"
-  type="ferramenta"
->
-  Ferramenta colaborativa para desenhar diagramas com estilo feito a mao.
-</ResourceCard>
+  <ResourceCard 
+    title="Excalidraw" 
+    url="https://excalidraw.com/"
+    type="ferramenta"
+  >
+    Ferramenta colaborativa para desenhar diagramas com estilo feito à mão.
+  </ResourceCard>
 
-<ResourceCard 
-  title="tldraw" 
-  url="https://www.tldraw.com/"
-  type="ferramenta"
->
-  Editor de diagramas colaborativo com foco em simplicidade e interatividade.
-</ResourceCard>
+  <ResourceCard 
+    title="tldraw" 
+    url="https://www.tldraw.com/"
+    type="ferramenta"
+  >
+    Editor de diagramas colaborativo com foco em simplicidade e interatividade.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Carbon" 
-  url="https://carbon.now.sh/"
-  type="ferramenta"
->
-  Ferramenta para criar imagens bonitas de trechos de codigo-fonte.
-</ResourceCard>
+  <ResourceCard 
+    title="Carbon" 
+    url="https://carbon.now.sh/"
+    type="ferramenta"
+  >
+    Ferramenta para criar imagens bonitas de trechos de código-fonte.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
@@ -148,40 +157,42 @@ Ferramentas online para ajudar no dia a dia do desenvolvedor.
 
 Plataformas com cursos gratuitos de alta qualidade.
 
-<ResourceCard 
-  title="CS50 - Harvard" 
-  url="https://cs50.harvard.edu/x/2025/"
-  type="curso"
->
-  Curso introdutorio gratuito de ciencia da computacao da Universidade de Harvard.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="CS50 - Harvard" 
+    url="https://cs50.harvard.edu/x/2025/"
+    type="curso"
+  >
+    Curso introdutório gratuito de ciência da computação da Universidade de Harvard.
+  </ResourceCard>
 
-<ResourceCard 
-  title="ScyllaDB University" 
-  url="https://university.scylladb.com/"
-  type="curso"
->
-  Cursos gratuitos sobre banco de dados NoSQL de alta performance com ScyllaDB.
-</ResourceCard>
+  <ResourceCard 
+    title="ScyllaDB University" 
+    url="https://university.scylladb.com/"
+    type="curso"
+  >
+    Cursos gratuitos sobre banco de dados NoSQL de alta performance com ScyllaDB.
+  </ResourceCard>
 
-<ResourceCard 
-  title="The Last Algorithms Course You'll Need" 
-  url="https://frontendmasters.com/courses/algorithms/"
-  type="curso"
->
-  Curso completo de algoritmos e estruturas de dados na Frontend Masters.
-</ResourceCard>
+  <ResourceCard 
+    title="The Last Algorithms Course You'll Need" 
+    url="https://frontendmasters.com/courses/algorithms/"
+    type="curso"
+  >
+    Curso completo de algoritmos e estruturas de dados na Frontend Masters.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Introduction to MongoDB" 
-  url="https://learn.mongodb.com/learning-paths/introduction-to-mongodb"
-  type="curso"
->
-  Curso oficial introdutorio sobre MongoDB, focado em desenvolvedores iniciantes.
-</ResourceCard>
+  <ResourceCard 
+    title="Introduction to MongoDB" 
+    url="https://learn.mongodb.com/learning-paths/introduction-to-mongodb"
+    type="curso"
+  >
+    Curso oficial introdutório sobre MongoDB, focado em desenvolvedores iniciantes.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="warning">
-  O CS50 de Harvard e considerado um dos melhores cursos introdutorios do mundo. Vale muito a pena!
+  O CS50 de Harvard é considerado um dos melhores cursos introdutórios do mundo. Vale muito a pena!
 </Tip>
 
 </Section>
@@ -190,78 +201,82 @@ Plataformas com cursos gratuitos de alta qualidade.
 
 Materiais de leitura para aprofundar seus conhecimentos.
 
-<ResourceCard 
-  title="Conventional Commits" 
-  url="https://www.conventionalcommits.org/pt-br/v1.0.0/"
-  type="leitura"
->
-  Especificacao de mensagens de commit padronizadas para facilitar automacoes.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Conventional Commits" 
+    url="https://www.conventionalcommits.org/pt-br/v1.0.0/"
+    type="leitura"
+  >
+    Especificação de mensagens de commit padronizadas para facilitar automações.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Refactoring Guru" 
-  url="https://refactoring.guru/pt-br"
-  type="leitura"
->
-  Explicacoes ilustradas sobre refatoracao, padroes de projeto e principios SOLID.
-</ResourceCard>
+  <ResourceCard 
+    title="Refactoring Guru" 
+    url="https://refactoring.guru/pt-br"
+    type="leitura"
+  >
+    Explicações ilustradas sobre refatoração, padrões de projeto e princípios SOLID.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Functional-Light JavaScript" 
-  url="https://github.com/getify/Functional-Light-JS?tab=readme-ov-file"
-  type="leitura"
->
-  Livro gratuito que ensina principios de programacao funcional com foco em JavaScript.
-</ResourceCard>
+  <ResourceCard 
+    title="Functional-Light JavaScript" 
+    url="https://github.com/getify/Functional-Light-JS?tab=readme-ov-file"
+    type="leitura"
+  >
+    Livro gratuito que ensina princípios de programação funcional com foco em JavaScript.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
-<Section title="Desafios e Pratica">
+<Section title="Desafios e Prática">
 
 Plataformas para praticar e testar suas habilidades.
 
-<ResourceCard 
-  title="Codewars" 
-  url="https://www.codewars.com"
-  type="desafio"
->
-  Plataforma de desafios de programacao para treinar logica e algoritmos em diversas linguagens.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Codewars" 
+    url="https://www.codewars.com"
+    type="desafio"
+  >
+    Plataforma de desafios de programação para treinar lógica e algoritmos em diversas linguagens.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Exercism" 
-  url="https://exercism.org"
-  type="desafio"
->
-  Plataforma de pratica com exercicios e mentorias gratuitas em varias linguagens.
-</ResourceCard>
+  <ResourceCard 
+    title="Exercism" 
+    url="https://exercism.org"
+    type="desafio"
+  >
+    Plataforma de prática com exercícios e mentorias gratuitas em várias linguagens.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Project Based Learning" 
-  url="https://github.com/practical-tutorials/project-based-learning"
-  type="desafio"
->
-  Lista de tutoriais que ensinam programacao por meio de projetos praticos.
-</ResourceCard>
+  <ResourceCard 
+    title="Project Based Learning" 
+    url="https://github.com/practical-tutorials/project-based-learning"
+    type="desafio"
+  >
+    Lista de tutoriais que ensinam programação por meio de projetos práticos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Desafios Backend (backend-br)" 
-  url="https://github.com/backend-br/desafios?tab=readme-ov-file"
-  type="leitura"
->
-  Colecao de desafios para praticar e melhorar habilidades em desenvolvimento backend.
-</ResourceCard>
+  <ResourceCard 
+    title="Desafios Backend (backend-br)" 
+    url="https://github.com/backend-br/desafios?tab=readme-ov-file"
+    type="leitura"
+  >
+    Coleção de desafios para praticar e melhorar habilidades em desenvolvimento backend.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Backend Challenges (CollabCode)" 
-  url="https://github.com/CollabCodeTech/backend-challenges"
-  type="leitura"
->
-  Lista de desafios tecnicos reais usados em processos seletivos para backend.
-</ResourceCard>
+  <ResourceCard 
+    title="Backend Challenges (CollabCode)" 
+    url="https://github.com/CollabCodeTech/backend-challenges"
+    type="leitura"
+  >
+    Lista de desafios técnicos reais usados em processos seletivos para backend.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  A pratica constante e o que diferencia um bom desenvolvedor. Reserve tempo todo dia para resolver pelo menos um desafio!
+  A prática constante é o que diferencia um bom desenvolvedor. Reserve tempo todo dia para resolver pelo menos um desafio!
 </Tip>
 
 </Section>

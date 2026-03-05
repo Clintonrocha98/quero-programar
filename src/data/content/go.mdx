@@ -1,7 +1,7 @@
 export const frontmatter = {
   id: "go",
   title: "Go",
-  description: "Linguagem moderna focada em simplicidade e eficiencia para sistemas distribuidos.",
+  description: "Linguagem moderna focada em simplicidade e eficiência para sistemas distribuídos.",
   icon: "GO",
   color: "bg-cyan-500"
 }
@@ -9,107 +9,116 @@ export const frontmatter = {
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Comecando do Zero" level="beginner">
+<Section title="Começando do Zero" level="beginner">
 
-<ResourceCard 
-  title="Go4noobs" 
-  url="https://github.com/caioreix/go4noobs#go4noobs"
-  type="leitura"
->
-  Repositorio com uma introducao pratica a linguagem Go para iniciantes.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Go4noobs" 
+    url="https://github.com/caioreix/go4noobs#go4noobs"
+    type="leitura"
+  >
+    Repositório com uma introdução prática à linguagem Go para iniciantes.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Aprenda Go - Curso" 
-  url="https://www.youtube.com/watch?v=WiGU_ZB-u0w&list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg&index=1"
-  type="curso"
->
-  Curso introdutorio de Go no YouTube, ideal para quem esta comecando.
-</ResourceCard>
+  <ResourceCard 
+    title="Aprenda Go - Curso" 
+    url="https://www.youtube.com/watch?v=WiGU_ZB-u0w&list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg&index=1"
+    type="curso"
+  >
+    Curso introdutório de Go no YouTube, ideal para quem está começando.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Aprenda Go com Testes" 
-  url="https://larien.gitbook.io/aprenda-go-com-testes"
-  type="leitura"
->
-  Livro gratuito que ensina Go a partir da abordagem de desenvolvimento orientado a testes (TDD).
-</ResourceCard>
+  <ResourceCard 
+    title="Aprenda Go com Testes" 
+    url="https://larien.gitbook.io/aprenda-go-com-testes"
+    type="leitura"
+  >
+    Livro gratuito que ensina Go a partir da abordagem de desenvolvimento orientado a testes (TDD).
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="tip">
-  Go e uma linguagem simples por design. Nao se assuste com a falta de recursos "magicos" - isso e intencional!
+  Go é uma linguagem simples por design. Não se assuste com a falta de recursos "mágicos" - isso é intencional!
 </Tip>
 
 </Section>
 
-<Section title="Documentacao e Referencias" level="intermediate">
+<Section title="Documentação e Referências" level="intermediate">
 
-<ResourceCard 
-  title="Go - Documentacao Oficial" 
-  url="https://go.dev/"
-  type="leitura"
->
-  Site oficial da linguagem Go com documentacao, downloads e recursos.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Go - Documentação Oficial" 
+    url="https://go.dev/"
+    type="leitura"
+  >
+    Site oficial da linguagem Go com documentação, downloads e recursos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Go by Example" 
-  url="https://gobyexample.com/"
-  type="leitura"
->
-  Colecao de exemplos praticos para aprender Go diretamente pelo codigo.
-</ResourceCard>
+  <ResourceCard 
+    title="Go by Example" 
+    url="https://gobyexample.com/"
+    type="leitura"
+  >
+    Coleção de exemplos práticos para aprender Go diretamente pelo código.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Go - W3Schools" 
-  url="https://www.w3schools.com/go/index.php"
-  type="leitura"
->
-  Tutorial basico de Go com explicacoes simples e exemplos.
-</ResourceCard>
+  <ResourceCard 
+    title="Go - W3Schools" 
+    url="https://www.w3schools.com/go/index.php"
+    type="leitura"
+  >
+    Tutorial básico de Go com explicações simples e exemplos.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
 <Section title="Canais e Comunidade" level="tools">
 
-<ResourceCard 
-  title="Aprenda Golang - Canal" 
-  url="https://www.youtube.com/@AprendaGolang/featured"
-  type="youtube"
->
-  Canal focado no ensino da linguagem Go com videos e tutoriais diversos.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Aprenda Golang - Canal" 
+    url="https://www.youtube.com/@AprendaGolang/featured"
+    type="youtube"
+  >
+    Canal focado no ensino da linguagem Go com vídeos e tutoriais diversos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="HunCoding - Canal" 
-  url="https://www.youtube.com/@huncoding"
-  type="youtube"
->
-  Canal com conteudos variados sobre programacao, incluindo Go.
-</ResourceCard>
+  <ResourceCard 
+    title="HunCoding - Canal" 
+    url="https://www.youtube.com/@huncoding"
+    type="youtube"
+  >
+    Canal com conteúdos variados sobre programação, incluindo Go.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
-<Section title="Pratica e Projetos" level="advanced">
+<Section title="Prática e Projetos" level="advanced">
 
-<ResourceCard 
-  title="Como implementar uma API do ZERO com Golang e PostgreSQL" 
-  url="https://www.youtube.com/watch?v=MD7b-iQMC24"
-  type="curso"
->
-  Tutorial pratico de como criar uma API completa usando Go e PostgreSQL.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Como implementar uma API do ZERO com Golang e PostgreSQL" 
+    url="https://www.youtube.com/watch?v=MD7b-iQMC24"
+    type="curso"
+  >
+    Tutorial prático de como criar uma API completa usando Go e PostgreSQL.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Go - Quiz (Roadmap.sh)" 
-  url="https://roadmap.sh/questions/golang"
-  type="ferramenta"
->
-  Quiz interativo para testar seus conhecimentos sobre Go.
-</ResourceCard>
+  <ResourceCard 
+    title="Go - Quiz (Roadmap.sh)" 
+    url="https://roadmap.sh/questions/golang"
+    type="ferramenta"
+  >
+    Quiz interativo para testar seus conhecimentos sobre Go.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  Go e muito usado em ferramentas de DevOps (Docker, Kubernetes). Se voce quer trabalhar com infraestrutura, Go e uma excelente escolha!
+  Go é muito usado em ferramentas de DevOps (Docker, Kubernetes). Se você quer trabalhar com infraestrutura, Go é uma excelente escolha!
 </Tip>
 
 </Section>

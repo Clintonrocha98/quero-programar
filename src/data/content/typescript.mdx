@@ -1,7 +1,7 @@
 export const frontmatter = {
   id: "typescript",
   title: "TypeScript",
-  description: "Superset do JavaScript que adiciona tipagem estatica e outros recursos avancados.",
+  description: "Superset do JavaScript que adiciona tipagem estática e outros recursos avançados.",
   icon: "TS",
   color: "bg-blue-600"
 }
@@ -9,51 +9,56 @@ export const frontmatter = {
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Comecando" level="beginner">
+<Section title="Começando" level="beginner">
 
-<ResourceCard 
-  title="TypeScript - Documentacao Oficial" 
-  url="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
-  type="documentacao"
->
-  Aprenda TypeScript em 5 minutos com a documentacao oficial.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="TypeScript - Documentação Oficial" 
+    url="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+    type="documentacao"
+  >
+    Aprenda TypeScript em 5 minutos com a documentação oficial.
+  </ResourceCard>
 
-<ResourceCard 
-  title="W3Schools - TypeScript" 
-  url="https://www.w3schools.com/typescript/index.php"
-  type="documentacao"
->
-  Tutorial basico de TypeScript com exemplos praticos.
-</ResourceCard>
+  <ResourceCard 
+    title="W3Schools - TypeScript" 
+    url="https://www.w3schools.com/typescript/index.php"
+    type="documentacao"
+  >
+    Tutorial básico de TypeScript com exemplos práticos.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="warning">
-  Antes de aprender TypeScript, tenha uma boa base de JavaScript. TypeScript e uma extensao do JS!
+  Antes de aprender TypeScript, tenha uma boa base de JavaScript. TypeScript é uma extensão do JS!
 </Tip>
 
 </Section>
 
-<Section title="Documentacao e Trilhas" level="intermediate">
+<Section title="Documentação e Trilhas" level="intermediate">
 
-<ResourceCard 
-  title="Roadmap - TypeScript" 
-  url="https://roadmap.sh/typescript"
-  type="roadmap"
->
-  Mapa de estudos para dominar TypeScript.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Roadmap - TypeScript" 
+    url="https://roadmap.sh/typescript"
+    type="roadmap"
+  >
+    Mapa de estudos para dominar TypeScript.
+  </ResourceCard>
 
-<ResourceCard 
-  title="TypeScript Tutorial - GeeksforGeeks" 
-  url="https://www.geeksforgeeks.org/typescript/"
-  type="tutorial"
->
-  Introducao ao TypeScript com exemplos e explicacoes claras.
-</ResourceCard>
+  <ResourceCard 
+    title="TypeScript Tutorial - GeeksforGeeks" 
+    url="https://www.geeksforgeeks.org/typescript/"
+    type="tutorial"
+  >
+    Introdução ao TypeScript com exemplos e explicações claras.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  TypeScript e quase obrigatorio em projetos React modernos. Se voce quer trabalhar com frontend, invista tempo aqui!
+  TypeScript é quase obrigatório em projetos React modernos. Se você quer trabalhar com frontend, invista tempo aqui!
 </Tip>
 
 </Section>

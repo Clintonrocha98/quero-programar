@@ -1,7 +1,7 @@
 export const frontmatter = {
   id: "css",
   title: "CSS",
-  description: "Linguagem de estilos utilizada para definir a aparencia visual de paginas web estruturadas com HTML.",
+  description: "Linguagem de estilos utilizada para definir a aparência visual de páginas web estruturadas com HTML.",
   icon: "CSS",
   color: "bg-blue-500"
 }
@@ -9,141 +9,150 @@ export const frontmatter = {
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
 <Section title="Primeiros Passos" level="beginner">
 
-Comece aqui se voce esta aprendendo CSS pela primeira vez.
+Comece aqui se você está aprendendo CSS pela primeira vez.
 
-<ResourceCard 
-  title="css4noobs" 
-  url="https://github.com/he4rt/css4noobs"
-  type="leitura"
->
-  Repositorio com material introdutorio de CSS para iniciantes.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="css4noobs" 
+    url="https://github.com/he4rt/css4noobs"
+    type="leitura"
+  >
+    Repositório com material introdutório de CSS para iniciantes.
+  </ResourceCard>
 
-<ResourceCard 
-  title="HTML/CSS - Modulo 1 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
-  type="curso"
->
-  Primeiro modulo do curso de HTML e CSS do Guanabara.
-</ResourceCard>
+  <ResourceCard 
+    title="HTML/CSS - Módulo 1 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
+    type="curso"
+  >
+    Primeiro módulo do curso de HTML e CSS do Guanabara.
+  </ResourceCard>
 
-<ResourceCard 
-  title="HTML/CSS - Modulo 2 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=vPNIAJ9B4hg&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s"
-  type="curso"
->
-  Continuacao do curso com conceitos intermediarios.
-</ResourceCard>
+  <ResourceCard 
+    title="HTML/CSS - Módulo 2 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=vPNIAJ9B4hg&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s"
+    type="curso"
+  >
+    Continuação do curso com conceitos intermediários.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="tip">
-  HTML e CSS andam juntos! Aprenda os dois de forma integrada para ter uma base solida.
+  HTML e CSS andam juntos! Aprenda os dois de forma integrada para ter uma base sólida.
 </Tip>
 
 </Section>
 
-<Section title="Documentacao e Referencias" level="intermediate">
+<Section title="Documentação e Referências" level="intermediate">
 
-<ResourceCard 
-  title="Aprenda a estilizar HTML utilizando CSS (MDN)" 
-  url="https://developer.mozilla.org/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics"
-  type="artigo"
->
-  Guia oficial da Mozilla sobre estilizacao com CSS.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Aprenda a estilizar HTML utilizando CSS (MDN)" 
+    url="https://developer.mozilla.org/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics"
+    type="artigo"
+  >
+    Guia oficial da Mozilla sobre estilização com CSS.
+  </ResourceCard>
 
-<ResourceCard 
-  title="CSS - W3Schools" 
-  url="https://www.w3schools.com/css/default.asp"
-  type="documentacao"
->
-  Referencia completa com exemplos interativos.
-</ResourceCard>
+  <ResourceCard 
+    title="CSS - W3Schools" 
+    url="https://www.w3schools.com/css/default.asp"
+    type="documentacao"
+  >
+    Referência completa com exemplos interativos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="CSS Tutorial - GeeksforGeeks" 
-  url="https://www.geeksforgeeks.org/css-tutorial/"
-  type="tutorial"
->
-  Tutorial passo a passo com os principais conceitos de CSS.
-</ResourceCard>
+  <ResourceCard 
+    title="CSS Tutorial - GeeksforGeeks" 
+    url="https://www.geeksforgeeks.org/css-tutorial/"
+    type="tutorial"
+  >
+    Tutorial passo a passo com os principais conceitos de CSS.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
 <Section title="Pratique e Teste" level="intermediate">
 
-<ResourceCard 
-  title="CSS - Quiz (W3Schools)" 
-  url="https://www.w3schools.com/css/css_quiz.asp"
-  type="quiz"
->
-  Quiz rapido para testar seus conhecimentos basicos.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="CSS - Quiz (W3Schools)" 
+    url="https://www.w3schools.com/css/css_quiz.asp"
+    type="quiz"
+  >
+    Quiz rápido para testar seus conhecimentos básicos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="CSS - Exercicios (W3Schools)" 
-  url="https://www.w3schools.com/css/css_exercises.asp"
-  type="exercicio"
->
-  Exercicios praticos para fixar o conteudo.
-</ResourceCard>
+  <ResourceCard 
+    title="CSS - Exercícios (W3Schools)" 
+    url="https://www.w3schools.com/css/css_exercises.asp"
+    type="exercicio"
+  >
+    Exercícios práticos para fixar o conteúdo.
+  </ResourceCard>
 
-<ResourceCard 
-  title="CSS - Quiz (GitHub)" 
-  url="https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/css/css-quiz.md"
-  type="quiz"
->
-  Perguntas no estilo LinkedIn para preparacao de entrevistas.
-</ResourceCard>
+  <ResourceCard 
+    title="CSS - Quiz (GitHub)" 
+    url="https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/css/css-quiz.md"
+    type="quiz"
+  >
+    Perguntas no estilo LinkedIn para preparação de entrevistas.
+  </ResourceCard>
 
-<ResourceCard 
-  title="CSS Quiz Set 1 - GeeksforGeeks" 
-  url="https://www.geeksforgeeks.org/quizzes/css-quiz-set-1/"
-  type="quiz"
->
-  Primeiro conjunto de quizzes de CSS.
-</ResourceCard>
+  <ResourceCard 
+    title="CSS Quiz Set 1 - GeeksforGeeks" 
+    url="https://www.geeksforgeeks.org/quizzes/css-quiz-set-1/"
+    type="quiz"
+  >
+    Primeiro conjunto de quizzes de CSS.
+  </ResourceCard>
 
-<ResourceCard 
-  title="CSS Quiz Set 2 - GeeksforGeeks" 
-  url="https://www.geeksforgeeks.org/quizzes/css-quiz-set-2/"
-  type="quiz"
->
-  Segundo conjunto de quizzes para testar sua base.
-</ResourceCard>
+  <ResourceCard 
+    title="CSS Quiz Set 2 - GeeksforGeeks" 
+    url="https://www.geeksforgeeks.org/quizzes/css-quiz-set-2/"
+    type="quiz"
+  >
+    Segundo conjunto de quizzes para testar sua base.
+  </ResourceCard>
 
-<ResourceCard 
-  title="CSS Quiz Set 3 - GeeksforGeeks" 
-  url="https://www.geeksforgeeks.org/quizzes/css-quiz-set-3/"
-  type="quiz"
->
-  Mais perguntas e desafios de CSS.
-</ResourceCard>
+  <ResourceCard 
+    title="CSS Quiz Set 3 - GeeksforGeeks" 
+    url="https://www.geeksforgeeks.org/quizzes/css-quiz-set-3/"
+    type="quiz"
+  >
+    Mais perguntas e desafios de CSS.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
-<Section title="Avancando nos Estudos" level="advanced">
+<Section title="Avançando nos Estudos" level="advanced">
 
-<ResourceCard 
-  title="HTML/CSS - Modulo 3 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=ofFgnDtn_1c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ"
-  type="curso"
->
-  Modulo avancado com projetos praticos.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="HTML/CSS - Módulo 3 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=ofFgnDtn_1c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ"
+    type="curso"
+  >
+    Módulo avançado com projetos práticos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="HTML/CSS - Modulo 4 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=zHKHMmEG9vE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT"
-  type="curso"
->
-  Modulo final com tecnicas avancadas de layout.
-</ResourceCard>
+  <ResourceCard 
+    title="HTML/CSS - Módulo 4 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=zHKHMmEG9vE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT"
+    type="curso"
+  >
+    Módulo final com técnicas avançadas de layout.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  Depois de dominar CSS basico, explore Flexbox e Grid. Sao essenciais para layouts modernos e responsivos!
+  Depois de dominar CSS básico, explore Flexbox e Grid. São essenciais para layouts modernos e responsivos!
 </Tip>
 
 </Section>

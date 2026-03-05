@@ -1,173 +1,178 @@
 export const frontmatter = {
   id: "artigos",
   title: "Artigos e Perfis",
-  description: "Artigos tecnicos e perfis de desenvolvedores para voce acompanhar."
+  description: "Artigos técnicos e perfis de desenvolvedores para você acompanhar."
 }
 
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
 <Section title="Perfis no DEV Community">
 
-Acompanhe esses desenvolvedores para conteudos frequentes sobre tecnologia e carreira.
+Acompanhe esses desenvolvedores para conteúdos frequentes sobre tecnologia e carreira.
 
-<ResourceCard 
-  title="jessilyneh" 
-  url="https://dev.to/jessilyneh"
-  type="perfil"
->
-  Perfil no DEV Community com publicacoes sobre tecnologia e carreira.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="jessilyneh" 
+    url="https://dev.to/jessilyneh"
+    type="perfil"
+  >
+    Perfil no DEV Community com publicações sobre tecnologia e carreira.
+  </ResourceCard>
 
-<ResourceCard 
-  title="leandronsp" 
-  url="https://dev.to/leandronsp"
-  type="perfil"
->
-  Perfil tecnico no DEV Community com foco em desenvolvimento web.
-</ResourceCard>
+  <ResourceCard 
+    title="leandronsp" 
+    url="https://dev.to/leandronsp"
+    type="perfil"
+  >
+    Perfil técnico no DEV Community com foco em desenvolvimento web.
+  </ResourceCard>
 
-<ResourceCard 
-  title="1cadumagalhaes" 
-  url="https://dev.to/1cadumagalhaes"
-  type="perfil"
->
-  Publicacoes diversas sobre programacao e aprendizados na area.
-</ResourceCard>
+  <ResourceCard 
+    title="1cadumagalhaes" 
+    url="https://dev.to/1cadumagalhaes"
+    type="perfil"
+  >
+    Publicações diversas sobre programação e aprendizados na área.
+  </ResourceCard>
 
-<ResourceCard 
-  title="danielhe4rt" 
-  url="https://dev.to/danielhe4rt"
-  type="perfil"
->
-  Criador de conteudo e desenvolvedor com foco na comunidade Dev.
-</ResourceCard>
+  <ResourceCard 
+    title="danielhe4rt" 
+    url="https://dev.to/danielhe4rt"
+    type="perfil"
+  >
+    Criador de conteúdo e desenvolvedor com foco na comunidade Dev.
+  </ResourceCard>
 
-<ResourceCard 
-  title="ocodista" 
-  url="https://dev.to/ocodista"
-  type="perfil"
->
-  Reflexoes e conteudos sobre desenvolvimento e boas praticas.
-</ResourceCard>
+  <ResourceCard 
+    title="ocodista" 
+    url="https://dev.to/ocodista"
+    type="perfil"
+  >
+    Reflexões e conteúdos sobre desenvolvimento e boas práticas.
+  </ResourceCard>
 
-<ResourceCard 
-  title="fernandakipper" 
-  url="https://dev.to/fernandakipper"
-  type="perfil"
->
-  Publicacoes sobre tecnologia, aprendizado e carreira.
-</ResourceCard>
+  <ResourceCard 
+    title="fernandakipper" 
+    url="https://dev.to/fernandakipper"
+    type="perfil"
+  >
+    Publicações sobre tecnologia, aprendizado e carreira.
+  </ResourceCard>
 
-<ResourceCard 
-  title="lixeletto" 
-  url="https://dev.to/lixeletto"
-  type="perfil"
->
-  Compartilha experiencias e conteudos tecnicos no DEV Community.
-</ResourceCard>
+  <ResourceCard 
+    title="lixeletto" 
+    url="https://dev.to/lixeletto"
+    type="perfil"
+  >
+    Compartilha experiências e conteúdos técnicos no DEV Community.
+  </ResourceCard>
 
-<ResourceCard 
-  title="cherryramatis" 
-  url="https://dev.to/cherryramatis"
-  type="perfil"
->
-  Conteudos diversos relacionados ao universo do desenvolvimento.
-</ResourceCard>
+  <ResourceCard 
+    title="cherryramatis" 
+    url="https://dev.to/cherryramatis"
+    type="perfil"
+  >
+    Conteúdos diversos relacionados ao universo do desenvolvimento.
+  </ResourceCard>
 
-<ResourceCard 
-  title="m4rri4nne" 
-  url="https://dev.to/m4rri4nne"
-  type="perfil"
->
-  Perfil com foco em aprendizado, comunidade e tecnologia.
-</ResourceCard>
+  <ResourceCard 
+    title="m4rri4nne" 
+    url="https://dev.to/m4rri4nne"
+    type="perfil"
+  >
+    Perfil com foco em aprendizado, comunidade e tecnologia.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Matheus Fidelis" 
-  url="https://fidelissauro.dev/"
-  type="perfil"
->
-  Blog pessoal com artigos e projetos sobre desenvolvimento de software.
-</ResourceCard>
+  <ResourceCard 
+    title="Matheus Fidelis" 
+    url="https://fidelissauro.dev/"
+    type="perfil"
+  >
+    Blog pessoal com artigos e projetos sobre desenvolvimento de software.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="tip">
-  Seguir desenvolvedores ativos e uma otima forma de se manter atualizado e aprender com a experiencia deles!
+  Seguir desenvolvedores ativos é uma ótima forma de se manter atualizado e aprender com a experiência deles!
 </Tip>
 
 </Section>
 
 <Section title="Artigos Recomendados">
 
-Leituras que vao expandir seu conhecimento tecnico e de carreira.
+Leituras que vão expandir seu conhecimento técnico e de carreira.
 
-<ResourceCard 
-  title="Node.js Por Baixo dos Panos - Serie" 
-  url="https://dev.to/_staticvoid/series/2080"
-  type="artigo"
->
-  Serie de artigos explicando os bastidores do Node.js.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Node.js Por Baixo dos Panos - Série" 
+    url="https://dev.to/_staticvoid/series/2080"
+    type="artigo"
+  >
+    Série de artigos explicando os bastidores do Node.js.
+  </ResourceCard>
 
-<ResourceCard 
-  title="O minimo que voce precisa saber de JavaScript" 
-  url="https://felipperegazio.com/posts/o-minimo-necessario-js-para-frameworks/"
-  type="artigo"
->
-  Resumo essencial de JS para quem deseja trabalhar com frameworks front-end.
-</ResourceCard>
+  <ResourceCard 
+    title="O mínimo que você precisa saber de JavaScript" 
+    url="https://felipperegazio.com/posts/o-minimo-necessario-js-para-frameworks/"
+    type="artigo"
+  >
+    Resumo essencial de JS para quem deseja trabalhar com frameworks front-end.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Entao voce quer ser Dev?" 
-  url="https://felipperegazio.com/posts/entao-vc-quer-ser-dev/"
-  type="artigo"
->
-  Artigo com reflexoes e conselhos sobre o inicio na carreira dev.
-</ResourceCard>
+  <ResourceCard 
+    title="Então você quer ser Dev?" 
+    url="https://felipperegazio.com/posts/entao-vc-quer-ser-dev/"
+    type="artigo"
+  >
+    Artigo com reflexões e conselhos sobre o início na carreira dev.
+  </ResourceCard>
 
-<ResourceCard 
-  title="12 Dicas NAO TECNICAS para o Primeiro Emprego" 
-  url="https://felipperegazio.com/posts/12-dicas-nao-tecnicas-primeiro-emprego/"
-  type="artigo"
->
-  Dicas praticas e comportamentais para conseguir o primeiro emprego em desenvolvimento.
-</ResourceCard>
+  <ResourceCard 
+    title="12 Dicas NÃO TÉCNICAS para o Primeiro Emprego" 
+    url="https://felipperegazio.com/posts/12-dicas-nao-tecnicas-primeiro-emprego/"
+    type="artigo"
+  >
+    Dicas práticas e comportamentais para conseguir o primeiro emprego em desenvolvimento.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Meus 3 Tipos Preferidos de Diagramas" 
-  url="https://dev.to/zanfranceschi/conceito-meus-3-tipos-preferidos-de-diagramas-20me"
-  type="artigo"
->
-  Exploracao sobre diferentes tipos de diagramas uteis em projetos de software.
-</ResourceCard>
+  <ResourceCard 
+    title="Meus 3 Tipos Preferidos de Diagramas" 
+    url="https://dev.to/zanfranceschi/conceito-meus-3-tipos-preferidos-de-diagramas-20me"
+    type="artigo"
+  >
+    Exploração sobre diferentes tipos de diagramas úteis em projetos de software.
+  </ResourceCard>
 
-<ResourceCard 
-  title="DDD para aplicacoes web modernas" 
-  url="https://medium.com/@albertosouza_47783/ddd-para-aplica%C3%A7%C3%B5es-web-modernas-2be654932497#d3f2"
-  type="artigo"
->
-  Aplicando Domain-Driven Design em aplicacoes web com foco pratico.
-</ResourceCard>
+  <ResourceCard 
+    title="DDD para aplicações web modernas" 
+    url="https://medium.com/@albertosouza_47783/ddd-para-aplica%C3%A7%C3%B5es-web-modernas-2be654932497#d3f2"
+    type="artigo"
+  >
+    Aplicando Domain-Driven Design em aplicações web com foco prático.
+  </ResourceCard>
 
-<ResourceCard 
-  title="How to Promises" 
-  url="https://github.com/samsantosb/How-to-Promises"
-  type="artigo"
->
-  Guia de Promises no Node.js, com foco em APIs e boas praticas.
-</ResourceCard>
+  <ResourceCard 
+    title="How to Promises" 
+    url="https://github.com/samsantosb/How-to-Promises"
+    type="artigo"
+  >
+    Guia de Promises no Node.js, com foco em APIs e boas práticas.
+  </ResourceCard>
 
-<ResourceCard 
-  title="CUPID: for joyful coding" 
-  url="https://dannorth.net/cupid-for-joyful-coding/"
-  type="artigo"
->
-  Conceito que propoe principios para escrever codigo que seja agradavel de manter.
-</ResourceCard>
+  <ResourceCard 
+    title="CUPID: for joyful coding" 
+    url="https://dannorth.net/cupid-for-joyful-coding/"
+    type="artigo"
+  >
+    Conceito que propõe princípios para escrever código que seja agradável de manter.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  Ler artigos tecnicos regularmente e uma das melhores formas de evoluir como desenvolvedor. Reserve um tempo toda semana para isso!
+  Ler artigos técnicos regularmente é uma das melhores formas de evoluir como desenvolvedor. Reserve um tempo toda semana para isso!
 </Tip>
 
 </Section>

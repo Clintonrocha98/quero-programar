@@ -1,7 +1,7 @@
 export const frontmatter = {
   id: "html",
   title: "HTML",
-  description: "Linguagem de marcacao usada para estruturar paginas na web, definindo o conteudo e sua hierarquia.",
+  description: "Linguagem de marcação usada para estruturar páginas na web, definindo o conteúdo e sua hierarquia.",
   icon: "HTML",
   color: "bg-orange-500"
 }
@@ -9,121 +9,132 @@ export const frontmatter = {
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
 <Section title="Primeiros Passos" level="beginner">
 
-Comece aqui se voce nunca criou uma pagina web antes.
+Comece aqui se você nunca criou uma página web antes.
 
-<ResourceCard 
-  title="html4noobs" 
-  url="https://github.com/lucassoren/HTML4Noobs"
-  type="leitura"
->
-  Material introdutorio em formato de repositorio. Aprenda HTML de forma simples e direta.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="html4noobs" 
+    url="https://github.com/lucassoren/HTML4Noobs"
+    type="leitura"
+  >
+    Material introdutório em formato de repositório. Aprenda HTML de forma simples e direta.
+  </ResourceCard>
 
-<ResourceCard 
-  title="HTML/CSS - Modulo 1 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
-  type="curso"
->
-  Primeiro modulo do curso de HTML e CSS do Guanabara. Comece por aqui!
-</ResourceCard>
+  <ResourceCard 
+    title="HTML/CSS - Módulo 1 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
+    type="curso"
+  >
+    Primeiro módulo do curso de HTML e CSS do Guanabara. Comece por aqui!
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="tip">
-  HTML e CSS andam juntos! Esse curso ensina os dois de forma integrada, que e a melhor maneira de aprender.
+  HTML e CSS andam juntos! Esse curso ensina os dois de forma integrada, que é a melhor maneira de aprender.
 </Tip>
 
-<ResourceCard 
-  title="HTML/CSS - Modulo 2 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=vPNIAJ9B4hg&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s"
-  type="curso"
->
-  Continuacao do curso, aprofundando nos conceitos.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="HTML/CSS - Módulo 2 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=vPNIAJ9B4hg&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s"
+    type="curso"
+  >
+    Continuação do curso, aprofundando nos conceitos.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
-<Section title="Documentacao e Referencias" level="intermediate">
+<Section title="Documentação e Referências" level="intermediate">
 
-<ResourceCard 
-  title="HTML - W3Schools" 
-  url="https://www.w3schools.com/html/default.asp"
-  type="documentacao"
->
-  Referencia completa com exemplos interativos. Perfeita para consulta rapida.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="HTML - W3Schools" 
+    url="https://www.w3schools.com/html/default.asp"
+    type="documentacao"
+  >
+    Referência completa com exemplos interativos. Perfeita para consulta rápida.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Estruturando a web com HTML (MDN)" 
-  url="https://developer.mozilla.org/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d"
-  type="artigo"
->
-  Guia oficial da Mozilla sobre como estruturar conteudo web.
-</ResourceCard>
+  <ResourceCard 
+    title="Estruturando a web com HTML (MDN)" 
+    url="https://developer.mozilla.org/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d"
+    type="artigo"
+  >
+    Guia oficial da Mozilla sobre como estruturar conteúdo web.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="warning">
-  Nao pule a semantica! Usar as tags corretas (header, main, article, section) melhora a acessibilidade e o SEO do seu site.
+  Não pule a semântica! Usar as tags corretas (header, main, article, section) melhora a acessibilidade e o SEO do seu site.
 </Tip>
 
 </Section>
 
 <Section title="Pratique e Teste" level="intermediate">
 
-<ResourceCard 
-  title="HTML - Quiz (W3Schools)" 
-  url="https://www.w3schools.com/html/html_quiz.asp"
-  type="quiz"
->
-  Quiz rapido para testar seus conhecimentos basicos.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="HTML - Quiz (W3Schools)" 
+    url="https://www.w3schools.com/html/html_quiz.asp"
+    type="quiz"
+  >
+    Quiz rápido para testar seus conhecimentos básicos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="HTML - Exercicios" 
-  url="https://www.w3schools.com/html/html_exercises.asp"
-  type="exercicio"
->
-  Exercicios praticos para fixar o conteudo.
-</ResourceCard>
+  <ResourceCard 
+    title="HTML - Exercícios" 
+    url="https://www.w3schools.com/html/html_exercises.asp"
+    type="exercicio"
+  >
+    Exercícios práticos para fixar o conteúdo.
+  </ResourceCard>
 
-<ResourceCard 
-  title="HTML - Quiz (GitHub)" 
-  url="https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/html/html-quiz.md"
-  type="quiz"
->
-  Perguntas no estilo LinkedIn para se preparar para entrevistas.
-</ResourceCard>
+  <ResourceCard 
+    title="HTML - Quiz (GitHub)" 
+    url="https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/html/html-quiz.md"
+    type="quiz"
+  >
+    Perguntas no estilo LinkedIn para se preparar para entrevistas.
+  </ResourceCard>
 
-<ResourceCard 
-  title="HTML Tutorial - GeeksforGeeks" 
-  url="https://www.geeksforgeeks.org/html-tutorial/"
-  type="tutorial"
->
-  Tutorial completo com explicacoes detalhadas.
-</ResourceCard>
+  <ResourceCard 
+    title="HTML Tutorial - GeeksforGeeks" 
+    url="https://www.geeksforgeeks.org/html-tutorial/"
+    type="tutorial"
+  >
+    Tutorial completo com explicações detalhadas.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
 <Section title="Continuando os Estudos" level="advanced">
 
-<ResourceCard 
-  title="HTML/CSS - Modulo 3 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=ofFgnDtn_1c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ"
-  type="curso"
->
-  Modulo avancado com projetos praticos.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="HTML/CSS - Módulo 3 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=ofFgnDtn_1c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ"
+    type="curso"
+  >
+    Módulo avançado com projetos práticos.
+  </ResourceCard>
 
-<ResourceCard 
-  title="HTML/CSS - Modulo 4 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=zHKHMmEG9vE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT"
-  type="curso"
->
-  Modulo final com tecnicas avancadas de layout.
-</ResourceCard>
+  <ResourceCard 
+    title="HTML/CSS - Módulo 4 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=zHKHMmEG9vE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT"
+    type="curso"
+  >
+    Módulo final com técnicas avançadas de layout.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  Depois de dominar HTML e CSS, o proximo passo natural e JavaScript. Volte para a pagina de JavaScript quando estiver pronto!
+  Depois de dominar HTML e CSS, o próximo passo natural é JavaScript. Volte para a página de JavaScript quando estiver pronto!
 </Tip>
 
 </Section>

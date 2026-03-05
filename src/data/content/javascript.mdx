@@ -1,7 +1,7 @@
 export const frontmatter = {
   id: "javascript",
   title: "JavaScript",
-  description: "A linguagem da web, usada para criar sites interativos e aplicacoes web.",
+  description: "A linguagem da web, usada para criar sites interativos e aplicações web.",
   icon: "JS",
   color: "bg-yellow-400"
 }
@@ -9,72 +9,81 @@ export const frontmatter = {
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Comecando do Zero" level="beginner">
+<Section title="Começando do Zero" level="beginner">
 
-Se voce nunca programou antes, comece por aqui. Esses recursos vao te dar uma base solida.
+Se você nunca programou antes, comece por aqui. Esses recursos vão te dar uma base sólida.
 
-<ResourceCard 
-  title="Javascript - Curso em Video" 
-  url="https://www.youtube.com/watch?v=uzEhd3Lugik&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=3"
-  type="curso"
->
-  Curso completo e didatico com o Professor Guanabara. Excelente para quem esta comecando do absoluto zero.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Javascript - Curso em Vídeo" 
+    url="https://www.youtube.com/watch?v=uzEhd3Lugik&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=3"
+    type="curso"
+  >
+    Curso completo e didático com o Professor Guanabara. Excelente para quem está começando do absoluto zero.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="tip">
-  Assista na velocidade 1.5x se ja tiver nocao de logica de programacao. Foque nos exercicios praticos, nao apenas assista!
+  Assista na velocidade 1.5x se já tiver noção de lógica de programação. Foque nos exercícios práticos, não apenas assista!
 </Tip>
 
-<ResourceCard 
-  title="javascript4noobs" 
-  url="https://github.com/ThiagoDellaNoce/javascript4noobs"
-  type="repositorio"
->
-  Material introdutorio em formato de repositorio no GitHub. Perfeito para ler e testar pequenos trechos de codigo.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="javascript4noobs" 
+    url="https://github.com/ThiagoDellaNoce/javascript4noobs"
+    type="repositorio"
+  >
+    Material introdutório em formato de repositório no GitHub. Perfeito para ler e testar pequenos trechos de código.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Javascript para web - Jessica Felix (Dia 1)" 
-  url="https://www.youtube.com/watch?v=o7qnEYyC9Pg"
-  type="curso"
->
-  Serie de videos focada em JavaScript para manipulacao do DOM e interatividade na web.
-</ResourceCard>
+  <ResourceCard 
+    title="Javascript para web - Jessica Felix (Dia 1)" 
+    url="https://www.youtube.com/watch?v=o7qnEYyC9Pg"
+    type="curso"
+  >
+    Série de vídeos focada em JavaScript para manipulação do DOM e interatividade na web.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
-<Section title="Documentacao e Referencias" level="intermediate">
+<Section title="Documentação e Referências" level="intermediate">
 
-Depois de entender o basico, use essas fontes como material de consulta diaria.
+Depois de entender o básico, use essas fontes como material de consulta diária.
 
-<ResourceCard 
-  title="MDN - Javascript" 
-  url="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
-  type="documentacao"
->
-  A documentacao oficial e mais completa da web. Referencia definitiva para qualquer duvida sobre a linguagem.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="MDN - Javascript" 
+    url="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+    type="documentacao"
+  >
+    A documentação oficial e mais completa da web. Referência definitiva para qualquer dúvida sobre a linguagem.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="warning">
-  A MDN pode parecer tecnica no comeco, mas e a fonte mais confiavel. Use-a como dicionario quando tiver duvidas sobre metodos ou sintaxe.
+  A MDN pode parecer técnica no começo, mas é a fonte mais confiável. Use-a como dicionário quando tiver dúvidas sobre métodos ou sintaxe.
 </Tip>
 
-<ResourceCard 
-  title="W3Schools - Javascript" 
-  url="https://www.w3schools.com/js/default.asp"
-  type="documentacao"
->
-  Tutoriais praticos com exemplos interativos. Otimo para aprender fazendo.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="W3Schools - Javascript" 
+    url="https://www.w3schools.com/js/default.asp"
+    type="documentacao"
+  >
+    Tutoriais práticos com exemplos interativos. Ótimo para aprender fazendo.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Primeiros passos com JavaScript (MDN)" 
-  url="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Scripting"
-  type="artigo"
->
-  Guia estruturado da MDN para quem quer um caminho mais linear de aprendizado.
-</ResourceCard>
+  <ResourceCard 
+    title="Primeiros passos com JavaScript (MDN)" 
+    url="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Scripting"
+    type="artigo"
+  >
+    Guia estruturado da MDN para quem quer um caminho mais linear de aprendizado.
+  </ResourceCard>
+</ResourceGroup>
 
 </Section>
 
@@ -82,76 +91,82 @@ Depois de entender o basico, use essas fontes como material de consulta diaria.
 
 Recursos para entender o que estudar e em qual ordem.
 
-<ResourceCard 
-  title="Roadmap.sh - Javascript" 
-  url="https://roadmap.sh/javascript"
-  type="ferramenta"
->
-  Mapa visual completo de tudo que voce precisa aprender em JavaScript, do basico ao avancado.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Roadmap.sh - Javascript" 
+    url="https://roadmap.sh/javascript"
+    type="ferramenta"
+  >
+    Mapa visual completo de tudo que você precisa aprender em JavaScript, do básico ao avançado.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  Nao tente aprender tudo de uma vez! Use o roadmap como bussola, nao como checklist. Foque em um topico por vez e pratique bastante antes de avancar.
+  Não tente aprender tudo de uma vez! Use o roadmap como bússola, não como checklist. Foque em um tópico por vez e pratique bastante antes de avançar.
 </Tip>
 
 </Section>
 
 <Section title="Pratique e Teste seus Conhecimentos" level="intermediate">
 
-A melhor forma de aprender e praticando. Use esses quizzes e desafios para fixar o conteudo.
+A melhor forma de aprender é praticando. Use esses quizzes e desafios para fixar o conteúdo.
 
-<ResourceCard 
-  title="Perguntas sobre Javascript (75 perguntas)" 
-  url="https://roadmap.sh/questions/javascript"
-  type="quiz"
->
-  Colecao de perguntas do Roadmap.sh para testar seu conhecimento.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Perguntas sobre Javascript (75 perguntas)" 
+    url="https://roadmap.sh/questions/javascript"
+    type="quiz"
+  >
+    Coleção de perguntas do Roadmap.sh para testar seu conhecimento.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Perguntas sobre Javascript (167 perguntas)" 
-  url="https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/javascript/javascript-quiz.md"
-  type="quiz"
->
-  Quizzes no estilo das avaliacoes do LinkedIn. Otimo para se preparar para entrevistas.
-</ResourceCard>
+  <ResourceCard 
+    title="Perguntas sobre Javascript (167 perguntas)" 
+    url="https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/javascript/javascript-quiz.md"
+    type="quiz"
+  >
+    Quizzes no estilo das avaliações do LinkedIn. Ótimo para se preparar para entrevistas.
+  </ResourceCard>
 
-<ResourceCard 
-  title="JavaScript Tutorial - GeeksforGeeks" 
-  url="https://www.geeksforgeeks.org/javascript/"
-  type="tutorial"
->
-  Tutoriais com explicacoes acessiveis e muitos exemplos praticos.
-</ResourceCard>
+  <ResourceCard 
+    title="JavaScript Tutorial - GeeksforGeeks" 
+    url="https://www.geeksforgeeks.org/javascript/"
+    type="tutorial"
+  >
+    Tutoriais com explicações acessíveis e muitos exemplos práticos.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="info">
-  Errar nos quizzes faz parte do processo! Anote os topicos que voce errou e revise-os depois.
+  Errar nos quizzes faz parte do processo! Anote os tópicos que você errou e revise-os depois.
 </Tip>
 
 </Section>
 
-<Section title="Conteudo Avancado" level="advanced">
+<Section title="Conteúdo Avançado" level="advanced">
 
-Para quem ja domina o basico e quer entender closures, event loop, design patterns e mais.
+Para quem já domina o básico e quer entender closures, event loop, design patterns e mais.
 
-<ResourceCard 
-  title="Operadores, condicoes e repeticoes - Jessica Felix (Dia 2)" 
-  url="https://www.youtube.com/watch?v=WdUnEtKc61Q"
-  type="curso"
->
-  Continuacao da serie focando em logica e estruturas de controle.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Operadores, condições e repetições - Jessica Felix (Dia 2)" 
+    url="https://www.youtube.com/watch?v=WdUnEtKc61Q"
+    type="curso"
+  >
+    Continuação da série focando em lógica e estruturas de controle.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Estrutura de dados - Jessica Felix (Dia 3)" 
-  url="https://www.youtube.com/watch?v=w9xS4v98T9o"
-  type="curso"
->
-  Aprenda sobre arrays, objetos e como organizar dados em JavaScript.
-</ResourceCard>
+  <ResourceCard 
+    title="Estrutura de dados - Jessica Felix (Dia 3)" 
+    url="https://www.youtube.com/watch?v=w9xS4v98T9o"
+    type="curso"
+  >
+    Aprenda sobre arrays, objetos e como organizar dados em JavaScript.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  Dominar estruturas de dados e essencial para entrevistas tecnicas em niveis Pleno/Senior. Invista tempo aqui!
+  Dominar estruturas de dados é essencial para entrevistas técnicas em níveis Pleno/Sênior. Invista tempo aqui!
 </Tip>
 
 </Section>

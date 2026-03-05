@@ -1,7 +1,7 @@
 export const frontmatter = {
   id: "python",
   title: "Python",
-  description: "Linguagem versatil usada em ciencia de dados, automacao, desenvolvimento web e mais.",
+  description: "Linguagem versátil usada em ciência de dados, automação, desenvolvimento web e mais.",
   icon: "PY",
   color: "bg-blue-500"
 }
@@ -9,83 +9,90 @@ export const frontmatter = {
 import { ResourceCard } from '@/components/resource-card'
 import { Tip } from '@/components/tip'
 import { Section } from '@/components/section'
+import { ResourceGroup } from '@/components/resource-group'
 
-<Section title="Comecando do Zero" level="beginner">
+<Section title="Começando do Zero" level="beginner">
 
-<ResourceCard 
-  title="Python Mundo 1 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6"
-  type="curso"
->
-  Curso introdutorio de Python por Gustavo Guanabara.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Python Mundo 1 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6"
+    type="curso"
+  >
+    Curso introdutório de Python por Gustavo Guanabara.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Python Mundo 2 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=nJkVHusJp6E&list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye"
-  type="curso"
->
-  Continuacao do curso com foco em estruturas de controle e funcoes.
-</ResourceCard>
+  <ResourceCard 
+    title="Python Mundo 2 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=nJkVHusJp6E&list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye"
+    type="curso"
+  >
+    Continuação do curso com foco em estruturas de controle e funções.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Python Mundo 3 (Curso em Video)" 
-  url="https://www.youtube.com/watch?v=0LB3FSfjvao&list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH"
-  type="curso"
->
-  Terceira parte abordando modulos, pacotes e manipulacao de arquivos.
-</ResourceCard>
+  <ResourceCard 
+    title="Python Mundo 3 (Curso em Vídeo)" 
+    url="https://www.youtube.com/watch?v=0LB3FSfjvao&list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH"
+    type="curso"
+  >
+    Terceira parte abordando módulos, pacotes e manipulação de arquivos.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="tip">
-  Python e conhecida pela sintaxe limpa e legivel. E uma otima primeira linguagem para quem esta comecando!
+  Python é conhecida pela sintaxe limpa e legível. É uma ótima primeira linguagem para quem está começando!
 </Tip>
 
 </Section>
 
-<Section title="Documentacao e Referencias" level="intermediate">
+<Section title="Documentação e Referências" level="intermediate">
 
-<ResourceCard 
-  title="Documentacao Oficial do Python" 
-  url="https://docs.python.org/pt-br/3.13/tutorial/index.html"
-  type="leitura"
->
-  Documentacao oficial do Python em portugues.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="Documentação Oficial do Python" 
+    url="https://docs.python.org/pt-br/3.13/tutorial/index.html"
+    type="leitura"
+  >
+    Documentação oficial do Python em português.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Python Fluente" 
-  url="https://pythonfluente.com/"
-  type="leitura"
->
-  Livro gratuito em portugues que aborda Python moderno com foco em boas praticas.
-</ResourceCard>
+  <ResourceCard 
+    title="Python Fluente" 
+    url="https://pythonfluente.com/"
+    type="leitura"
+  >
+    Livro gratuito em português que aborda Python moderno com foco em boas práticas.
+  </ResourceCard>
 
-<ResourceCard 
-  title="Roadmap Python" 
-  url="https://roadmap.sh/python"
-  type="leitura"
->
-  Guia visual com etapas recomendadas para aprender e se aprofundar em Python.
-</ResourceCard>
+  <ResourceCard 
+    title="Roadmap Python" 
+    url="https://roadmap.sh/python"
+    type="leitura"
+  >
+    Guia visual com etapas recomendadas para aprender e se aprofundar em Python.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="warning">
-  Python tem muitas areas de atuacao (web, dados, automacao, IA). Escolha uma area para focar no inicio!
+  Python tem muitas áreas de atuação (web, dados, automação, IA). Escolha uma área para focar no início!
 </Tip>
 
 </Section>
 
 <Section title="Web com Python" level="advanced">
 
-<ResourceCard 
-  title="FastAPI do ZERO" 
-  url="https://fastapidozero.dunossauro.com/estavel/#sobre-o-curso"
-  type="curso"
->
-  Curso gratuito criado por Dunossauro para ensinar FastAPI do basico ao avancado.
-</ResourceCard>
+<ResourceGroup>
+  <ResourceCard 
+    title="FastAPI do ZERO" 
+    url="https://fastapidozero.dunossauro.com/estavel/#sobre-o-curso"
+    type="curso"
+  >
+    Curso gratuito criado por Dunossauro para ensinar FastAPI do básico ao avançado.
+  </ResourceCard>
+</ResourceGroup>
 
 <Tip type="insight">
-  FastAPI e um dos frameworks mais modernos e rapidos para criar APIs em Python. Se voce quer trabalhar com backend, vale muito a pena aprender!
+  FastAPI é um dos frameworks mais modernos e rápidos para criar APIs em Python. Se você quer trabalhar com backend, vale muito a pena aprender!
 </Tip>
 
 </Section>
