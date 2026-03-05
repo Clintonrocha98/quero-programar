@@ -38,7 +38,7 @@ export function ResourceCard({ title, url, type, children }: ResourceCardProps) 
       )}
     >
       <div className="relative flex items-start gap-3">
-        <div className="flex-1">
+        <div className="flex flex-1 justify-between w-full">
           <a
             href={url}
             target="_blank"

@@ -29,9 +29,9 @@ export function Section({ title, level, children }: SectionProps) {
   const levelStyle = level ? levelStyles[level] : null
 
   return (
-    <section className="mb-8">
-      <div className="flex items-center gap-3 mb-4">
-        <h2 className="text-xl font-bold text-metal-100">{title}</h2>
+    <section className="mb-8 rounded-xl border border-metal-800 bg-metal-900/50 p-6 backdrop-blur-sm">
+      <div className="flex items-center gap-3 mb-6 pb-4 border-b border-metal-800">
+        <h2 className="text-xl font-bold text-metal-100 m-0">{title}</h2>
         {levelStyle && (
           <span className={cn("inline-block rounded-full border px-3 py-1 text-xs font-medium", levelStyle.badge)}>
             {levelStyle.label}

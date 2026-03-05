@@ -13,6 +13,7 @@ import WebContent, { frontmatter as webMeta } from './web.mdx'
 import ArtigosContent, { frontmatter as artigosMeta } from './artigos.mdx'
 import ResourcesContent, { frontmatter as resourcesMeta } from './resources.mdx'
 import InicianteContent, { frontmatter as inicianteMeta } from './iniciante.mdx'
+import StudyPlanContent, { frontmatter as studyPlanMeta } from './study-plan.mdx'
 
 export interface TechnologyMeta {
   id: string
@@ -87,10 +88,15 @@ export const pages: Record<string, ContentItem<PageMeta>> = {
     meta: inicianteMeta,
     Content: InicianteContent,
   },
+  "study-plan": {
+    meta: studyPlanMeta,
+    Content: StudyPlanContent,
+  },
 }
 
 // Interface compativel com LanguageCard
 export interface TechnologyCardInfo {
+  id: string
   name: string
   description: string
   icon: string
@@ -103,6 +109,7 @@ export const technologiesList: TechnologyMeta[] = Object.values(technologies).ma
 
 // Lista formatada para uso com LanguageCard
 export const technologiesForCards: TechnologyCardInfo[] = Object.values(technologies).map(t => ({
+  id: t.meta.id,
   name: t.meta.title,
   description: t.meta.description,
   icon: t.meta.icon,
