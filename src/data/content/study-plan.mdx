@@ -1,0 +1,435 @@
+export const frontmatter = {
+  id: "study-plan",
+  title: "Plano de Estudos",
+  description: "Um guia do que estudar antes de começar a programar."
+}
+
+import { LearningPath, LearningPathItem, LearningPathContent } from '@/components/learning-path'
+import { CodeBlock } from '@/components/code-block'
+import { ResourceCard } from '@/components/resource-card'
+import { Tip } from '@/components/tip'
+import { ResourceGroup } from '@/components/resource-group'
+
+<LearningPath>
+
+  <LearningPathItem>
+    <LearningPathContent>
+      ## FASE 1 — SISTEMA & LINHA DE COMANDO (Fundação)
+
+      **Objetivo:** Ficar confortável navegando no sistema, entendendo o que é arquivo, processo e comando.
+
+      ### Conteúdos
+      - Sistema de arquivos (diretórios, paths absolutos/relativos)
+      - Comandos essenciais: <b>ls</b>, <b>cd</b>, <b>pwd</b>, <b>cp</b>, <b>mv</b>, <b>rm</b>
+      - Leitura de arquivos: <b>cat</b>, <b>less</b>, <b>head</b>, <b>tail</b>
+      - Busca: <b>grep</b>, <b>find</b>
+      - Permissões: leitura, escrita, execução (<b>chmod</b>, <b>chown</b>)
+      - Variáveis de ambiente
+      - Redirecionamento e pipes (<b>{'>'}</b>, <b>{'>>'}</b>, <b>{'|'}</b>)
+
+      <CodeBlock 
+        filename="terminal.sh"
+        language="bash"
+        code={`# Listar arquivos e mostrar permissoes
+ls -la
+
+# Criar um diretorio e entrar nele
+mkdir projeto-inicial && cd projeto-inicial
+
+# Criar um arquivo com conteudo
+echo "Ola Mundo" > arquivo.txt
+
+# Ler o arquivo
+cat arquivo.txt
+
+# Copiar arquivo
+cp arquivo.txt backup.txt
+
+# Listar processos rodando
+ps aux | grep chrome
+`}
+      />
+
+      ### Entregáveis
+      - Navegar e organizar arquivos sem interface gráfica
+      - Criar scripts simples de shell
+      - Resolver problemas comuns só com terminal
+      - Entender mensagens de erro básicas
+
+      ### Conteúdo para Estudo
+      <ResourceGroup>
+        <ResourceCard 
+          title="Linux4Noobs" 
+          url="https://github.com/lucascbittencourt/linux4noobs?tab=readme-ov-file"
+          type="repositorio"
+        >
+          Guia completo para iniciantes no mundo Linux.
+        </ResourceCard>
+      </ResourceGroup>
+    </LearningPathContent>
+  </LearningPathItem>
+
+  <LearningPathItem>
+    <LearningPathContent>
+      ## FASE 2 — DADOS COMO CONCEITO (Antes de banco)
+
+      **Objetivo:** Entender dados **antes** de entrar em banco de dados.
+
+      ### Conteúdos
+      - O que são dados estruturados
+      - Diferença entre CSV, XLSX e JSON
+      - Tipos de dados: texto, números, datas
+      - Normalização básica
+      - Chave primária e identificadores
+      - Pensar dados como tabelas
+
+      <CodeBlock 
+        filename="dados.json"
+        language="json"
+        code={`[
+    {
+      "id": 1,
+      "nome": "Joao Silva",
+      "email": "joao@email.com",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Maria Souza",
+      "email": "maria@email.com",
+      "ativo": false
+    }
+]`}
+      />
+
+      ### Entregáveis
+      - Criar tabelas bem estruturadas em CSV
+      - Identificar erros comuns de modelagem
+      - Transformar dados mal organizados em dados organizados
+
+      ### Conteúdo para Estudo
+      <ResourceGroup>
+        <ResourceCard 
+          title="Diferença entre JSON e CSV" 
+          url="https://www.geeksforgeeks.org/blogs/difference-between-json-and-csv/"
+          type="artigo"
+        >
+          Artigo explicando as diferenças fundamentais entre os formatos.
+        </ResourceCard>
+        
+        <ResourceCard 
+          title="Chaves Primárias em Banco de Dados" 
+          url="https://www.geeksforgeeks.org/dbms/primary-key-in-dbms/"
+          type="artigo"
+        >
+          Entenda o conceito de chave primária.
+        </ResourceCard>
+
+        <ResourceCard 
+          title="Tipos de Dados SQL" 
+          url="https://www.w3schools.com/sql/sql_datatypes.asp"
+          type="documentacao"
+        >
+          Guia sobre os diferentes tipos de dados.
+        </ResourceCard>
+      </ResourceGroup>
+    </LearningPathContent>
+  </LearningPathItem>
+
+  <LearningPathItem>
+    <LearningPathContent>
+      ## FASE 3 — BANCO DE DADOS RELACIONAL & SQL
+
+      **Objetivo:** Pensar sistemas a partir de dados.
+
+      ### Conteúdos
+      - Conceitos fundamentais: tabelas, linhas, colunas, relações
+      - Modelagem relacional: 1:1, 1:N, N:N
+      - Chaves: primária, estrangeira
+      - SQL básico: <b>SELECT</b>, <b>INSERT</b>, <b>UPDATE</b>, <b>DELETE</b>
+      - SQL intermediário: <b>WHERE</b>, <b>ORDER BY</b>, <b>LIMIT</b>, <b>JOIN</b>, <b>GROUP BY</b>
+      - Diferença prática entre MySQL e PostgreSQL
+
+      <CodeBlock 
+        filename="queries.sql"
+        language="sql"
+        code={`-- Criar tabela de usuarios
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE
+);
+
+-- Buscar usuarios ativos
+SELECT * FROM users WHERE active = true;
+
+-- Relacionar usuarios e pedidos
+SELECT users.name, orders.total 
+FROM users 
+JOIN orders ON users.id = orders.user_id;`}
+      />
+
+      ### Entregáveis
+      - Modelar um sistema simples (ex: usuários + pedidos)
+      - Criar banco do zero e popular com dados
+      - Fazer consultas que respondem perguntas reais
+      - Ler SQL e entender o que ele faz
+
+      ### Conteúdo para Estudo
+      <ResourceGroup>
+        <ResourceCard 
+          title="SQL4Noobs" 
+          url="https://github.com/Luisnadachi/SQL4Noobs"
+          type="repositorio"
+        >
+          Aprenda SQL de forma prática e direta.
+        </ResourceCard>
+
+        <ResourceCard 
+          title="Tutorial SQL W3Schools" 
+          url="https://www.w3schools.com/sql/"
+          type="tutorial"
+        >
+          Referência completa e interativa de SQL.
+        </ResourceCard>
+      </ResourceGroup>
+    </LearningPathContent>
+  </LearningPathItem>
+
+  <LearningPathItem>
+    <LearningPathContent>
+      ## FASE 4 — ARQUITETURA DE SISTEMAS (SEM CÓDIGO)
+
+      **Objetivo:** Aprender a pensar *antes* de programar.
+
+      ### Conteúdos
+      - Separação de responsabilidades: dados, lógica, apresentação
+      - O que é backend e frontend
+      - Fluxo de dados: usuário → sistema → banco → resposta
+      - Erros comuns de arquitetura
+
+      <Tip type="insight">
+        Antes de escrever uma linha de código, desenhe. Entender o fluxo de dados economiza horas de programação.
+      </Tip>
+
+      ### Entregáveis
+      - Desenhar arquitetura de um sistema simples
+      - Identificar onde cada parte vive
+      - Explicar um sistema sem mencionar linguagem
+
+      ### Conteúdo para Estudo
+      <ResourceGroup>
+        <ResourceCard 
+          title="O Padrão MVC" 
+          url="https://medium.com/@gabrielequevedo/model-view-controller-mvc-316fbc169a5"
+          type="artigo"
+        >
+          Entenda como estruturar aplicações web de forma eficiente.
+        </ResourceCard>
+
+        <ResourceCard 
+          title="Como a Web funciona" 
+          url="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works"
+          type="artigo"
+        >
+          Visão geral do funcionamento da internet.
+        </ResourceCard>
+
+        <ResourceCard 
+          title="Client-side vs Server-side" 
+          url="https://www.cloudflare.com/pt-br/learning/serverless/glossary/client-side-vs-server-side/"
+          type="artigo"
+        >
+          Diferenças entre processamento no cliente e no servidor.
+        </ResourceCard>
+      </ResourceGroup>
+    </LearningPathContent>
+  </LearningPathItem>
+
+  <LearningPathItem>
+    <LearningPathContent>
+      ## FASE 5 — WEB: HTML & CSS (Browsers)
+
+      **Objetivo:** Entender o que o browser faz e como ele renderiza páginas.
+
+      ### Conteúdos
+      - Como um browser funciona
+      - HTML: semântica, estrutura, tags principais
+      - CSS: layout, estilos, Box model
+      - Responsividade básica
+      - Separação conteúdo vs aparência
+
+      <CodeBlock 
+        filename="index.html"
+        language="html"
+        code={`<!-- Estrutura semantica basica -->
+<article class="card">
+    <header>
+      <h2>Titulo do Artigo</h2>
+      <span class="date">01/01/2024</span>
+    </header>
+    
+    <p>Conteudo do artigo...</p>
+    
+    <footer>
+      <a href="#" class="btn">Ler mais</a>
+    </footer>
+</article>`}
+      />
+
+      ### Entregáveis
+      - Criar páginas estáticas bem estruturadas
+      - Identificar dados “vindos do banco” em páginas
+      - Ler HTML/CSS de terceiros e entender
+
+      ### Conteúdo para Estudo
+      <ResourceGroup>
+        <ResourceCard 
+          title="HTML4Noobs" 
+          url="https://github.com/lucassoren/HTML4Noobs"
+          type="repositorio"
+        >
+          Aprenda HTML do zero.
+        </ResourceCard>
+
+        <ResourceCard 
+          title="CSS4Noobs" 
+          url="https://github.com/he4rt/css4noobs"
+          type="repositorio"
+        >
+          Domine a estilização com CSS.
+        </ResourceCard>
+
+        <ResourceCard 
+          title="Como os navegadores funcionam" 
+          url="https://web.dev/articles/howbrowserswork?hl=pt-br"
+          type="artigo"
+        >
+          Entenda o processo de renderização.
+        </ResourceCard>
+      </ResourceGroup>
+    </LearningPathContent>
+  </LearningPathItem>
+
+  <LearningPathItem>
+    <LearningPathContent>
+      ## FASE 6 — INTEGRAÇÃO MENTAL (Dados + Web)
+
+      **Objetivo:** Conectar tudo sem programar ainda.
+
+      ### Conteúdos
+      - Mapear tabelas → elementos da página
+      - Identificar CRUD em interfaces web
+      - Pensar páginas como “visualização de dados”
+      - Fluxo completo do sistema
+
+      <CodeBlock 
+        language="plaintext"
+        code={`Banco de Dados (Tabela Users)
+| id | nome | avatar_url |
+--------------------------
+| 1  | Ana  | /img/1.jpg |
+
+⬇ transforma em ⬇
+
+Interface Web (HTML)
+
+<div class="user-card">
+    <img src="/img/1.jpg" />
+    <h3>Ana</h3>
+</div>
+`}
+      />
+
+      ### Entregáveis
+      - Planejar páginas a partir de modelos de dados
+      - Explicar como um site consome dados
+      - Desenhar telas baseadas no banco
+
+      ### Conteúdo para Estudo
+      <ResourceGroup>
+        <ResourceCard 
+          title="Entendendo o CRUD" 
+          url="https://pt.wikipedia.org/wiki/CRUD"
+          type="leitura"
+        >
+          Create, Read, Update, Delete: as quatro operações básicas.
+        </ResourceCard>
+      </ResourceGroup>
+    </LearningPathContent>
+  </LearningPathItem>
+
+  <LearningPathItem>
+    <LearningPathContent>
+      ## FASE 7 — ESCOLHA DE LINGUAGEM & PROGRAMAÇÃO
+
+      **Objetivo:** Agora sim, codar com contexto.
+
+      ### Conteúdos
+      - Escolher uma linguagem (PHP, Python, Java, JS, etc.)
+      - Sintaxe básica: variáveis, condicionais, loops, funções
+      - Conectar linguagem ao banco
+      - Executar consultas via código
+
+      <CodeBlock 
+        filename="app.js"
+        language="javascript"
+        code={`// Exemplo conceitual de conexao
+async function getUsers() {
+    // 1. Conecta
+    const db = await connectToDatabase();
+    
+    // 2. Consulta
+    const users = await db.query("SELECT * FROM users");
+    
+    // 3. Retorna dados
+    return users;
+}
+
+// 4. Usa os dados
+const userList = await getUsers();
+console.log(userList);`}
+      />
+
+      ### Entregáveis
+      - Criar programa simples que lê/escreve no banco
+      - Implementar CRUD básico
+      - Resolver problemas reais com código
+    </LearningPathContent>
+  </LearningPathItem>
+
+  <LearningPathItem isLast={true}>
+    <LearningPathContent>
+      ## FASE 8 — PROJETOS PRÁTICOS
+
+      **Objetivo:** Consolidar tudo.
+
+      ### Projetos sugeridos
+      - Sistema simples de cadastro
+      - Página web conectada ao banco
+      - Aplicação com login fictício
+      - CRUD completo
+
+      ### Entregáveis
+      - Código organizado
+      - Banco bem modelado
+      - Interface funcional
+      - Explicar o projeto de ponta a ponta
+
+      <Tip type="insight">
+        Ao completar esta fase, você terá uma base sólida em web, dados e programação, usando a linguagem apenas como ferramenta e não como muleta.
+      </Tip>
+      
+      ### Conclusão e Próximos Passos
+      
+      Ao finalizar este plano, você terá desenvolvido:
+      
+      - Conforto com terminal
+      - Pensamento orientado a dados
+      - Entendimento de arquitetura
+      - Base sólida em web
+      - Linguagem como ferramenta, não muleta
+    </LearningPathContent>
+  </LearningPathItem>
+
+</LearningPath>

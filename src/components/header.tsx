@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Menu, X, Code, BookOpen, Home, FileText } from "lucide-react"
+import { Menu, X, Code, BookOpen, Home, FileText, Map } from "lucide-react"
 import { MobileNavLink } from "./mobile-nav-link"
 import { NavLink } from "./nav-link"
 
@@ -24,6 +24,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <NavLink href="/" icon={<Home className="h-4 w-4 mr-1" />} label="O começo" />
+            <NavLink href="/plano-de-estudos" icon={<Map className="h-4 w-4 mr-1" />} label="Plano de Estudos" />
             <NavLink href="/tecnologias" icon={<Code className="h-4 w-4 mr-1" />} label="Tecnologias" />
             <NavLink href="/recursos" icon={<BookOpen className="h-4 w-4 mr-1" />} label="Recursos" />
             <NavLink href="/artigos" icon={<FileText className="h-4 w-4 mr-1" />} label="Artigos" />
@@ -48,6 +49,7 @@ export default function Header() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-metal-900 border-b border-metal-800 shadow-lg">
             <MobileNavLink href="/" icon={<Home className="h-5 w-5 mr-2" />} label="Início" />
+            <MobileNavLink href="/plano-de-estudos" icon={<Map className="h-5 w-5 mr-2" />} label="Plano de Estudos" />
             <MobileNavLink href="/tecnologias" icon={<Code className="h-5 w-5 mr-2" />} label="Tecnologias" />
             <MobileNavLink href="/recursos" icon={<BookOpen className="h-5 w-5 mr-2" />} label="Recursos" />
             <MobileNavLink href="/artigos" icon={<FileText className="h-5 w-5 mr-2" />} label="Artigos" />
@@ -57,3 +59,4 @@ export default function Header() {
     </header>
   )
 }
+
