@@ -36,7 +36,7 @@ export const navigationConfig: NavigationConfig = {
     },
     {
       id: 'comunidade-4noobs',
-      label: 'Comunidade / 4Noobs',
+      label: 'He4rt',
       icon: 'Rocket',
       children: [
         { id: '4noobs-todas', label: 'Ver Todas', href: '/he4rt/4noobs' },
@@ -44,6 +44,11 @@ export const navigationConfig: NavigationConfig = {
         { id: '4noobs-frameworks', label: 'Frameworks', href: '/he4rt/4noobs/frameworks' },
         { id: '4noobs-ferramentas', label: 'Ferramentas', href: '/he4rt/4noobs/ferramentas' },
         { id: '4noobs-banco-de-dados', label: 'Bancos de Dados', href: '/he4rt/4noobs/banco-de-dados' },
+        { id: '4noobs-sistemas-operacionais', label: 'Sistemas Operacionais', href: '/he4rt/4noobs/sistemas-operacionais' },
+        { id: '4noobs-design', label: 'Design', href: '/he4rt/4noobs/design' },
+        { id: '4noobs-paradigmas', label: 'Paradigmas', href: '/he4rt/4noobs/paradigmas' },
+        { id: '4noobs-diversos', label: 'Diversos', href: '/he4rt/4noobs/diversos' },
+        { id: '4noobs-certificacoes', label: 'Certificações', href: '/he4rt/4noobs/certificacoes' },
       ]
     },
     {

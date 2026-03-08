@@ -1,0 +1,24 @@
+export const frontmatter = {
+  title: "Paradigmas",
+  description: "Repositórios sobre conceitos bases e paradigmas de programação.",
+  icon: "Share2"
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { ContentSection } from '@/components/content-section'
+import { ResourceGroup } from '@/components/resource-group'
+
+<ContentSection title="Paradigmas de Programação">
+  Aprenda as ideias que moldam a forma de se escrever e arquitetar softwares e linguagens.
+
+  <ResourceGroup>
+    <ResourceCard
+      title="POO"
+      url="https://github.com/atomotavio/POO4Noobs"
+      type="repositorio"
+      author="atomotavio"
+    >
+      Aprenda o básico de programação orientada a objetos.
+    </ResourceCard>
+  </ResourceGroup>
+</ContentSection>

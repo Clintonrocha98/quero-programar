@@ -1,0 +1,33 @@
+export const frontmatter = {
+  title: "Design",
+  description: "Repositórios voltados para a área de design focados no desenvolvedor.",
+  icon: "LayoutTemplate"
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { ContentSection } from '@/components/content-section'
+import { ResourceGroup } from '@/components/resource-group'
+
+<ContentSection title="Design">
+  Entenda os princípios de design para construir não apenas software que funciona, mas interfaces focadas nos usuários.
+
+  <ResourceGroup>
+    <ResourceCard
+      title="UI"
+      url="https://github.com/IUX7K/ui4noobs"
+      type="repositorio"
+      author="IUX7K"
+    >
+      Introdução ao UI Design de forma acessível para iniciantes.
+    </ResourceCard>
+    
+    <ResourceCard
+      title="UX"
+      url="https://github.com/IUX7K/ux4noobs/"
+      type="repositorio"
+      author="IUX7K"
+    >
+      Introdução ao UX Design para iniciantes.
+    </ResourceCard>
+  </ResourceGroup>
+</ContentSection>

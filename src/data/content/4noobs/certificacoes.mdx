@@ -1,0 +1,24 @@
+export const frontmatter = {
+  title: "Certificações",
+  description: "Repositórios com estudos preparatórios para as principais certificações.",
+  icon: "FileText"
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { ContentSection } from '@/components/content-section'
+import { ResourceGroup } from '@/components/resource-group'
+
+<ContentSection title="Certificações">
+  Prepare-se adequadamente para provas com estes guias de estudos.
+
+  <ResourceGroup>
+    <ResourceCard
+      title="LPI"
+      url="https://github.com/lanjoni/lpi4noobs"
+      type="repositorio"
+      author="lanjoni"
+    >
+      Guia completo para a certificação Linux Professional Institute.
+    </ResourceCard>
+  </ResourceGroup>
+</ContentSection>

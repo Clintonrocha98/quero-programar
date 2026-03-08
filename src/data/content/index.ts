@@ -14,6 +14,11 @@ import Linguagens4Noobs, { frontmatter as linguagens4NoobsMeta } from './4noobs/
 import Frameworks4Noobs, { frontmatter as frameworks4NoobsMeta } from './4noobs/frameworks.mdx'
 import Ferramentas4Noobs, { frontmatter as ferramentas4NoobsMeta } from './4noobs/ferramentas.mdx'
 import BancoDeDados4Noobs, { frontmatter as bancoDeDados4NoobsMeta } from './4noobs/banco-de-dados.mdx'
+import SistemasOperacionais4Noobs, { frontmatter as sistemasOperacionais4NoobsMeta } from './4noobs/sistemas-operacionais.mdx'
+import Design4Noobs, { frontmatter as design4NoobsMeta } from './4noobs/design.mdx'
+import Paradigmas4Noobs, { frontmatter as paradigmas4NoobsMeta } from './4noobs/paradigmas.mdx'
+import Diversos4Noobs, { frontmatter as diversos4NoobsMeta } from './4noobs/diversos.mdx'
+import Certificacoes4Noobs, { frontmatter as certificacoes4NoobsMeta } from './4noobs/certificacoes.mdx'
 
 // Importacao dos arquivos MDX de paginas
 import ArtigosContent, { frontmatter as artigosMeta } from './pages/artigos.mdx'
@@ -125,6 +130,26 @@ export const fourNoobsData: Record<string, ContentItem<FourNoobsMeta>> = {
   "banco-de-dados": {
     meta: { ...bancoDeDados4NoobsMeta, id: 'banco-de-dados', color: 'bg-indigo-500/10 text-indigo-500' },
     Content: BancoDeDados4Noobs,
+  },
+  "sistemas-operacionais": {
+    meta: { ...sistemasOperacionais4NoobsMeta, id: 'sistemas-operacionais', color: 'bg-stone-500/10 text-stone-500' },
+    Content: SistemasOperacionais4Noobs,
+  },
+  design: {
+    meta: { ...design4NoobsMeta, id: 'design', color: 'bg-pink-500/10 text-pink-500' },
+    Content: Design4Noobs,
+  },
+  paradigmas: {
+    meta: { ...paradigmas4NoobsMeta, id: 'paradigmas', color: 'bg-purple-500/10 text-purple-500' },
+    Content: Paradigmas4Noobs,
+  },
+  diversos: {
+    meta: { ...diversos4NoobsMeta, id: 'diversos', color: 'bg-yellow-500/10 text-yellow-500' },
+    Content: Diversos4Noobs,
+  },
+  certificacoes: {
+    meta: { ...certificacoes4NoobsMeta, id: 'certificacoes', color: 'bg-cyan-500/10 text-cyan-500' },
+    Content: Certificacoes4Noobs,
   },
 }
 

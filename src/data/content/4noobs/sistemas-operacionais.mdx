@@ -1,0 +1,33 @@
+export const frontmatter = {
+  title: "Sistemas Operacionais",
+  description: "Repositórios com tutoriais e dicas sobre sistemas operacionais mantidos pela comunidade.",
+  icon: "Terminal"
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { ContentSection } from '@/components/content-section'
+import { ResourceGroup } from '@/components/resource-group'
+
+<ContentSection title="Sistemas Operacionais">
+  Aprenda como dominar o ambiente base onde todos os seus códigos irão rodar.
+
+  <ResourceGroup>
+    <ResourceCard
+      title="Arch Linux"
+      url="https://github.com/LucasHe4rt/ArchLinux4noobs"
+      type="repositorio"
+      author="LucasHe4rt"
+    >
+      Tutorial de instalação da distribuição Arch Linux.
+    </ResourceCard>
+    
+    <ResourceCard
+      title="Linux"
+      url="https://github.com/lucashe4rt/linux4noobs"
+      type="repositorio"
+      author="lucashe4rt"
+    >
+      Tutorial de Linux para iniciantes em programação.
+    </ResourceCard>
+  </ResourceGroup>
+</ContentSection>

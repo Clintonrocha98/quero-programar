@@ -1,0 +1,42 @@
+export const frontmatter = {
+  title: "Diversos",
+  description: "Repositórios de temas diversos que compõem a cultura do desenvolvimento.",
+  icon: "Briefcase"
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { ContentSection } from '@/components/content-section'
+import { ResourceGroup } from '@/components/resource-group'
+
+<ContentSection title="Diversos">
+  Materiais sobre outras disciplinas fundamentais que completam o conhecimento de quem programa.
+
+  <ResourceGroup>
+    <ResourceCard
+      title="QA"
+      url="https://github.com/vcwild/qa4noobs"
+      type="repositorio"
+      author="vcwild"
+    >
+      Introdução a testes e qualidade de software.
+    </ResourceCard>
+    
+    <ResourceCard
+      title="DevOps"
+      url="https://github.com/lbarcat/DevOps4noobs"
+      type="repositorio"
+      author="lbarcat"
+    >
+      Aprenda e pratique a cultura DevOps.
+    </ResourceCard>
+    
+    <ResourceCard
+      title="Acessibilidade na Web"
+      url="https://github.com/Gabrielbsb21/acessibilidade4Noobs"
+      type="repositorio"
+      author="Gabrielbsb21"
+    >
+      Introdução à acessibilidade em aplicações web.
+    </ResourceCard>
+  </ResourceGroup>
+</ContentSection>
