@@ -1,0 +1,44 @@
+export const frontmatter = {
+  title: "Bancos de Dados",
+  description: "Cursos e materiais para aprender bancos de dados e como modelar informações.",
+  icon: "Database"
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { ContentSection } from '@/components/content-section'
+import { ResourceGroup } from '@/components/resource-group'
+
+<ContentSection title="Bancos de Dados">
+  Aprenda como as aplicações armazenam, buscam e gerenciam dados.
+
+  <ResourceGroup>
+    <ResourceCard
+      title="PostgreSQL 4Noobs"
+      description="Aprenda um dos bancos relacionais open source mais avançados e robustos do mundo."
+      url="https://github.com/he4rt/postgresql4noobs"
+      icon="Server"
+      type="curso"
+    />
+    <ResourceCard
+      title="MySQL 4Noobs"
+      description="Comece pelo MySQL, o banco de dados relacional (SQL) mais popular para aplicações web."
+      url="https://github.com/he4rt/mysql4noobs"
+      icon="Database"
+      type="curso"
+    />
+    <ResourceCard
+      title="MongoDB 4Noobs"
+      description="Descubra bancos NoSQL baseados em documentos com o MongoDB, muito comum com Node.js."
+      url="https://github.com/he4rt/mongodb4noobs"
+      icon="Folder"
+      type="curso"
+    />
+    <ResourceCard
+      title="Redis 4Noobs"
+      description="Aprenda como melhorar a performance de aplicações com banco de dados em memória e cache."
+      url="https://github.com/he4rt/redis4noobs"
+      icon="Zap"
+      type="curso"
+    />
+  </ResourceGroup>
+</ContentSection>

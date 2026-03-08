@@ -35,6 +35,18 @@ export const navigationConfig: NavigationConfig = {
       ]
     },
     {
+      id: 'comunidade-4noobs',
+      label: 'Comunidade / 4Noobs',
+      icon: 'Rocket',
+      children: [
+        { id: '4noobs-todas', label: 'Ver Todas', href: '/he4rt/4noobs' },
+        { id: '4noobs-linguagens', label: 'Linguagens', href: '/he4rt/4noobs/linguagens' },
+        { id: '4noobs-frameworks', label: 'Frameworks', href: '/he4rt/4noobs/frameworks' },
+        { id: '4noobs-ferramentas', label: 'Ferramentas', href: '/he4rt/4noobs/ferramentas' },
+        { id: '4noobs-banco-de-dados', label: 'Bancos de Dados', href: '/he4rt/4noobs/banco-de-dados' },
+      ]
+    },
+    {
       id: 'recursos',
       label: 'Recursos',
       icon: 'BookOpen',

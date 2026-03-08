@@ -1,0 +1,51 @@
+export const frontmatter = {
+  title: "Ferramentas",
+  description: "Aprenda sobre ferramentas essenciais no dia a dia do desenvolvimento.",
+  icon: "Wrench"
+}
+
+import { ResourceCard } from '@/components/resource-card'
+import { ContentSection } from '@/components/content-section'
+import { ResourceGroup } from '@/components/resource-group'
+
+<ContentSection title="Ferramentas">
+  O dia a dia de todo programador exige domínio de diversas ferramentas que facilitam o trabalho.
+
+  <ResourceGroup>
+    <ResourceCard
+      title="Git 4Noobs"
+      description="Aprenda a versionar o seu código. O controle de versão é uma habilidade obrigatória em qualquer empresa."
+      url="https://github.com/he4rt/git4noobs"
+      icon="GitBranch"
+      type="curso"
+    />
+    <ResourceCard
+      title="Docker 4Noobs"
+      description="Entenda como empacotar e distribuir suas aplicações em containers usando Docker."
+      url="https://github.com/he4rt/docker4noobs"
+      icon="Box"
+      type="curso"
+    />
+    <ResourceCard
+      title="Linux 4Noobs"
+      description="Comece no mundo Linux. O sistema operacional mais utilizado nos servidores da internet."
+      url="https://github.com/he4rt/linux4noobs"
+      icon="Terminal"
+      type="curso"
+    />
+    <ResourceCard
+      title="Vim 4Noobs"
+      description="Aprenda a editar arquivos de forma super produtiva e diretamente do terminal com o Vim."
+      url="https://github.com/he4rt/vim4noobs"
+      icon="Edit3"
+      type="curso"
+    />
+    <ResourceCard
+      title="GitHub Actions 4Noobs"
+      description="Automatize seus fluxos de trabalho, como testes e deploys usando o GitHub Actions."
+      url="https://github.com/he4rt/githubactions4noobs"
+      icon="PlaySquare"
+      type="curso"
+    />
+  </ResourceGroup>
+</ContentSection>

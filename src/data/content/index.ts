@@ -9,6 +9,12 @@ import PythonContent, { frontmatter as pythonMeta } from './technologies/python.
 import TypescriptContent, { frontmatter as typescriptMeta } from './technologies/typescript.mdx'
 import WebContent, { frontmatter as webMeta } from './technologies/web.mdx'
 
+// Importação dos arquivos MDX de Comunidade/4noobs
+import Linguagens4Noobs, { frontmatter as linguagens4NoobsMeta } from './4noobs/linguagens.mdx'
+import Frameworks4Noobs, { frontmatter as frameworks4NoobsMeta } from './4noobs/frameworks.mdx'
+import Ferramentas4Noobs, { frontmatter as ferramentas4NoobsMeta } from './4noobs/ferramentas.mdx'
+import BancoDeDados4Noobs, { frontmatter as bancoDeDados4NoobsMeta } from './4noobs/banco-de-dados.mdx'
+
 // Importacao dos arquivos MDX de paginas
 import ArtigosContent, { frontmatter as artigosMeta } from './pages/artigos.mdx'
 import ResourcesContent, { frontmatter as resourcesMeta } from './pages/resources.mdx'
@@ -23,13 +29,21 @@ export interface TechnologyMeta {
   color: string
 }
 
+export interface FourNoobsMeta {
+  id: string
+  title: string
+  description: string
+  icon: string
+  color?: string
+}
+
 export interface PageMeta {
   id: string
   title: string
   description: string
 }
 
-export interface ContentItem<T = TechnologyMeta | PageMeta> {
+export interface ContentItem<T = TechnologyMeta | PageMeta | FourNoobsMeta> {
   meta: T
   Content: React.ComponentType
 }
@@ -94,6 +108,26 @@ export const pages: Record<string, ContentItem<PageMeta>> = {
   },
 }
 
+// Mapa de paginas 4Noobs
+export const fourNoobsData: Record<string, ContentItem<FourNoobsMeta>> = {
+  linguagens: {
+    meta: { ...linguagens4NoobsMeta, id: 'linguagens', color: 'bg-blue-500/10 text-blue-500' },
+    Content: Linguagens4Noobs,
+  },
+  frameworks: {
+    meta: { ...frameworks4NoobsMeta, id: 'frameworks', color: 'bg-green-500/10 text-green-500' },
+    Content: Frameworks4Noobs,
+  },
+  ferramentas: {
+    meta: { ...ferramentas4NoobsMeta, id: 'ferramentas', color: 'bg-orange-500/10 text-orange-500' },
+    Content: Ferramentas4Noobs,
+  },
+  "banco-de-dados": {
+    meta: { ...bancoDeDados4NoobsMeta, id: 'banco-de-dados', color: 'bg-indigo-500/10 text-indigo-500' },
+    Content: BancoDeDados4Noobs,
+  },
+}
+
 // Interface compativel com TechnologyCard
 export interface TechnologyCardInfo {
   id: string
@@ -117,6 +151,15 @@ export const technologiesForCards: TechnologyCardInfo[] = Object.values(technolo
   url: `/tecnologias/${t.meta.id}`,
 }))
 
+export const fourNoobsForCards: TechnologyCardInfo[] = Object.values(fourNoobsData).map(t => ({
+  id: t.meta.id,
+  name: t.meta.title,
+  description: t.meta.description,
+  icon: t.meta.icon,
+  color: t.meta.color || 'bg-gray-500/10 text-gray-500',
+  url: `/he4rt/4noobs/${t.meta.id}`,
+}))
+
 // Funcao auxiliar para buscar uma tecnologia pelo ID
 export function getTechnology(id: string): ContentItem<TechnologyMeta> | undefined {
   return technologies[id.toLowerCase()]
@@ -135,4 +178,14 @@ export function getPage(id: string): ContentItem<PageMeta> | undefined {
 // Verifica se uma pagina existe
 export function hasPage(id: string): boolean {
   return id.toLowerCase() in pages
+}
+
+// Funcao auxiliar para buscar dados do 4Noobs pelo ID
+export function getFourNoobs(id: string): ContentItem<FourNoobsMeta> | undefined {
+  return fourNoobsData[id.toLowerCase()]
+}
+
+// Verifica se uma rota do 4Noobs existe
+export function hasFourNoobs(id: string): boolean {
+  return id.toLowerCase() in fourNoobsData
 }

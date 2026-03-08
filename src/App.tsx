@@ -10,6 +10,8 @@ import ArticlesPage from "./pages/articles";
 import StudyPlanPage from "./pages/study-plan";
 import TechnologyDetailsPage from "./pages/technology-details";
 import DebugGuidePage from "./pages/debug-guide";
+import FourNoobsPage from "./pages/4noobs/4noobs-list";
+import FourNoobsCategoryPage from "./pages/4noobs/4noobs-details";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
             <Route path="/recursos" element={<ResourcesPage />} />
             <Route path="/artigos" element={<ArticlesPage />} />
             <Route path="/como-debugar" element={<DebugGuidePage />} />
+            <Route path="/he4rt/4noobs" element={<FourNoobsPage />} />
+            <Route path="/he4rt/4noobs/:categoryId" element={<FourNoobsCategoryPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AppLayout>
