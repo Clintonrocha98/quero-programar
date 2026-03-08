@@ -87,7 +87,7 @@ export function StudyPathNavigator({ children, className }: StudyPathNavigatorPr
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={cn(
-                  "flex items-center gap-2 px-4 py-2 rounded-full text-sm whitespace-nowrap transition-all duration-200 border flex-shrink-0",
+                  "flex items-center gap-2 px-2 py-2 rounded-full text-sm whitespace-nowrap transition-all duration-200 border flex-shrink-0",
                   isActive
                     ? "bg-steel-blue text-white border-steel-blue font-medium shadow-lg shadow-steel-blue/20"
                     : isCompleted
