@@ -126,8 +126,8 @@ export function NavTreeItem({ item, depth = 0 }: NavTreeItemProps) {
       {renderIcon()}
       <span>{item.label}</span>
       {item.badge && (
-        <span className="text-xs px-1.5 py-0.5 rounded bg-metal-800 text-metal-400">
-          {item.badge}
+        <span className="text-xs px-1.5 py-0.5 rounded bg-metal-800 text-metal-400 min-w-[65px] max-w-[100px]">
+            {item.badge}
         </span>
       )}
     </div>
