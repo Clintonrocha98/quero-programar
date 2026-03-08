@@ -28,9 +28,3 @@ export interface Category {
   icon: React.ReactNode
   url: string
 }
-
-export interface NavLinkProps {
-  href: string
-  icon: React.ReactNode
-  label: string
-}
