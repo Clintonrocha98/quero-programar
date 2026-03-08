@@ -8,7 +8,7 @@ export default function FourNoobsPage() {
       <div className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight text-white flex items-center gap-3">
           <BookOpen className="w-10 h-10 text-steel-blue-light" />
-          He4rt
+          4Noobs
         </h1>
         <p className="text-lg text-slate-400 max-w-3xl leading-relaxed">
           Repositórios criados pela comunidade He4rt Developers para ajudar iniciantes a 
