@@ -35,20 +35,34 @@ export const navigationConfig: NavigationConfig = {
       ]
     },
     {
-      id: 'comunidade-4noobs',
+      id: 'comunidade-he4rt',
       label: 'He4rt',
-      icon: 'Rocket',
+      icon: 'He4rtLogo',
       children: [
-        { id: '4noobs-todas', label: 'Ver Todas', href: '/he4rt/4noobs' },
-        { id: '4noobs-linguagens', label: 'Linguagens', href: '/he4rt/4noobs/linguagens' },
-        { id: '4noobs-frameworks', label: 'Frameworks', href: '/he4rt/4noobs/frameworks' },
-        { id: '4noobs-ferramentas', label: 'Ferramentas', href: '/he4rt/4noobs/ferramentas' },
-        { id: '4noobs-banco-de-dados', label: 'Bancos de Dados', href: '/he4rt/4noobs/banco-de-dados' },
-        { id: '4noobs-sistemas-operacionais', label: 'Sistemas Operacionais', href: '/he4rt/4noobs/sistemas-operacionais' },
-        { id: '4noobs-design', label: 'Design', href: '/he4rt/4noobs/design' },
-        { id: '4noobs-paradigmas', label: 'Paradigmas', href: '/he4rt/4noobs/paradigmas' },
-        { id: '4noobs-diversos', label: 'Diversos', href: '/he4rt/4noobs/diversos' },
-        { id: '4noobs-certificacoes', label: 'Certificações', href: '/he4rt/4noobs/certificacoes' },
+        {
+          id: 'he4rt-4noobs',
+          label: '4Noobs',
+          icon: 'BookOpen',
+          children: [
+            { id: '4noobs-todas', label: 'Ver Todas', href: '/he4rt/4noobs' },
+            { id: '4noobs-linguagens', label: 'Linguagens', href: '/he4rt/4noobs/linguagens' },
+            { id: '4noobs-frameworks', label: 'Frameworks', href: '/he4rt/4noobs/frameworks' },
+            { id: '4noobs-ferramentas', label: 'Ferramentas', href: '/he4rt/4noobs/ferramentas' },
+            { id: '4noobs-banco-de-dados', label: 'Bancos de Dados', href: '/he4rt/4noobs/banco-de-dados' },
+            { id: '4noobs-sistemas-operacionais', label: 'Sistemas Operacionais', href: '/he4rt/4noobs/sistemas-operacionais' },
+            { id: '4noobs-design', label: 'Design', href: '/he4rt/4noobs/design' },
+            { id: '4noobs-paradigmas', label: 'Paradigmas', href: '/he4rt/4noobs/paradigmas' },
+            { id: '4noobs-diversos', label: 'Diversos', href: '/he4rt/4noobs/diversos' },
+            { id: '4noobs-certificacoes', label: 'Certificações', href: '/he4rt/4noobs/certificacoes' },
+          ]
+        },
+        {
+          id: 'he4rt-projetos',
+          label: 'Projetos da Comunidade',
+          icon: 'Github',
+          badge: 'Em breve',
+          children: []
+        }
       ]
     },
     {

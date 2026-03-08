@@ -4,7 +4,8 @@ import { NavItem } from '../../types/navigation'
 import { useSidebar } from '../../hooks/use-sidebar'
 import { useActiveRoute } from '../../hooks/use-active-route'
 import { cn } from '../../lib/utils'
-import { getIcon } from './sidebar-icons.tsx'
+import { getIcon } from './sidebar-icons'
+import he4rtLogo from '@/assets/he4rt-logo.png'
 
 interface NavTreeItemProps {
   item: NavItem
@@ -30,7 +31,22 @@ export function NavTreeItem({ item, depth = 0 }: NavTreeItemProps) {
   
   const paddingLeft = depth === 0 ? 'pl-3' : depth === 1 ? 'pl-6' : 'pl-9'
   
-  const Icon = item.icon ? getIcon(item.icon) : null
+  const isHe4rtLogo = item.icon === 'He4rtLogo'
+  const Icon = item.icon && !isHe4rtLogo ? getIcon(item.icon) : null
+
+  const renderIcon = () => {
+    if (isHe4rtLogo) {
+      return (
+        <div className="w-5 h-5 rounded overflow-hidden flex items-center justify-center bg-transparent shrink-0">
+          <img src={he4rtLogo} alt="He4rt Logo" className="w-full h-full object-contain" />
+        </div>
+      )
+    }
+    if (Icon) {
+      return <Icon className="h-4 w-4 shrink-0" />
+    }
+    return null
+  }
 
   // Se tem filhos, renderiza como botão expansível
   if (hasChildren) {
@@ -48,7 +64,7 @@ export function NavTreeItem({ item, depth = 0 }: NavTreeItemProps) {
           aria-expanded={isExpanded}
         >
           <span className="flex items-center gap-2">
-            {Icon && <Icon className="h-4 w-4" />}
+            {renderIcon()}
             <span>{item.label}</span>
             {item.badge && (
               <span className="text-xs px-1.5 py-0.5 rounded bg-steel-blue/20 text-steel-blue-light">
@@ -88,7 +104,7 @@ export function NavTreeItem({ item, depth = 0 }: NavTreeItemProps) {
             : 'text-metal-300 hover:text-metal-100 hover:bg-metal-800/50'
         )}
       >
-        {Icon && <Icon className="h-4 w-4" />}
+        {renderIcon()}
         <span>{item.label}</span>
         {item.badge && (
           <span className="text-xs px-1.5 py-0.5 rounded bg-steel-blue/20 text-steel-blue-light">
@@ -107,7 +123,7 @@ export function NavTreeItem({ item, depth = 0 }: NavTreeItemProps) {
         paddingLeft
       )}
     >
-      {Icon && <Icon className="h-4 w-4" />}
+      {renderIcon()}
       <span>{item.label}</span>
       {item.badge && (
         <span className="text-xs px-1.5 py-0.5 rounded bg-metal-800 text-metal-400">

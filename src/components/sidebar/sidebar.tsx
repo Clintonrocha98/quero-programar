@@ -22,14 +22,14 @@ interface SidebarProps {
  */
 export function Sidebar({ className, showLogo = false }: SidebarProps) {
   const { expandItem } = useSidebar()
-  const { parentId } = useActiveRoute()
+  const { parentIds } = useActiveRoute()
 
-  // Auto-expande a categoria pai quando a rota muda
+  // Auto-expande as categorias pais quando a rota muda
   useEffect(() => {
-    if (parentId) {
-      expandItem(parentId)
+    if (parentIds && parentIds.length > 0) {
+      parentIds.forEach(id => expandItem(id))
     }
-  }, [parentId, expandItem])
+  }, [parentIds, expandItem])
 
   return (
     <nav

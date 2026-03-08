@@ -1,32 +1,9 @@
-import {
-  Home,
-  Map,
-  Code,
-  BookOpen,
-  FileText,
-  Wrench,
-  Rocket,
-  Bug,
-  LucideIcon
-} from 'lucide-react'
+import { LucideIcon } from 'lucide-react'
+import { IconMap } from '../../data/icons'
 
 /**
- * Mapeamento de nomes de ícones para componentes Lucide
- */
-const iconMap: Record<string, LucideIcon> = {
-  Home,
-  Map,
-  Code,
-  BookOpen,
-  FileText,
-  Wrench,
-  Rocket,
-  Bug,
-}
-
-/**
- * Retorna o componente de ícone baseado no nome
+ * Retorna o componente de ícone baseado no nome centralizado em data/icons
  */
 export function getIcon(name: string): LucideIcon | null {
-  return iconMap[name] || null
+  return IconMap[name] || null
 }
