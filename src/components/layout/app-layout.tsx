@@ -1,18 +1,20 @@
 import { ReactNode } from 'react'
 import { Sidebar, SidebarDrawer } from '../sidebar'
 import Footer from '../footer'
+import { cn } from '@/lib/utils'
 
 interface AppLayoutProps {
   children: ReactNode
+  wide?: boolean
 }
 
 /**
  * Layout principal da aplicação com sidebar e conteúdo.
- * 
+ *
  * Desktop (lg+): Sidebar fixa à esquerda, conteúdo à direita
  * Mobile (<lg): Drawer overlay, conteúdo ocupa tela toda
  */
-export function AppLayout({ children }: AppLayoutProps) {
+export function AppLayout({ children, wide = false }: AppLayoutProps) {
   return (
     <div className="min-h-screen bg-metal-950">
       {/* Drawer mobile */}
@@ -28,7 +30,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       {/* Conteúdo Principal */}
       <div className="lg:pl-64">
         <main className="min-h-[calc(100vh-4rem)] py-10">
-          <div className="container mx-auto px-4 max-w-4xl ">
+          <div className={cn('container mx-auto px-4', wide ? 'max-w-[1440px]' : 'max-w-4xl')}>
             {children}
           </div>
         </main>

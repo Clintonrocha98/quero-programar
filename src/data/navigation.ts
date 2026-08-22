@@ -19,6 +19,16 @@ export const navigationConfig: NavigationConfig = {
       href: '/plano-de-estudos'
     },
     {
+      id: 'guia',
+      label: 'Guia',
+      icon: 'Briefcase',
+      badge: 'Novo',
+      children: [
+        { id: 'guia-visao-geral', label: 'Visão Geral', href: '/guia' },
+        { id: 'guia-curriculo', label: 'Modelo de Currículo', href: '/guia/curriculo' },
+      ]
+    },
+    {
       id: 'tecnologias',
       label: 'Tecnologias',
       icon: 'Code',
