@@ -1,4 +1,3 @@
-import { MESES_PT } from '@/lib/curriculo-constants'
 import { normalizarUrl } from '@/lib/curriculo-format'
 import type {
   CurriculoData,
@@ -9,15 +8,16 @@ import type {
   SecaoOpcional,
 } from '@/types/curriculo'
 
+/** Formata AAAA-MM como MM/AAAA para leitura por sistemas de rastreamento de candidatos. */
 export function formatarMesAno(data: string | null): string {
   if (!data) return ''
 
   const [ano, mes] = data.split('-')
-  const nomeMes = MESES_PT[Number(mes) - 1]
+  const numeroMes = Number(mes)
 
-  if (!nomeMes) return ''
+  if (!ano || !Number.isInteger(numeroMes) || numeroMes < 1 || numeroMes > 12) return ''
 
-  return `${nomeMes}/${ano}`
+  return `${String(numeroMes).padStart(2, '0')}/${ano}`
 }
 
 export function nomeRenderizado(header: CurriculoHeader): string {
@@ -50,12 +50,12 @@ export function sufixoVinculo(exp: Experiencia): string {
 
 export function periodoExperiencia(exp: Experiencia): string {
   const inicio = formatarMesAno(exp.data_inicio)
-  const fim = exp.atual ? 'Atuando' : formatarMesAno(exp.data_fim)
+  const fim = exp.atual ? 'Atual' : formatarMesAno(exp.data_fim)
 
   if (!inicio) return fim
   if (!fim) return inicio
 
-  return `${inicio} – ${fim}`
+  return `${inicio} - ${fim}`
 }
 
 export function tituloExperiencia(exp: Experiencia): string {
@@ -128,7 +128,7 @@ export function formatarPeriodoFormacao(f: Formacao): string {
   if (!inicio) return fim
   if (!fim) return inicio
 
-  return `${inicio} – ${fim}`
+  return `${inicio} - ${fim}`
 }
 
 type SecoesVisiveisPdf = Record<

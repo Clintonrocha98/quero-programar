@@ -82,7 +82,6 @@ export function ExperienciaItem({ experiencia }: ExperienciaItemProps) {
           onChange={(valores) =>
             dispatch({ type: 'atualizarExperiencia', id: experiencia.id, patch: valores })
           }
-          rotuloAtual="Atuando"
           textoExibido={periodoExperiencia(experiencia)}
           aviso={avisoPeriodo}
         />
