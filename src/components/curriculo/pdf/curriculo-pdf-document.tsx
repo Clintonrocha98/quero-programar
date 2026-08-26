@@ -33,9 +33,16 @@ export function CurriculoPdfDocument({ data, opcionaisAtivos }: CurriculoPdfDocu
   const secoes = secoesVisiveisPdf(data, opcionaisAtivos)
   const links = linksHeader(data.header)
   const contato = linhaContato(data.header)
+  const nome = data.header.nome_completo.trim()
 
   return (
-    <Document>
+    <Document
+      title={nome === '' ? 'Currículo' : `Currículo - ${nome}`}
+      author={nome}
+      subject="Currículo profissional"
+      keywords={data.hard_skills.join(', ')}
+      language="pt-BR"
+    >
       <Page size="A4" style={styles.page}>
         <Text style={styles.nome}>{nomeRenderizado(data.header)}</Text>
 
@@ -83,13 +90,12 @@ export function CurriculoPdfDocument({ data, opcionaisAtivos }: CurriculoPdfDocu
                         </Text>
                       ) : null,
                       ...bloco.realizacoes.map((realizacao, realizacaoIndex) => (
-                        <View
+                        <Text
                           key={`${exp.id}-realizacao-${blocoIndex}-${realizacaoIndex}`}
-                          style={styles.bulletLinha}
+                          style={styles.bulletTexto}
                         >
-                          <Text style={styles.bulletMarcador}>•</Text>
-                          <Text style={styles.bulletTexto}>{realizacao}</Text>
-                        </View>
+                          {`• ${realizacao}`}
+                        </Text>
                       )),
                     ])}
                   </View>
@@ -102,10 +108,7 @@ export function CurriculoPdfDocument({ data, opcionaisAtivos }: CurriculoPdfDocu
           <View>
             <Text style={styles.tituloSecao}>HARD SKILLS</Text>
 
-            <View style={styles.bulletLinha}>
-              <Text style={styles.bulletMarcador}>•</Text>
-              <Text style={styles.bulletTexto}>{linhaHardSkills(data.hard_skills)}</Text>
-            </View>
+            <Text style={styles.bulletTexto}>{`• ${linhaHardSkills(data.hard_skills)}`}</Text>
           </View>
         )}
 
@@ -141,13 +144,12 @@ export function CurriculoPdfDocument({ data, opcionaisAtivos }: CurriculoPdfDocu
                     {projeto.destaques
                       .filter((destaque) => destaque.trim() !== '')
                       .map((destaque, destaqueIndex) => (
-                        <View
+                        <Text
                           key={`${projeto.id}-destaque-${destaqueIndex}`}
-                          style={styles.bulletLinha}
+                          style={styles.bulletTexto}
                         >
-                          <Text style={styles.bulletMarcador}>•</Text>
-                          <Text style={styles.bulletTexto}>{destaque}</Text>
-                        </View>
+                          {`• ${destaque}`}
+                        </Text>
                       ))}
                   </View>
                 )

@@ -27,7 +27,6 @@ export const styles = StyleSheet.create({
   },
   resumo: {
     marginTop: 10,
-    textAlign: 'justify',
   },
   tituloSecao: {
     fontSize: 11,
@@ -47,18 +46,11 @@ export const styles = StyleSheet.create({
   },
   paragrafo: {
     marginTop: 3,
-    textAlign: 'justify',
-  },
-  bulletLinha: {
-    flexDirection: 'row',
-    marginTop: 1.5,
-    paddingLeft: 12,
-  },
-  bulletMarcador: {
-    width: 12,
   },
   bulletTexto: {
-    flex: 1,
+    marginTop: 1.5,
+    paddingLeft: 24,
+    textIndent: -12,
   },
   link: {
     color: '#000000',
