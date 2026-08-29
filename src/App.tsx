@@ -15,11 +15,14 @@ import DebugGuidePage from "./pages/debug-guide";
 import FourNoobsPage from "./pages/4noobs/4noobs-list";
 import FourNoobsCategoryPage from "./pages/4noobs/4noobs-details";
 import GuiaHubPage from "./pages/guia/guia-hub";
+import { useSeo } from "./hooks/use-seo";
 
 const CurriculoPage = lazy(() => import("./pages/guia/curriculo"));
 
 function RoteamentoComLayout() {
   const { pathname } = useLocation()
+
+  useSeo()
 
   return (
     <AppLayout wide={pathname === '/guia/curriculo'}>

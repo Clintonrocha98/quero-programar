@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && pnpm run build:seo",
+    "build:seo": "node scripts/gerar-og.mjs && node scripts/gerar-html.mjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@mdx-js/react": "^3.1.1",
     "@mdx-js/rollup": "^3.1.1",
+    "@resvg/resvg-js": "^2.6.2",
     "@rollup/plugin-alias": "^5.1.1",
     "@tailwindcss/typography": "^0.5.19",
     "@types/react": "^18.3.20",
@@ -39,6 +41,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "gray-matter": "^4.0.3",
     "postcss": "^8.5.3",
+    "satori": "^0.33.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
     "vite": "^5.4.19"

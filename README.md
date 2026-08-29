@@ -64,6 +64,50 @@ O projeto utiliza um tema personalizado escuro com tons metálicos.
 - **Acentos:** `steel-blue`, `cyan-accent`, `amber-accent`, `emerald-accent`, `rose-accent`.
 - **Tipografia:** Configurada via `@tailwindcss/typography` para renderização elegante de arquivos Markdown.
 
+## SEO e Compartilhamento
+
+O site é uma SPA. Um crawler de rede social não executa JavaScript. Por isso o build gera um arquivo HTML por rota, com as meta tags já preenchidas.
+
+O build executa três etapas:
+
+```
+vite build           →  dist/index.html + assets
+gerar-og.mjs         →  dist/og/<rota>.png     (uma imagem 1200x630 por rota)
+gerar-html.mjs       →  dist/<rota>.html       (meta tags por rota)
+                        dist/sitemap.xml
+                        dist/robots.txt
+```
+
+Os metadados vêm de duas fontes:
+
+- `src/data/seo.json` define título, descrição e seção das rotas fixas.
+- O `frontmatter` dos arquivos MDX define os metadados das rotas de tecnologia e de 4Noobs.
+
+O componente `useSeo` (`src/hooks/use-seo.ts`) atualiza o título e as meta tags durante a navegação no cliente. O prerender atende o crawler. O hook atende o usuário.
+
+### Como adicionar uma página ao SEO
+
+- Rota de tecnologia ou de 4Noobs: nenhuma ação. O script lê o `frontmatter` do MDX novo.
+- Rota fixa nova: adicione uma entrada em `src/data/seo.json` com `titulo`, `descricao` e `secao`.
+
+### Como trocar o domínio
+
+Defina `VITE_SITE_URL` no arquivo `.env` ou no ambiente de build:
+
+```bash
+VITE_SITE_URL=https://seu-dominio.com.br pnpm build
+```
+
+O valor alimenta `og:url`, `og:image`, o canonical e o sitemap.
+
+### Como regerar apenas as imagens
+
+```bash
+pnpm build:seo
+```
+
+O comando exige um `dist` existente. As fontes usadas pelas imagens ficam em `scripts/og/fontes`.
+
 ## Guia de Contribuição de Conteúdo (MDX)
 
 Toda a documentação de tecnologias e trilhas vive em arquivos `.mdx` dentro de `src/data/content`.

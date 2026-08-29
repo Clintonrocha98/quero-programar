@@ -1,0 +1,54 @@
+{
+  "site": {
+    "nome": "QueroProgramar",
+    "locale": "pt_BR",
+    "descricao": "Conteúdos gratuitos e bem selecionados para aprender programação do zero: trilha de estudos, tecnologias, recursos e um construtor de currículo."
+  },
+  "rotas": {
+    "/": {
+      "titulo": "Aprenda programação do zero",
+      "descricao": "Conteúdos gratuitos e bem selecionados para guiar seu aprendizado em programação, do básico até a construção de aplicações.",
+      "secao": "Início"
+    },
+    "/plano-de-estudos": {
+      "titulo": "Plano de Estudos",
+      "descricao": "Um guia do que estudar antes de começar a programar, na ordem que faz sentido para quem aprende sozinho.",
+      "secao": "Plano de Estudos"
+    },
+    "/tecnologias": {
+      "titulo": "Tecnologias",
+      "descricao": "HTML, CSS, JavaScript, TypeScript, Python, Java, Go e PHP: por onde começar em cada tecnologia e o que estudar em seguida.",
+      "secao": "Tecnologias"
+    },
+    "/recursos": {
+      "titulo": "Recursos",
+      "descricao": "Ferramentas, plataformas e recursos diversos para complementar seus estudos em programação.",
+      "secao": "Recursos"
+    },
+    "/artigos": {
+      "titulo": "Artigos e Perfis",
+      "descricao": "Artigos técnicos e perfis de desenvolvedores para você acompanhar e continuar aprendendo.",
+      "secao": "Artigos"
+    },
+    "/como-debugar": {
+      "titulo": "Guia de Debugging",
+      "descricao": "Antes de pedir ajuda, passe por esta lista de verificação. Aprenda a investigar o erro e a montar um bom pedido de ajuda.",
+      "secao": "Debugging"
+    },
+    "/he4rt/4noobs": {
+      "titulo": "4Noobs",
+      "descricao": "Os repositórios 4Noobs da comunidade He4rt, organizados por categoria: linguagens, frameworks, ferramentas, bancos de dados e mais.",
+      "secao": "He4rt 4Noobs"
+    },
+    "/guia": {
+      "titulo": "Guia",
+      "descricao": "Conteúdo prático e ferramentas para quem está se preparando para buscar as primeiras vagas como desenvolvedor.",
+      "secao": "Guia"
+    },
+    "/guia/curriculo": {
+      "titulo": "Modelo de Currículo",
+      "descricao": "Monte seu currículo de desenvolvedor direto no navegador: estrutura recomendada por profissionais de RH, avisos de formatação e download em PDF.",
+      "secao": "Guia"
+    }
+  }
+}
