@@ -49,6 +49,31 @@
       "titulo": "Modelo de Currículo",
       "descricao": "Monte seu currículo de desenvolvedor direto no navegador: estrutura recomendada por profissionais de RH, avisos de formatação e download em PDF.",
       "secao": "Guia"
+    },
+    "/mentoria": {
+      "titulo": "Mentoria",
+      "descricao": "Você não precisa ser sênior para mentorar. Veja se já pode ajudar alguém e como começar uma mentoria, de um lado ou do outro.",
+      "secao": "Mentoria"
+    },
+    "/mentoria/como-mentorar": {
+      "titulo": "Como mentorar",
+      "descricao": "Como oferecer mentoria a partir do que você já viveu: o que fazer, o que evitar e como combinar as conversas.",
+      "secao": "Mentoria"
+    },
+    "/mentoria/como-ser-mentorado": {
+      "titulo": "Como ser mentorado",
+      "descricao": "Como encontrar alguém para mentorar você, pedir uma conversa e aproveitar cada sessão.",
+      "secao": "Mentoria"
+    },
+    "/mentoria/roteiro": {
+      "titulo": "Roteiro de uma sessão de mentoria",
+      "descricao": "Roteiro de 30 ou 60 minutos para a primeira conversa e para as seguintes, com perguntas que funcionam para qualquer tema.",
+      "secao": "Mentoria"
+    },
+    "/mentoria/modelos": {
+      "titulo": "Modelos de mensagem para mentoria",
+      "descricao": "Mensagens prontas para copiar: oferecer mentoria, pedir uma conversa, combinar, mandar pauta e resumo, recusar e encerrar.",
+      "secao": "Mentoria"
     }
   }
 }

@@ -68,6 +68,36 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        surgir: {
+          from: { opacity: '0', transform: 'translateY(4px)' },
+          to: { opacity: '1', transform: 'none' },
+        },
+        'subir-degrau': {
+          from: { transform: 'scaleY(0)' },
+          to: { transform: 'scaleY(1)' },
+        },
+        pousar: {
+          '0%': { opacity: '0', transform: 'translateY(-12px)' },
+          '60%': { opacity: '1', transform: 'translateY(2px)' },
+          '100%': { opacity: '1', transform: 'none' },
+        },
+        'girar-uma-vez': {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(-360deg)' },
+        },
+        fluir: {
+          from: { strokeDashoffset: '32' },
+          to: { strokeDashoffset: '0' },
+        },
+      },
+      animation: {
+        surgir: 'surgir 200ms ease-out both',
+        'subir-degrau': 'subir-degrau 450ms cubic-bezier(.2,.8,.2,1) both',
+        pousar: 'pousar 350ms ease-out both',
+        'girar-uma-vez': 'girar-uma-vez 700ms ease-in-out 1 both',
+        fluir: 'fluir 1.2s linear 1 both',
+      },
       typography: (theme) => ({
         metal: {
           css: {

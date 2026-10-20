@@ -129,3 +129,108 @@ a {
   margin-top: 0;
   margin-left: 0;
 }
+.prose.mentoria-artigo > h2 {
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 6rem;
+}
+.prose.mentoria-artigo > h2:first-child {
+  margin-top: 0;
+}
+.prose.mentoria-artigo > p {
+  margin-bottom: 1rem;
+  max-width: 75ch;
+}
+.prose.mentoria-artigo > ul {
+  max-width: 75ch;
+}
+.prose.mentoria-artigo .not-prose :is(h2, h3, h4, ul, li) {
+  margin: 0;
+}
+.prose.mentoria-artigo .not-prose li {
+  padding-left: 0;
+}
+
+.prose .mentoria-lista > ul {
+  display: grid;
+  gap: 0.75rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.prose .mentoria-lista > ul > li {
+  margin: 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  border-left: 3px solid var(--tom-lista, var(--steel-blue-light));
+}
+.prose .mentoria-lista > ul > li > strong:first-child {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--metal-100);
+}
+.prose .mentoria-lista[data-layout="grade"] > ul {
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 640px) {
+  .prose .mentoria-lista[data-layout="grade"] > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .prose .mentoria-lista[data-layout="grade"] > ul > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+.prose .mentoria-lista[data-layout="linhas"] > ul > li + li {
+  padding-top: 0.75rem;
+}
+.mentoria-lista[data-tom="principio"] {
+  --tom-lista: var(--steel-blue-light);
+}
+.mentoria-lista[data-tom="limite"] {
+  --tom-lista: var(--amber-accent);
+}
+.mentoria-lista[data-tom="dica"] {
+  --tom-lista: var(--cyan-accent);
+}
+.prose.mentoria-artigo > .mentoria-lista {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.prose.mentoria-artigo .mentoria-lista > ul > li {
+  padding-left: 1rem;
+}
+
+.prose.mentoria-artigo .mentoria-passos > * + * {
+  margin-top: 1rem;
+}
+.prose.mentoria-artigo .mentoria-passos ol {
+  display: grid;
+  gap: 0.75rem;
+  counter-reset: passo;
+  list-style: none;
+  padding: 0;
+}
+.prose.mentoria-artigo .mentoria-passos ol > li {
+  position: relative;
+  min-height: 1.75rem;
+  padding-left: 2.5rem;
+  padding-top: 0.125rem;
+  color: var(--metal-200);
+  counter-increment: passo;
+}
+.prose.mentoria-artigo .mentoria-passos ol > li::before {
+  content: counter(passo);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid var(--steel-blue-light);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--metal-100);
+}

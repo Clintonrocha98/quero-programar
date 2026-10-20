@@ -15,6 +15,8 @@ import DebugGuidePage from "./pages/debug-guide";
 import FourNoobsPage from "./pages/4noobs/4noobs-list";
 import FourNoobsCategoryPage from "./pages/4noobs/4noobs-details";
 import GuiaHubPage from "./pages/guia/guia-hub";
+import MentoriaHubPage from "./pages/mentoria/mentoria-hub";
+import MentoriaPagina from "./pages/mentoria/mentoria-pagina";
 import { useSeo } from "./hooks/use-seo";
 
 const CurriculoPage = lazy(() => import("./pages/guia/curriculo"));
@@ -25,7 +27,8 @@ function RoteamentoComLayout() {
   useSeo()
 
   const ehCurriculo = pathname === '/guia/curriculo'
-  const largura = ehCurriculo ? 'ampla' : 'padrao'
+  const ehMentoria = pathname === '/mentoria' || pathname.startsWith('/mentoria/')
+  const largura = ehCurriculo ? 'ampla' : ehMentoria ? 'media' : 'padrao'
 
   return (
     <AppLayout largura={largura}>
@@ -55,6 +58,8 @@ function RoteamentoComLayout() {
             </Suspense>
           }
         />
+        <Route path="/mentoria" element={<MentoriaHubPage />} />
+        <Route path="/mentoria/:pagina" element={<MentoriaPagina />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AppLayout>

@@ -25,6 +25,19 @@ export const navigationConfig: NavigationConfig = {
       href: '/guia/curriculo'
     },
     {
+      id: 'mentoria',
+      label: 'Mentoria',
+      icon: 'Handshake',
+      badge: 'Novo',
+      children: [
+        { id: 'mentoria-visao-geral', label: 'Visão Geral', href: '/mentoria' },
+        { id: 'mentoria-como-mentorar', label: 'Como mentorar', href: '/mentoria/como-mentorar' },
+        { id: 'mentoria-como-ser-mentorado', label: 'Como ser mentorado', href: '/mentoria/como-ser-mentorado' },
+        { id: 'mentoria-roteiro', label: 'Roteiro da sessão', href: '/mentoria/roteiro' },
+        { id: 'mentoria-modelos', label: 'Modelos de mensagem', href: '/mentoria/modelos' },
+      ]
+    },
+    {
       id: 'tecnologias',
       label: 'Tecnologias',
       icon: 'Code',

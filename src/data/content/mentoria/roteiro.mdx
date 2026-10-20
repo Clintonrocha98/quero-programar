@@ -1,0 +1,34 @@
+export const frontmatter = {
+  id: "roteiro",
+  title: "Roteiro da sessão",
+  description: "Um roteiro em blocos para conduzir a primeira sessão e as conversas de acompanhamento, em 30 ou 60 minutos."
+}
+
+import { RoteiroSessao } from '@/components/mentoria/roteiro-sessao'
+import { CardapioTemas } from '@/components/mentoria/cardapio-temas'
+import { ListaEmCartoes } from '@/components/mentoria/lista-em-cartoes'
+import { Callout } from '@/components/callout'
+
+Um roteiro dá segurança para quem mentora pela primeira vez e evita a conversa sem rumo. Ele é um guia, não uma regra. Adapte à vontade.
+
+<RoteiroSessao />
+
+<CardapioTemas titulo="Sem tema para hoje?">
+Se a pessoa chegou sem pauta, escolham juntos um dos temas abaixo.
+</CardapioTemas>
+
+## Dicas para o tempo render
+
+<ListaEmCartoes variante="dica">
+
+- **Combine quem controla o tempo.** Pode ser qualquer um dos dois, mas alguém precisa olhar o relógio.
+- **Guarde os 5 minutos finais.** Eles são para definir o próximo passo. Não deixe a conversa engolir esse momento.
+- **Um tema por vez.** Se surgir outro assunto importante, anote para a próxima conversa.
+- **Terminar antes está tudo bem.** Se o tema do dia acabou cedo, encerre. Tempo sobrando não precisa ser preenchido.
+- **Passou do horário? Pergunte.** Antes de esticar, confirme se a outra pessoa pode continuar.
+
+</ListaEmCartoes>
+
+<Callout type="tip">
+  Depois de algumas conversas, você vai ajustar o roteiro ao seu jeito. Esse é o objetivo: ele serve para começar, não para prender.
+</Callout>

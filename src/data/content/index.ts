@@ -26,6 +26,11 @@ import ResourcesContent, { frontmatter as resourcesMeta } from './pages/resource
 import InicianteContent, { frontmatter as inicianteMeta } from './pages/iniciante.mdx'
 import StudyPlanContent, { frontmatter as studyPlanMeta } from './pages/study-plan.mdx'
 
+import ComoMentorarContent, { frontmatter as comoMentorarMeta } from './mentoria/como-mentorar.mdx'
+import ComoSerMentoradoContent, { frontmatter as comoSerMentoradoMeta } from './mentoria/como-ser-mentorado.mdx'
+import RoteiroMentoriaContent, { frontmatter as roteiroMentoriaMeta } from './mentoria/roteiro.mdx'
+import ModelosMentoriaContent, { frontmatter as modelosMentoriaMeta } from './mentoria/modelos.mdx'
+
 export interface TechnologyMeta {
   id: string
   title: string
@@ -110,6 +115,25 @@ export const pages: Record<string, ContentItem<PageMeta>> = {
   "study-plan": {
     meta: studyPlanMeta,
     Content: StudyPlanContent,
+  },
+}
+
+export const mentoriaPages: Record<string, ContentItem<PageMeta>> = {
+  "como-mentorar": {
+    meta: comoMentorarMeta,
+    Content: ComoMentorarContent,
+  },
+  "como-ser-mentorado": {
+    meta: comoSerMentoradoMeta,
+    Content: ComoSerMentoradoContent,
+  },
+  roteiro: {
+    meta: roteiroMentoriaMeta,
+    Content: RoteiroMentoriaContent,
+  },
+  modelos: {
+    meta: modelosMentoriaMeta,
+    Content: ModelosMentoriaContent,
   },
 }
 
@@ -203,6 +227,11 @@ export function getPage(id: string): ContentItem<PageMeta> | undefined {
 // Verifica se uma pagina existe
 export function hasPage(id: string): boolean {
   return id.toLowerCase() in pages
+}
+
+export function getMentoriaPage(id: string): ContentItem<PageMeta> | undefined {
+  const chave = id.toLowerCase()
+  return Object.prototype.hasOwnProperty.call(mentoriaPages, chave) ? mentoriaPages[chave] : undefined
 }
 
 // Funcao auxiliar para buscar dados do 4Noobs pelo ID

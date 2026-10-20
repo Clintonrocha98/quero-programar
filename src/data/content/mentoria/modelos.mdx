@@ -1,0 +1,22 @@
+export const frontmatter = {
+  id: "modelos",
+  title: "Modelos de mensagem",
+  description: "Mensagens prontas para pedir, oferecer, combinar, conduzir e encerrar uma mentoria."
+}
+
+import { ModelosLista } from '@/components/mentoria/modelos-lista'
+import { CicloMentoria } from '@/components/mentoria/ciclo-mentoria'
+import { CampoDestacado } from '@/components/mentoria/campo-destacado'
+import { Callout } from '@/components/callout'
+
+A parte mais difícil costuma ser mandar a primeira mensagem. Estes modelos destravam cada passo: entrar, combinar, conduzir as sessões e sair.
+
+<CicloMentoria destino="mesma-pagina" />
+
+Pegue o que precisa agora. Troque o que está entre <CampoDestacado>[colchetes]</CampoDestacado>, adapte ao seu jeito de falar e use na rede onde você já está.
+
+<Callout type="tip">
+  Personalize sempre. Uma mensagem genérica demais parece spam. Uma frase sobre a pessoa ou sobre o seu momento já faz a mensagem ser lida com outro cuidado.
+</Callout>
+
+<ModelosLista />
