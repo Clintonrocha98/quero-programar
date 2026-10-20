@@ -24,8 +24,11 @@ function RoteamentoComLayout() {
 
   useSeo()
 
+  const ehCurriculo = pathname === '/guia/curriculo'
+  const largura = ehCurriculo ? 'ampla' : 'padrao'
+
   return (
-    <AppLayout wide={pathname === '/guia/curriculo'}>
+    <AppLayout largura={largura}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/tecnologias" element={<TechnologiesPage />} />

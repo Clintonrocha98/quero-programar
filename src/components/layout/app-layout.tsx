@@ -3,9 +3,17 @@ import { Sidebar, SidebarDrawer } from '../sidebar'
 import Footer from '../footer'
 import { cn } from '@/lib/utils'
 
+type LarguraLayout = 'padrao' | 'media' | 'ampla'
+
 interface AppLayoutProps {
   children: ReactNode
-  wide?: boolean
+  largura?: LarguraLayout
+}
+
+const classesLargura: Record<LarguraLayout, string> = {
+  padrao: 'max-w-4xl',
+  media: 'max-w-6xl',
+  ampla: 'max-w-[1440px]',
 }
 
 /**
@@ -14,7 +22,7 @@ interface AppLayoutProps {
  * Desktop (lg+): Sidebar fixa à esquerda, conteúdo à direita
  * Mobile (<lg): Drawer overlay, conteúdo ocupa tela toda
  */
-export function AppLayout({ children, wide = false }: AppLayoutProps) {
+export function AppLayout({ children, largura = 'padrao' }: AppLayoutProps) {
   return (
     <div className="min-h-screen bg-metal-950">
       {/* Drawer mobile */}
@@ -30,7 +38,7 @@ export function AppLayout({ children, wide = false }: AppLayoutProps) {
       {/* Conteúdo Principal */}
       <div className="lg:pl-64">
         <main className="min-h-[calc(100vh-4rem)] py-10">
-          <div className={cn('container mx-auto px-4', wide ? 'max-w-[1440px]' : 'max-w-4xl')}>
+          <div className={cn('container mx-auto px-4', classesLargura[largura])}>
             {children}
           </div>
         </main>
