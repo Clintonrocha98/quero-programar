@@ -5,7 +5,6 @@
 Este repo usa product.md. No início de toda sessão, leia:
 
 - `.product/STRATEGY.md` — visão, posicionamento, público
-- `.product/ROADMAP.md` — marcos do trimestre
 - `.product/CONTEXT.md` — restrições de arquitetura, decisões
 - `.product/specs/` — specs de feature (leia as que tocam a tarefa)
 

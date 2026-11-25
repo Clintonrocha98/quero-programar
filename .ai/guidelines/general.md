@@ -1,6 +1,6 @@
 # Guidelines gerais
 
-Este repo é o QueroProgramar, um site estático (SPA React + Vite) da comunidade He4rt para quem começa a programar. A verdade do produto fica em `.product/`. As regras aqui são de engenharia.
+Este repo é o QueroProgramar, um site estático (SPA React + Vite), projeto pessoal, para quem começa a programar. A verdade do produto fica em `.product/`. As regras aqui são de engenharia.
 
 - Cada camada tem um arquivo de rule em `.ai/rules/`. Antes de escrever código, abra `.ai/rules/index.md` e leia as rules cujos globs batem com os arquivos que você vai tocar.
 - Todo texto que o agente escreve é em pt-BR: conteúdo, comentários, mensagens de commit e títulos de PR. Identificadores e termos técnicos ficam no original (`useSyncExternalStore`, `frontmatter`).

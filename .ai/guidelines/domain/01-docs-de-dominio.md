@@ -17,7 +17,6 @@ Se um desses arquivos não existe ou ainda é só template, **siga em silêncio*
 .product/
 ├── STRATEGY.md      (visão, público, posicionamento)
 ├── CONTEXT.md       (arquitetura, restrições, glossário)
-├── ROADMAP.md       (marcos do trimestre)
 ├── decisions/       (uma decisão por arquivo: 0001-titulo.md)
 ├── specs/           (YYYY-MM-DD-titulo.md)
 ├── personas/
