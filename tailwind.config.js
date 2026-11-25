@@ -42,26 +42,30 @@ export default {
           foreground: "var(--card-foreground)",
         },
         metal: {
-          100: "#e8e8f0",
-          200: "#c4c4d4",
-          300: "#9d9db0",
-          400: "#7a7a8f",
-          500: "#5a5a6e",
-          600: "#3d3d4d",
-          700: "#2a2a38",
-          800: "#1c1c27",
-          850: "#16161f",
-          900: "#111118",
-          950: "#0a0a0f",
+          100: "#e8e3d8",
+          200: "#d2d0ca",
+          300: "#b4bac5",
+          400: "#8b94a5",
+          500: "#5f6979",
+          600: "#3a4556",
+          700: "#252d39",
+          800: "#1d232d",
+          850: "#1a2029",
+          900: "#141920",
+          950: "#0e1116",
         },
         "steel-blue": {
           DEFAULT: "#4a6fa5",
-          light: "#6b8fc5",
+          light: "#7fa6dd",
         },
         "cyan-accent": "#22d3ee",
         "amber-accent": "#fbbf24",
         "emerald-accent": "#34d399",
         "rose-accent": "#fb7185",
+      },
+      fontFamily: {
+        sans: ['"Instrument Sans Variable"', "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ['"JetBrains Mono Variable"', "ui-monospace", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -90,6 +94,14 @@ export default {
           from: { strokeDashoffset: '32' },
           to: { strokeDashoffset: '0' },
         },
+        // 19ch e steps(19) seguem o tamanho de "por onde eu começo?" em src/pages/home.tsx.
+        digitar: {
+          from: { width: '0' },
+          to: { width: '19ch' },
+        },
+        piscar: {
+          '50%': { opacity: '0' },
+        },
       },
       animation: {
         surgir: 'surgir 200ms ease-out both',
@@ -97,6 +109,9 @@ export default {
         pousar: 'pousar 350ms ease-out both',
         'girar-uma-vez': 'girar-uma-vez 700ms ease-in-out 1 both',
         fluir: 'fluir 1.2s linear 1 both',
+        digitar: 'digitar 1.1s steps(19, end) 300ms both',
+        piscar: 'piscar 1s steps(1) infinite',
+        responder: 'surgir 420ms cubic-bezier(.22,1,.36,1) 1.6s both',
       },
       typography: (theme) => ({
         metal: {

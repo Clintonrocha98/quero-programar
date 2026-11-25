@@ -56,13 +56,16 @@ src/
 └── App.tsx               # Configuração de rotas principal
 ```
 
-## Design System "Dark Metallic"
+## Design System "Grafite"
 
-O projeto utiliza um tema personalizado escuro com tons metálicos.
+O projeto usa um tema escuro em tons de grafite, com cara de terminal.
 
-- **Cores Principais:** Variáveis `metal-100` a `metal-950` definem a escala de cinza azulada.
-- **Acentos:** `steel-blue`, `cyan-accent`, `amber-accent`, `emerald-accent`, `rose-accent`.
-- **Tipografia:** Configurada via `@tailwindcss/typography` para renderização elegante de arquivos Markdown.
+- **Cores principais:** a escala `metal-100` a `metal-950` guarda os tons de grafite (fundo `#0e1116`, texto `#e8e3d8`). O nome `metal` ficou do tema anterior.
+- **Ação principal:** `primary` é âmbar (`#f3c55b`). Use em botão de ação principal, cursor e item ativo da navegação.
+- **Links e prompt:** `steel-blue-light` (`#7fa6dd`).
+- **Acentos categóricos:** `cyan-accent`, `amber-accent`, `emerald-accent`, `rose-accent`.
+- **Fontes:** Instrument Sans (`font-sans`, texto) e JetBrains Mono (`font-mono`, código e detalhes de terminal), via `@fontsource-variable`.
+- **Markdown:** `@tailwindcss/typography` com o tema `prose-metal`.
 
 ## SEO e Compartilhamento
 

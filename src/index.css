@@ -4,22 +4,24 @@
 
 @layer base {
   :root {
-    /* Metallic Color Palette */
-    --metal-950: #0a0a0f;
-    --metal-900: #111118;
-    --metal-850: #16161f;
-    --metal-800: #1c1c27;
-    --metal-700: #2a2a38;
-    --metal-600: #3d3d4d;
-    --metal-500: #5a5a6e;
-    --metal-400: #7a7a8f;
-    --metal-300: #9d9db0;
-    --metal-200: #c4c4d4;
-    --metal-100: #e8e8f0;
+    /* Paleta Grafite (escala metal-*) */
+    --metal-950: #0e1116;
+    --metal-900: #141920;
+    --metal-850: #1a2029;
+    --metal-800: #1d232d;
+    --metal-700: #252d39;
+    --metal-600: #3a4556;
+    --metal-500: #5f6979;
+    --metal-400: #8b94a5;
+    --metal-300: #b4bac5;
+    --metal-200: #d2d0ca;
+    --metal-100: #e8e3d8;
     
     /* Accent Colors */
     --steel-blue: #4a6fa5;
-    --steel-blue-light: #6b8fc5;
+    --steel-blue-light: #7fa6dd;
+    --ambar: #f3c55b;
+    --ambar-foreground: #1a1405;
     --cyan-accent: #22d3ee;
     --amber-accent: #fbbf24;
     --emerald-accent: #34d399;
@@ -35,8 +37,8 @@
     --popover: var(--metal-850);
     --popover-foreground: var(--metal-100);
     
-    --primary: var(--steel-blue);
-    --primary-foreground: var(--metal-100);
+    --primary: var(--ambar);
+    --primary-foreground: var(--ambar-foreground);
     
     --secondary: var(--metal-800);
     --secondary-foreground: var(--metal-200);
