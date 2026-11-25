@@ -22,7 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-AGENTS.md
 .logs
 .octto
 docs
