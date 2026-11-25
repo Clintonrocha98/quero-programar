@@ -1,127 +1,104 @@
 import { Link } from "react-router-dom"
-import { ArrowRight, Bug, Briefcase, BookOpen, FileText, Github, Handshake, Linkedin, Map, MessageSquare, Terminal } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 import { technologiesForCards } from "@/data/content"
 import { getTechnologyIcon } from "@/components/technology-icon"
 import { cn } from "@/lib/utils"
-import he4rtLogo from "@/assets/he4rt-logo.png"
 
-const blocosSecundarios = [
-  { href: "/guia/curriculo", titulo: "Modelo de Currículo", texto: "Monte o seu e exporte em PDF.", Icone: Briefcase },
-  { href: "/mentoria", titulo: "Mentoria", texto: "Como pedir e como dar mentoria.", Icone: Handshake },
+const garantias = ["gratuito, sempre", "sem trilha obrigatória", "sem conta, sem cadastro", "curadoria de quem já passou por isso"]
+
+const perguntasDaComunidade = [
+  { pergunta: "onde eu aprendo javascript?", href: "/tecnologias/javascript" },
+  { pergunta: "como eu monto meu currículo?", href: "/guia/curriculo" },
+  { pergunta: "alguém pode me mentorar?", href: "/mentoria" },
+  { pergunta: "meu código não funciona, e agora?", href: "/como-debugar" },
+  { pergunta: "tem material da he4rt?", href: "/he4rt/4noobs" },
 ]
 
-const atalhos = [
-  { href: "/he4rt/4noobs", rotulo: "4Noobs", Icone: BookOpen },
-  { href: "/como-debugar", rotulo: "Como Debugar", Icone: Bug },
-  { href: "/recursos", rotulo: "Recursos", Icone: BookOpen },
-  { href: "/artigos", rotulo: "Artigos", Icone: FileText },
-]
-
-const linksAutor = [
-  { href: "https://github.com/clintonrocha98", rotulo: "GitHub", Icone: Github },
-  { href: "https://www.linkedin.com/in/clintonrocha", rotulo: "LinkedIn", Icone: Linkedin },
-]
-
-const linksHe4rt = [
-  { href: "https://github.com/he4rt/", rotulo: "GitHub He4rt", Icone: Github },
-  { href: "https://discord.gg/xJNRcM4h", rotulo: "Discord He4rt", Icone: MessageSquare },
-]
-
-const bloco = "rounded-2xl border border-metal-800 bg-metal-900 p-5 transition-colors hover:border-metal-600 hover:no-underline"
-
-function LinksExternos({ links }: { links: typeof linksAutor }) {
-  return links.map(({ href, rotulo, Icone }) => (
-    <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="hover:text-metal-100">
-      <Icone className="h-4 w-4" />
-      <span className="sr-only">{rotulo}</span>
-    </a>
-  ))
-}
+const painel = "rounded-xl border border-metal-700 bg-metal-900"
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-4 lg:h-[calc(100dvh-5rem)]">
-      <header className="space-y-3">
-        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-metal-700 bg-metal-800 px-3 py-1 text-sm text-steel-blue-light">
-          <Terminal className="h-4 w-4" />
-          <span>Aprenda de graça</span>
+    <div className="flex flex-col gap-5">
+      <section className={painel}>
+        <div className="flex items-center gap-2 border-b border-metal-700 px-4 py-3" aria-hidden="true">
+          <span className="h-2.5 w-2.5 rounded-full bg-metal-700" />
+          <span className="h-2.5 w-2.5 rounded-full bg-metal-700" />
+          <span className="h-2.5 w-2.5 rounded-full bg-metal-700" />
+          <span className="ml-3 font-mono text-xs text-metal-400">comunidade — por onde começar</span>
         </div>
-        <h1 className="text-3xl font-bold tracking-tight text-metal-100 xl:text-4xl">
-          Aprenda com o melhor que existe na{" "}
-          <span className="bg-gradient-to-r from-steel-blue-light to-cyan-accent bg-clip-text text-transparent">web</span>.
-        </h1>
-        <p className="max-w-2xl text-metal-300">
-          Conteúdos gratuitos e bem selecionados para quem aprende programação sozinho, do básico ao primeiro emprego.
-        </p>
-      </header>
 
-      <div className="grid flex-1 gap-4 lg:min-h-0 lg:grid-cols-4 lg:grid-rows-2">
-        <Link to="/plano-de-estudos" className={cn(bloco, "group flex flex-col justify-between bg-gradient-to-br from-steel-blue/20 to-metal-900 lg:col-span-2 lg:row-span-2")}>
-          <div className="space-y-3">
-            <Map className="h-8 w-8 text-steel-blue-light" />
-            <span className="block text-xs font-semibold uppercase tracking-wider text-cyan-accent">Comece aqui</span>
-            <h2 className="m-0 text-2xl font-bold text-metal-100">Plano de Estudos</h2>
-            <p className="text-metal-300">Um guia do que estudar antes de começar a programar.</p>
-          </div>
-          <span className="mt-4 inline-flex items-center gap-1 font-semibold text-steel-blue-light">
-            Abrir o plano <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </span>
-        </Link>
+        <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div>
+            <p className="font-mono text-lg md:text-2xl">
+              <span className="text-steel-blue-light">$ </span>
+              <span className="inline-block overflow-hidden whitespace-nowrap align-bottom animate-digitar motion-reduce:animate-none">
+                por onde eu começo?
+              </span>
+              <span className="inline-block h-[1.1em] w-[0.6ch] animate-piscar bg-primary align-[-0.15em] motion-reduce:animate-none" aria-hidden="true" />
+            </p>
 
-        <div className={cn(bloco, "flex flex-col justify-between lg:col-span-2")}>
-          <div className="flex items-center justify-between">
-            <h2 className="m-0 text-lg font-bold text-metal-100">Tecnologias</h2>
-            <Link to="/tecnologias" className="text-sm text-steel-blue-light">Ver todas →</Link>
+            <div className="mt-6 space-y-4 animate-responder motion-reduce:animate-none">
+              <h1 className="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.03em] text-metal-100 lg:text-5xl">
+                Pelo Plano de Estudos. Depois, escolha uma tecnologia.
+              </h1>
+              <p className="max-w-xl text-lg text-metal-400">
+                As respostas que damos toda semana na comunidade, guardadas aqui. Tudo gratuito, com o porquê de cada indicação.
+              </p>
+              <Link
+                to="/plano-de-estudos"
+                className="inline-flex rounded-lg bg-primary px-5 py-3 font-semibold text-primary-foreground transition-[filter,transform] hover:text-primary-foreground hover:no-underline hover:brightness-110 active:scale-[0.97]"
+              >
+                Abrir o Plano de Estudos
+              </Link>
+            </div>
           </div>
-          <div className="mt-3 grid grid-cols-5 gap-2 sm:grid-cols-9">
+
+          <ul className="hidden space-y-1 font-mono text-[13px] text-metal-400 animate-responder motion-reduce:animate-none lg:block">
+            {garantias.map((garantia) => (
+              <li key={garantia}><span className="text-steel-blue-light">✓</span> {garantia}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <div className="grid gap-5 lg:grid-cols-[1.2fr_1fr]">
+        <section className={cn(painel, "p-6")}>
+          <div className="flex items-baseline justify-between gap-3">
+            <h2 className="m-0 text-lg font-semibold text-metal-100">Escolha uma tecnologia</h2>
+            <Link to="/tecnologias" className="whitespace-nowrap font-mono text-xs text-metal-400 hover:text-metal-100 hover:no-underline">ls tecnologias/</Link>
+          </div>
+          <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3">
             {technologiesForCards.map((tech) => (
               <Link
                 key={tech.id}
                 to={tech.url}
                 title={tech.name}
-                className="flex aspect-square items-center justify-center rounded-lg bg-metal-850 p-2 transition-transform hover:scale-110 [&_img]:h-7 [&_img]:w-7 [&_svg]:h-7 [&_svg]:w-7"
+                className="flex min-w-0 items-center gap-2.5 rounded-lg border border-metal-700 bg-metal-850 px-3 py-2.5 text-sm text-metal-100 transition-colors hover:border-steel-blue-light hover:text-metal-100 hover:no-underline [&_img]:h-5 [&_img]:w-5 [&_svg]:h-5 [&_svg]:w-5"
               >
                 {getTechnologyIcon(tech.id)}
-                <span className="sr-only">{tech.name}</span>
+                <span className="truncate">{tech.name}</span>
               </Link>
             ))}
           </div>
-        </div>
+        </section>
 
-        {blocosSecundarios.map(({ href, titulo, texto, Icone }) => (
-          <Link key={href} to={href} className={cn(bloco, "flex flex-col gap-2")}>
-            <Icone className="h-6 w-6 text-emerald-accent" />
-            <h2 className="m-0 text-lg font-bold text-metal-100">{titulo}</h2>
-            <p className="text-sm text-metal-400">{texto}</p>
-          </Link>
-        ))}
+        <section className={cn(painel, "p-6")}>
+          <h2 className="m-0 text-lg font-semibold text-metal-100">Outras perguntas de toda semana</h2>
+          <ul className="mt-3">
+            {perguntasDaComunidade.map(({ pergunta, href }) => (
+              <li key={href}>
+                <Link
+                  to={href}
+                  className="group flex items-center justify-between gap-3 border-b border-dashed border-metal-700 py-2.5 font-mono text-[13px] text-metal-400 hover:text-metal-100 hover:no-underline"
+                >
+                  <span><span className="text-steel-blue-light">$ </span>{pergunta}</span>
+                  <ChevronRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
-
-      <footer className="flex flex-col gap-3 border-t border-metal-800 pt-4 lg:flex-row lg:items-center lg:justify-between">
-        <nav className="flex flex-wrap gap-2" aria-label="Atalhos">
-          {atalhos.map(({ href, rotulo, Icone }) => (
-            <Link key={href} to={href} className="inline-flex items-center gap-1.5 rounded-full border border-metal-700 bg-metal-900 px-3 py-1 text-sm text-metal-300 hover:border-metal-500 hover:text-metal-100 hover:no-underline">
-              <Icone className="h-3.5 w-3.5" /> {rotulo}
-            </Link>
-          ))}
-        </nav>
-        <div className="flex flex-col gap-2 text-sm text-metal-400 xl:flex-row xl:gap-6">
-          <div className="flex items-center gap-3">
-            <img src={he4rtLogo} alt="" className="h-5 w-5 object-contain" />
-            <span>Membro da <span className="font-medium text-metal-200">He4rt Developers</span></span>
-            <LinksExternos links={linksHe4rt} />
-          </div>
-          <div className="flex items-center gap-3">
-            <span>
-              Feito por{" "}
-              <a href="https://github.com/clintonrocha98" target="_blank" rel="noopener noreferrer" className="font-medium text-metal-200 hover:text-steel-blue-light">
-                Clinton Rocha
-              </a>
-            </span>
-            <LinksExternos links={linksAutor} />
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
