@@ -26,12 +26,13 @@ function RoteamentoComLayout() {
 
   useSeo()
 
+  const ehHome = pathname === '/'
   const ehCurriculo = pathname === '/guia/curriculo'
   const ehMentoria = pathname === '/mentoria' || pathname.startsWith('/mentoria/')
-  const largura = ehCurriculo ? 'ampla' : ehMentoria ? 'media' : 'padrao'
+  const largura = ehCurriculo ? 'ampla' : ehMentoria || ehHome ? 'media' : 'padrao'
 
   return (
-    <AppLayout largura={largura}>
+    <AppLayout largura={largura} rodape={!ehHome}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/tecnologias" element={<TechnologiesPage />} />

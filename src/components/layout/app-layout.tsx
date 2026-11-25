@@ -8,6 +8,7 @@ type LarguraLayout = 'padrao' | 'media' | 'ampla'
 interface AppLayoutProps {
   children: ReactNode
   largura?: LarguraLayout
+  rodape?: boolean
 }
 
 const classesLargura: Record<LarguraLayout, string> = {
@@ -16,7 +17,7 @@ const classesLargura: Record<LarguraLayout, string> = {
   ampla: 'max-w-[1440px]',
 }
 
-export function AppLayout({ children, largura = 'padrao' }: AppLayoutProps) {
+export function AppLayout({ children, largura = 'padrao', rodape = true }: AppLayoutProps) {
   return (
     <div className="min-h-screen bg-metal-950">
       <SidebarDrawer />
@@ -33,7 +34,7 @@ export function AppLayout({ children, largura = 'padrao' }: AppLayoutProps) {
             {children}
           </div>
         </main>
-        <Footer />
+        {rodape && <Footer />}
       </div>
     </div>
   )
