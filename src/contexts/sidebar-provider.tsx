@@ -1,5 +1,5 @@
 import { useState, useCallback, ReactNode } from 'react'
-import { SidebarContextValue } from '../types/navigation'
+import { SidebarContextValue } from '@/types/navigation'
 import { SidebarContext } from './sidebar-context'
 
 interface SidebarProviderProps {
@@ -7,28 +7,25 @@ interface SidebarProviderProps {
   defaultExpanded?: string[]
 }
 
-/**
- * Provider para o estado global da sidebar
- */
 export function SidebarProvider({ children, defaultExpanded = [] }: SidebarProviderProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [expandedItems, setExpandedItems] = useState<string[]>(defaultExpanded)
 
-  const toggleSidebar = useCallback(() => {
+  const toggleSidebar = () => {
     setIsOpen(prev => !prev)
-  }, [])
+  }
 
   const closeSidebar = useCallback(() => {
     setIsOpen(false)
   }, [])
 
-  const toggleItem = useCallback((id: string) => {
+  const toggleItem = (id: string) => {
     setExpandedItems(prev =>
       prev.includes(id)
         ? prev.filter(item => item !== id)
         : [...prev, id]
     )
-  }, [])
+  }
 
   const expandItem = useCallback((id: string) => {
     setExpandedItems(prev =>
@@ -36,13 +33,13 @@ export function SidebarProvider({ children, defaultExpanded = [] }: SidebarProvi
     )
   }, [])
 
-  const collapseItem = useCallback((id: string) => {
+  const collapseItem = (id: string) => {
     setExpandedItems(prev => prev.filter(item => item !== id))
-  }, [])
+  }
 
-  const collapseAll = useCallback(() => {
+  const collapseAll = () => {
     setExpandedItems([])
-  }, [])
+  }
 
   const value: SidebarContextValue = {
     isOpen,

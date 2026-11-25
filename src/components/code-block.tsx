@@ -75,13 +75,13 @@ export function CodeBlock({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-lg border border-metal-700 bg-[#1e1e1e]",
+        "relative overflow-hidden rounded-lg border border-metal-700",
         "w-full min-w-0 hidden md:block",
         className
       )}
+      style={{ backgroundColor: themes.vsDark.plain.backgroundColor }}
       {...props}
     >
-      {/* Header */}
       <div className="flex items-center justify-between border-b border-metal-700 bg-metal-850 px-4 py-2">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
@@ -114,7 +114,6 @@ export function CodeBlock({
         </div>
       </div>
 
-      {/* Code */}
       <div
         className={cn(
           "overflow-auto font-mono text-sm",

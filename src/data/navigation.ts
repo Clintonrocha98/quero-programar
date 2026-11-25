@@ -1,9 +1,5 @@
-import { NavigationConfig } from '../types/navigation'
+import { NavigationConfig } from '@/types/navigation'
 
-/**
- * Configuração da estrutura de navegação da sidebar
- * Baseado nas rotas existentes no App.tsx
- */
 export const navigationConfig: NavigationConfig = {
   items: [
     {

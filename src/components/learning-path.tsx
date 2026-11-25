@@ -22,9 +22,7 @@ export function LearningPath({ children, className }: LearningPathProps) {
 export function LearningPathItem({ children, isLast = false }: LearningPathItemProps) {
   return (
     <div className="relative flex gap-4">
-      {/* Timeline connector */}
       <div className="relative flex flex-col items-center">
-        {/* Node dot */}
         <div
           className={cn(
             "relative z-10 flex h-4 w-4 items-center justify-center",
@@ -35,7 +33,6 @@ export function LearningPathItem({ children, isLast = false }: LearningPathItemP
           <div className="h-1.5 w-1.5 rounded-full bg-steel-blue-light" />
         </div>
         
-        {/* Connecting line */}
         {!isLast && (
           <div
             className={cn(
@@ -46,7 +43,6 @@ export function LearningPathItem({ children, isLast = false }: LearningPathItemP
         )}
       </div>
 
-      {/* Content */}
       <div className={cn("flex-1 pb-6", isLast && "pb-0")}>
         {children}
       </div>
@@ -54,7 +50,6 @@ export function LearningPathItem({ children, isLast = false }: LearningPathItemP
   )
 }
 
-// Componente auxiliar para wrapper de conteudo na timeline
 interface LearningPathContentProps {
   children: ReactNode
   className?: string

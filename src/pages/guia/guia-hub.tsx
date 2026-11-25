@@ -7,11 +7,11 @@ export default function GuiaHubPage() {
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight text-white flex items-center gap-3">
+        <h1 className="text-4xl font-bold tracking-tight text-metal-100 flex items-center gap-3">
           <Briefcase className="w-10 h-10 text-steel-blue-light" />
           Guia
         </h1>
-        <p className="text-lg text-slate-400 max-w-3xl leading-relaxed">
+        <p className="text-lg text-metal-300 max-w-3xl leading-relaxed">
           Conteúdo prático e ferramentas para quem está se preparando para buscar as primeiras vagas
           como desenvolvedor: currículo, dicas e recursos de carreira.
         </p>

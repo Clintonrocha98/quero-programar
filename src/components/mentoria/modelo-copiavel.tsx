@@ -89,7 +89,7 @@ export function ModeloCopiavel({ modelo, abertoInicialmente = false, hidden = fa
           type="button"
           onClick={() => copiar(modelo.texto)}
           aria-label={`Copiar modelo: ${modelo.titulo}`}
-          className="inline-flex w-fit flex-shrink-0 items-center gap-2 rounded-lg bg-steel-blue px-3 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-steel-blue-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-accent"
+          className="inline-flex w-fit flex-shrink-0 items-center gap-2 rounded-lg bg-steel-blue px-3 py-1.5 text-sm font-semibold text-metal-100 transition-colors hover:bg-steel-blue-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-accent"
         >
           {copiado ? <Check className="h-4 w-4" aria-hidden="true" /> : <Copy className="h-4 w-4" aria-hidden="true" />}
           <span aria-live="polite">{copiado ? 'Copiado!' : erro ? 'Não foi possível copiar' : 'Copiar'}</span>

@@ -124,7 +124,6 @@ export default function DebugGuidePage() {
         ))}
       </div>
 
-      {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 lg:left-64 right-0 p-4 bg-metal-950/90 backdrop-blur-md border-t border-metal-800 z-40 transform transition-transform">
         <div className="container mx-auto px-4 max-w-4xl  flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-metal-300 font-medium">
@@ -135,7 +134,7 @@ export default function DebugGuidePage() {
             disabled={!allChecked}
             className={`flex items-center gap-2 px-6 py-3 rounded-lg font-bold transition-all ${
               allChecked 
-                ? "bg-steel-blue hover:bg-steel-blue-light text-white shadow-lg shadow-steel-blue/20" 
+                ? "bg-steel-blue hover:bg-steel-blue-light text-metal-100 shadow-lg shadow-steel-blue/20" 
                 : "bg-metal-800 text-metal-500 cursor-not-allowed"
             }`}
           >
@@ -145,7 +144,6 @@ export default function DebugGuidePage() {
         </div>
       </div>
 
-      {/* Attribution */}
       <div className="mt-16 text-center text-metal-400 pb-20">
         <p className="flex items-center justify-center gap-2">
           Inspirado em: 
@@ -161,9 +159,8 @@ export default function DebugGuidePage() {
         </p>
       </div>
 
-      {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-metal-950/60 backdrop-blur-sm">
           <div className="bg-metal-900 border border-metal-700 rounded-xl shadow-2xl max-w-lg w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             <div className="p-6">
               <div className="w-12 h-12 rounded-full bg-emerald-accent/10 flex items-center justify-center mb-4 mx-auto">

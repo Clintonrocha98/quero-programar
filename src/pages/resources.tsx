@@ -15,7 +15,7 @@ export default function ResourcesPage() {
         <h1 className="text-3xl md:text-4xl font-bold mb-2">
           {meta.title}
         </h1>
-        <p className="text-slate-600 max-w-2xl">
+        <p className="text-metal-300 max-w-2xl">
           {meta.description}
         </p>
       </header>

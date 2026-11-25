@@ -35,7 +35,7 @@ export function ResourceCard({ title, url, type, author, children }: ResourceCar
         "p-4 h-full",
         "transition-all duration-300",
         "hover:border-metal-600 hover:shadow-lg hover:shadow-metal-950/50",
-        "before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/[0.02] before:to-transparent before:pointer-events-none"
+        "before:absolute before:inset-0 before:bg-gradient-to-br before:from-metal-100/[0.02] before:to-transparent before:pointer-events-none"
       )}
     >
       <div className="relative flex items-start gap-3 flex-none">

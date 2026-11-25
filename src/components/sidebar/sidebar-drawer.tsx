@@ -1,18 +1,13 @@
 import { useEffect, useRef } from 'react'
 import { X } from 'lucide-react'
-import { useSidebar } from '../../hooks/use-sidebar'
+import { useSidebar } from '@/hooks/use-sidebar'
 import { Sidebar } from './sidebar'
-import { cn } from '../../lib/utils'
+import { cn } from '@/lib/utils'
 
-/**
- * Drawer da sidebar para dispositivos móveis.
- * Aparece como overlay quando aberto.
- */
 export function SidebarDrawer() {
   const { isOpen, closeSidebar } = useSidebar()
   const drawerRef = useRef<HTMLDivElement>(null)
 
-  // Fecha o drawer ao clicar fora
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (drawerRef.current && !drawerRef.current.contains(event.target as Node)) {
@@ -22,7 +17,6 @@ export function SidebarDrawer() {
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside)
-      // Previne scroll do body quando drawer está aberto
       document.body.style.overflow = 'hidden'
     }
 
@@ -32,7 +26,6 @@ export function SidebarDrawer() {
     }
   }, [isOpen, closeSidebar])
 
-  // Fecha com tecla Escape
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -51,16 +44,14 @@ export function SidebarDrawer() {
 
   return (
     <>
-      {/* Backdrop/Overlay */}
       <div
         className={cn(
-          'fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity lg:hidden',
+          'fixed inset-0 z-40 bg-metal-950/50 backdrop-blur-sm transition-opacity lg:hidden',
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
         aria-hidden="true"
       />
 
-      {/* Drawer */}
       <div
         ref={drawerRef}
         className={cn(
@@ -71,7 +62,6 @@ export function SidebarDrawer() {
         aria-modal="true"
         aria-label="Menu de navegação"
       >
-        {/* Header do Drawer */}
         <div className="flex items-center justify-between h-16 px-4 border-b border-metal-800">
           <span className="font-bold text-lg text-metal-100">Menu</span>
           <button
@@ -83,7 +73,6 @@ export function SidebarDrawer() {
           </button>
         </div>
 
-        {/* Conteúdo do Drawer */}
         <div className="overflow-y-auto h-[calc(100vh-4rem)]">
           <Sidebar />
         </div>

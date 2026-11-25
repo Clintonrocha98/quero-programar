@@ -20,7 +20,7 @@ export function ComeceAgora({ acao, children }: ComeceAgoraProps) {
         <div className="flex sm:justify-end">
           <Link
             to={acao.href}
-            className="inline-flex w-full items-center justify-center rounded-lg bg-steel-blue px-5 py-2.5 text-sm font-semibold !text-white !no-underline transition-colors hover:ring-2 hover:ring-steel-blue-light/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-accent focus-visible:ring-offset-2 focus-visible:ring-offset-metal-900 sm:w-auto"
+            className="inline-flex w-full items-center justify-center rounded-lg bg-steel-blue px-5 py-2.5 text-sm font-semibold !text-metal-100 !no-underline transition-colors hover:ring-2 hover:ring-steel-blue-light/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-accent focus-visible:ring-offset-2 focus-visible:ring-offset-metal-900 sm:w-auto"
           >
             {acao.rotulo}
           </Link>

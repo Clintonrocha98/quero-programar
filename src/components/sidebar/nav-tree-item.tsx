@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { ChevronDown, ChevronRight } from 'lucide-react'
-import { NavItem } from '../../types/navigation'
-import { useSidebar } from '../../hooks/use-sidebar'
-import { useActiveRoute } from '../../hooks/use-active-route'
-import { cn } from '../../lib/utils'
+import { NavItem } from '@/types/navigation'
+import { useSidebar } from '@/hooks/use-sidebar'
+import { useActiveRoute } from '@/hooks/use-active-route'
+import { cn } from '@/lib/utils'
 import { getIcon } from './sidebar-icons'
 import he4rtLogo from '@/assets/he4rt-logo.png'
 
@@ -12,14 +12,6 @@ interface NavTreeItemProps {
   depth?: number
 }
 
-/**
- * Item individual da árvore de navegação.
- * Pode ser:
- * - Expansível (tem children)
- * - Link final (tem href)
- * 
- * Renderiza recursivamente seus filhos se expansível.
- */
 export function NavTreeItem({ item, depth = 0 }: NavTreeItemProps) {
   const { expandedItems, toggleItem, closeSidebar } = useSidebar()
   const { isActive, isParentOfActive } = useActiveRoute()
@@ -48,7 +40,6 @@ export function NavTreeItem({ item, depth = 0 }: NavTreeItemProps) {
     return null
   }
 
-  // Se tem filhos, renderiza como botão expansível
   if (hasChildren) {
     return (
       <div>
@@ -90,7 +81,6 @@ export function NavTreeItem({ item, depth = 0 }: NavTreeItemProps) {
     )
   }
 
-  // Se tem href, renderiza como link
   if (item.href) {
     return (
       <Link

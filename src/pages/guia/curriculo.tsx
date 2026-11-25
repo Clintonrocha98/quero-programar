@@ -13,8 +13,8 @@ export default function CurriculoPage() {
         />
 
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight text-white">Modelo de Currículo</h1>
-          <p className="text-lg text-slate-400 max-w-3xl leading-relaxed">
+          <h1 className="text-4xl font-bold tracking-tight text-metal-100">Modelo de Currículo</h1>
+          <p className="text-lg text-metal-300 max-w-3xl leading-relaxed">
             Edite o modelo direto no documento abaixo, as alterações ficam salvas
             automaticamente no seu navegador e você pode baixar o resultado em PDF.
           </p>

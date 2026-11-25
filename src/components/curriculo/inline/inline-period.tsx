@@ -2,6 +2,8 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { ANO_MINIMO, MESES_PT } from '@/lib/curriculo-constants'
 
+const ANO_MAXIMO = new Date().getFullYear() + 1
+
 export interface InlinePeriodProps {
   dataInicio: string | null
   dataFim: string | null
@@ -95,9 +97,8 @@ export function InlinePeriod({
     }
   }, [aberto, aplicarEFechar])
 
-  const anoMaximo = new Date().getFullYear() + 1
   const anos: string[] = []
-  for (let ano = anoMaximo; ano >= ANO_MINIMO; ano--) {
+  for (let ano = ANO_MAXIMO; ano >= ANO_MINIMO; ano--) {
     anos.push(String(ano))
   }
 

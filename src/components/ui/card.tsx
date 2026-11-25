@@ -30,7 +30,7 @@ export function Card({children, className}: CardProps) {
         "border border-metal-700",
         "transition-all duration-300",
         "hover:border-metal-600",
-        "before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/[0.03] before:to-transparent before:pointer-events-none",
+        "before:absolute before:inset-0 before:bg-gradient-to-br before:from-metal-100/[0.03] before:to-transparent before:pointer-events-none",
         className
       )}
     >

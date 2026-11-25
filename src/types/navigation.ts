@@ -1,7 +1,3 @@
-/**
- * Tipos para o sistema de navegação da sidebar
- */
-
 export interface NavItem {
   id: string
   label: string

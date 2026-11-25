@@ -16,7 +16,7 @@ const estiloOpcao = (ativo: boolean) =>
   cn(
     'rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-steel-blue-light',
-    ativo ? 'bg-steel-blue text-white shadow-sm' : 'text-metal-300 hover:bg-metal-800 hover:text-metal-100',
+    ativo ? 'bg-steel-blue text-metal-100 shadow-sm' : 'text-metal-300 hover:bg-metal-800 hover:text-metal-100',
   )
 
 export function RoteiroSessao() {
@@ -185,7 +185,7 @@ export function RoteiroSessao() {
           <button
             type="button"
             onClick={() => copiar(montarTextoRoteiro(roteiro, duracao))}
-            className="inline-flex w-fit flex-shrink-0 items-center gap-2 rounded-lg bg-steel-blue px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-steel-blue-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-accent"
+            className="inline-flex w-fit flex-shrink-0 items-center gap-2 rounded-lg bg-steel-blue px-4 py-2 text-sm font-semibold text-metal-100 transition-colors hover:bg-steel-blue-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-accent"
           >
             {copiado ? <Check className="h-4 w-4" aria-hidden="true" /> : <Copy className="h-4 w-4" aria-hidden="true" />}
             <span aria-live="polite">{copiado ? 'Copiado!' : erro ? 'Não foi possível copiar' : 'Copiar roteiro'}</span>

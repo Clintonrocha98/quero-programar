@@ -45,7 +45,6 @@ const calloutStyles: Record<
 }
 
 export function Callout({ type = "tip", children }: CalloutProps) {
-  // Use a type guard or fallback for unknown types
   const calloutType = (calloutStyles[type as CalloutType] ? type : "tip") as CalloutType
   const style = calloutStyles[calloutType]
 

@@ -1,4 +1,3 @@
-// Importacao dos arquivos MDX de tecnologias
 import JavaScriptContent, { frontmatter as javascriptMeta } from './technologies/javascript.mdx'
 import HtmlContent, { frontmatter as htmlMeta } from './technologies/html.mdx'
 import CssContent, { frontmatter as cssMeta } from './technologies/css.mdx'
@@ -9,7 +8,6 @@ import PythonContent, { frontmatter as pythonMeta } from './technologies/python.
 import TypescriptContent, { frontmatter as typescriptMeta } from './technologies/typescript.mdx'
 import WebContent, { frontmatter as webMeta } from './technologies/web.mdx'
 
-// Importação dos arquivos MDX de Comunidade/4noobs
 import Linguagens4Noobs, { frontmatter as linguagens4NoobsMeta } from './4noobs/linguagens.mdx'
 import Frameworks4Noobs, { frontmatter as frameworks4NoobsMeta } from './4noobs/frameworks.mdx'
 import Ferramentas4Noobs, { frontmatter as ferramentas4NoobsMeta } from './4noobs/ferramentas.mdx'
@@ -20,7 +18,6 @@ import Paradigmas4Noobs, { frontmatter as paradigmas4NoobsMeta } from './4noobs/
 import Diversos4Noobs, { frontmatter as diversos4NoobsMeta } from './4noobs/diversos.mdx'
 import Certificacoes4Noobs, { frontmatter as certificacoes4NoobsMeta } from './4noobs/certificacoes.mdx'
 
-// Importacao dos arquivos MDX de paginas
 import ArtigosContent, { frontmatter as artigosMeta } from './pages/artigos.mdx'
 import ResourcesContent, { frontmatter as resourcesMeta } from './pages/resources.mdx'
 import InicianteContent, { frontmatter as inicianteMeta } from './pages/iniciante.mdx'
@@ -58,7 +55,6 @@ export interface ContentItem<T = TechnologyMeta | PageMeta | FourNoobsMeta> {
   Content: React.ComponentType
 }
 
-// Mapa de todas as tecnologias disponiveis
 export const technologies: Record<string, ContentItem<TechnologyMeta>> = {
   javascript: {
     meta: javascriptMeta,
@@ -98,7 +94,6 @@ export const technologies: Record<string, ContentItem<TechnologyMeta>> = {
   },
 }
 
-// Mapa de paginas de conteudo
 export const pages: Record<string, ContentItem<PageMeta>> = {
   artigos: {
     meta: artigosMeta,
@@ -137,7 +132,6 @@ export const mentoriaPages: Record<string, ContentItem<PageMeta>> = {
   },
 }
 
-// Mapa de paginas 4Noobs
 export const fourNoobsData: Record<string, ContentItem<FourNoobsMeta>> = {
   linguagens: {
     meta: { ...linguagens4NoobsMeta, id: 'linguagens', color: 'bg-blue-500/10 text-blue-500' },
@@ -177,7 +171,6 @@ export const fourNoobsData: Record<string, ContentItem<FourNoobsMeta>> = {
   },
 }
 
-// Interface compativel com TechnologyCard
 export interface TechnologyCardInfo {
   id: string
   name: string
@@ -187,10 +180,8 @@ export interface TechnologyCardInfo {
   url: string
 }
 
-// Lista de metadados das tecnologias para exibir na pagina de listagem
 export const technologiesList: TechnologyMeta[] = Object.values(technologies).map(t => t.meta)
 
-// Lista formatada para uso com TechnologyCard
 export const technologiesForCards: TechnologyCardInfo[] = Object.values(technologies).map(t => ({
   id: t.meta.id,
   name: t.meta.title,
@@ -209,22 +200,18 @@ export const fourNoobsForCards: TechnologyCardInfo[] = Object.values(fourNoobsDa
   url: `/he4rt/4noobs/${t.meta.id}`,
 }))
 
-// Funcao auxiliar para buscar uma tecnologia pelo ID
 export function getTechnology(id: string): ContentItem<TechnologyMeta> | undefined {
   return technologies[id.toLowerCase()]
 }
 
-// Verifica se uma tecnologia existe
 export function hasTechnology(id: string): boolean {
   return id.toLowerCase() in technologies
 }
 
-// Funcao auxiliar para buscar uma pagina pelo ID
 export function getPage(id: string): ContentItem<PageMeta> | undefined {
   return pages[id.toLowerCase()]
 }
 
-// Verifica se uma pagina existe
 export function hasPage(id: string): boolean {
   return id.toLowerCase() in pages
 }
@@ -234,12 +221,10 @@ export function getMentoriaPage(id: string): ContentItem<PageMeta> | undefined {
   return Object.prototype.hasOwnProperty.call(mentoriaPages, chave) ? mentoriaPages[chave] : undefined
 }
 
-// Funcao auxiliar para buscar dados do 4Noobs pelo ID
 export function getFourNoobs(id: string): ContentItem<FourNoobsMeta> | undefined {
   return fourNoobsData[id.toLowerCase()]
 }
 
-// Verifica se uma rota do 4Noobs existe
 export function hasFourNoobs(id: string): boolean {
   return id.toLowerCase() in fourNoobsData
 }

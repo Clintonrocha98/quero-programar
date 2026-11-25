@@ -1,10 +1,7 @@
 import { useContext } from 'react'
-import { SidebarContextValue } from '../types/navigation'
-import { SidebarContext } from '../contexts/sidebar-context'
+import { SidebarContextValue } from '@/types/navigation'
+import { SidebarContext } from '@/contexts/sidebar-context'
 
-/**
- * Hook para acessar o estado da sidebar
- */
 export function useSidebar(): SidebarContextValue {
   const context = useContext(SidebarContext)
   if (!context) {

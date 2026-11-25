@@ -11,7 +11,7 @@ export default function CategoryCard({ category }: { category: Category }) {
             <div className="bg-metal-800 p-3 rounded-lg text-steel-blue-light group-hover:text-cyan-accent transition-colors duration-300">
               {category.icon}
             </div>
-            <h2 className="text-xl font-bold text-metal-100 group-hover:text-white transition-colors m-0 mb-0">
+            <h2 className="text-xl font-bold text-metal-100 group-hover:text-metal-100 transition-colors m-0 mb-0">
               {category.name}
             </h2>
           </div>

@@ -75,14 +75,14 @@ export default function MentoriaHubPage() {
   return (
     <div className="space-y-12">
       <div className="space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight text-white flex items-center gap-3">
+        <h1 className="text-4xl font-bold tracking-tight text-metal-100 flex items-center gap-3">
           <Handshake className="w-10 h-10 text-steel-blue-light" aria-hidden="true" />
           Mentoria
         </h1>
         <p className="text-xl font-medium text-metal-100 max-w-3xl leading-relaxed">
           Você não precisa ser sênior para mentorar. Basta já ter passado pela etapa que outra pessoa vive agora.
         </p>
-        <p className="text-lg text-slate-400 max-w-3xl leading-relaxed">
+        <p className="text-lg text-metal-300 max-w-3xl leading-relaxed">
           A permissão para mentorar é por tema, não por cargo. Ninguém está pronto para tudo, mas você já
           está pronto para alguém.
         </p>

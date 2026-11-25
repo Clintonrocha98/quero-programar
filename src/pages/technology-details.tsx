@@ -21,7 +21,7 @@ export default function TechnologyPage() {
     <div className="container mx-auto px-4 max-w-4xl py-8">
       <div className="mb-12">
         <div className="flex items-center gap-6 mb-6">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl shadow-lg shadow-black/20">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl shadow-lg shadow-metal-950/20">
             {getTechnologyIcon(meta.id, "w-12 h-12")}
           </div>
           <div>

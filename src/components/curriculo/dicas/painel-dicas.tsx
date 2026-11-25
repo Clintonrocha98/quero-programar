@@ -5,7 +5,7 @@ import { BotaoCopiarPrompt } from '@/components/curriculo/dicas/botao-copiar-pro
 export function PainelDicas() {
   return (
     <aside className="hidden w-[300px] flex-shrink-0 space-y-4 2xl:block 2xl:sticky 2xl:top-24">
-      <div className="flex items-center gap-2 text-white">
+      <div className="flex items-center gap-2 text-metal-100">
         <Sparkles className="h-4 w-4 text-cyan-accent" />
         <p className="font-semibold">Dicas de preenchimento</p>
       </div>

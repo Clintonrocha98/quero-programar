@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useReducer, useState, type ReactNode } from 'react'
+import { useEffect, useReducer, useState, type ReactNode } from 'react'
 import { estadoDoModelo } from '@/data/curriculo-modelo'
 import { curriculoReducer } from '@/lib/curriculo-reducer'
 import { carregarRascunho, salvarRascunho } from '@/lib/curriculo-storage'
@@ -25,7 +25,7 @@ export function CurriculoProvider({ children }: CurriculoProviderProps) {
     return () => clearTimeout(timeoutId)
   }, [state])
 
-  const avisos = useMemo(() => validarCurriculo(state.data), [state.data])
+  const avisos = validarCurriculo(state.data)
 
   const value: CurriculoContextValue = { state, dispatch, avisos, rascunhoSalvo }
 
