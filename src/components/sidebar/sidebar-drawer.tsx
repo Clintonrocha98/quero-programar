@@ -55,7 +55,7 @@ export function SidebarDrawer() {
       <div
         ref={drawerRef}
         className={cn(
-          'fixed inset-y-0 left-0 z-50 w-64 bg-metal-950 border-r border-metal-800 shadow-xl transition-transform duration-300 ease-in-out lg:hidden',
+          'fixed inset-y-0 left-0 z-50 w-72 bg-metal-950 border-r border-metal-800 shadow-xl transition-transform duration-300 ease-in-out lg:hidden',
           isOpen ? 'translate-x-0' : '-translate-x-full'
         )}
         role="dialog"
