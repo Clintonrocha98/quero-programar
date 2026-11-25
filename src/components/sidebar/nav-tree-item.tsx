@@ -1,109 +1,70 @@
 import { Link } from 'react-router-dom'
-import { ChevronDown, ChevronRight } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { NavItem } from '@/types/navigation'
 import { useSidebar } from '@/hooks/use-sidebar'
 import { useActiveRoute } from '@/hooks/use-active-route'
 import { cn } from '@/lib/utils'
-import { getIcon } from './sidebar-icons'
-import he4rtLogo from '@/assets/he4rt-logo.png'
 
 interface NavTreeItemProps {
   item: NavItem
   depth?: number
 }
 
+const recuoPorProfundidade = ['pl-3', 'pl-6', 'pl-9']
+
 export function NavTreeItem({ item, depth = 0 }: NavTreeItemProps) {
   const { expandedItems, toggleItem, closeSidebar } = useSidebar()
   const { isActive, isParentOfActive } = useActiveRoute()
-  
+
   const isExpanded = expandedItems.includes(item.id)
-  const hasChildren = item.children && item.children.length > 0
-  const isCurrentActive = isActive(item.id)
-  const isParent = isParentOfActive(item.id)
-  
-  const paddingLeft = depth === 0 ? 'pl-3' : depth === 1 ? 'pl-6' : 'pl-9'
-  
-  const isHe4rtLogo = item.icon === 'He4rtLogo'
-  const Icon = item.icon && !isHe4rtLogo ? getIcon(item.icon) : null
+  const recuo = recuoPorProfundidade[depth] ?? 'pl-9'
+  const badge = item.badge && (
+    <span className="ml-auto font-mono text-[11px] lowercase text-primary">{item.badge}</span>
+  )
 
-  const renderIcon = () => {
-    if (isHe4rtLogo) {
-      return (
-        <div className="w-5 h-5 rounded overflow-hidden flex items-center justify-center bg-transparent shrink-0">
-          <img src={he4rtLogo} alt="He4rt Logo" className="w-full h-full object-contain" />
-        </div>
-      )
-    }
-    if (Icon) {
-      return <Icon className="h-4 w-4 shrink-0" />
-    }
-    return null
-  }
-
-  if (hasChildren) {
+  if (item.children && item.children.length > 0) {
     return (
       <div>
         <button
           onClick={() => toggleItem(item.id)}
           className={cn(
-            'w-full flex items-center justify-between py-2 pr-3 text-sm font-medium rounded-md transition-colors',
-            paddingLeft,
-            isParent
-              ? 'text-steel-blue-light bg-metal-800/50'
-              : 'text-metal-300 hover:text-metal-100 hover:bg-metal-800/50'
+            'flex w-full items-center gap-1.5 border-l border-metal-700 py-1.5 pr-3 text-left text-sm transition-colors hover:bg-metal-900 hover:text-metal-100',
+            recuo,
+            isParentOfActive(item.id) ? 'text-metal-100' : 'text-metal-400',
           )}
           aria-expanded={isExpanded}
         >
-          <span className="flex items-center gap-2">
-            {renderIcon()}
-            <span>{item.label}</span>
-            {item.badge && (
-              <span className="text-xs px-1.5 py-0.5 rounded bg-steel-blue/20 text-steel-blue-light">
-                {item.badge}
-              </span>
-            )}
-          </span>
-          {isExpanded ? (
-            <ChevronDown className="h-4 w-4" />
-          ) : (
-            <ChevronRight className="h-4 w-4" />
-          )}
+          <ChevronRight className={cn('h-3.5 w-3.5 shrink-0 transition-transform', isExpanded && 'rotate-90')} />
+          <span>{item.label}</span>
+          {badge}
         </button>
-        
-        {isExpanded && item.children && (
-          <div className="mt-1 space-y-1">
-            {item.children.map(child => (
-              <NavTreeItem key={child.id} item={child} depth={depth + 1} />
-            ))}
-          </div>
-        )}
+
+        {isExpanded && item.children.map((child) => (
+          <NavTreeItem key={child.id} item={child} depth={depth + 1} />
+        ))}
       </div>
     )
   }
 
-  if (item.href) {
-    return (
-      <Link
-        to={item.href}
-        onClick={closeSidebar}
-        className={cn(
-          'flex items-center gap-2 py-2 pr-3 text-sm rounded-md transition-colors',
-          paddingLeft,
-          isCurrentActive
-            ? 'text-steel-blue-light bg-steel-blue/10 font-medium'
-            : 'text-metal-300 hover:text-metal-100 hover:bg-metal-800/50'
-        )}
-      >
-        {renderIcon()}
-        <span>{item.label}</span>
-        {item.badge && (
-          <span className="text-xs px-1.5 py-0.5 rounded bg-steel-blue/20 text-steel-blue-light">
-            {item.badge}
-          </span>
-        )}
-      </Link>
-    )
-  }
+  if (!item.href) return null
 
-  return null
+  const ativo = isActive(item.id)
+
+  return (
+    <Link
+      to={item.href}
+      onClick={closeSidebar}
+      className={cn(
+        'flex items-center border-l border-metal-700 py-1.5 pr-3 text-sm transition-colors hover:bg-metal-900 hover:text-metal-100 hover:no-underline',
+        recuo,
+        ativo
+          ? 'bg-metal-900 text-metal-100 shadow-[inset_2px_0_0_var(--primary)]'
+          : 'text-metal-400',
+      )}
+      aria-current={ativo ? 'page' : undefined}
+    >
+      <span className="pl-5">{item.label}</span>
+      {badge}
+    </Link>
+  )
 }
