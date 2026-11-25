@@ -70,13 +70,6 @@ export const navigationConfig: NavigationConfig = {
             { id: '4noobs-diversos', label: 'Diversos', href: '/he4rt/4noobs/diversos' },
             { id: '4noobs-certificacoes', label: 'Certificações', href: '/he4rt/4noobs/certificacoes' },
           ]
-        },
-        {
-          id: 'he4rt-projetos',
-          label: 'Projetos da Comunidade',
-          icon: 'Github',
-          badge: 'Em breve',
-          children: []
         }
       ]
     },
@@ -97,20 +90,6 @@ export const navigationConfig: NavigationConfig = {
       label: 'Como Debugar',
       icon: 'Bug',
       href: '/como-debugar'
-    },
-    {
-      id: 'ferramentas',
-      label: 'Ferramentas',
-      icon: 'Wrench',
-      badge: 'Em breve',
-      children: []
-    },
-    {
-      id: 'projetos',
-      label: 'Projetos',
-      icon: 'Rocket',
-      badge: 'Em breve',
-      children: []
     }
   ],
   defaultExpanded: []

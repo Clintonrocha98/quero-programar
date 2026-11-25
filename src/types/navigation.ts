@@ -4,7 +4,7 @@ export interface NavItem {
   icon?: string           // Nome do ícone Lucide
   href?: string           // Se definido, é um link final
   children?: NavItem[]    // Se definido, é expansível
-  badge?: string          // Opcional: "Novo", "Em breve"
+  badge?: string          // Opcional: "Novo"
 }
 
 export interface NavigationConfig {
