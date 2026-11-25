@@ -6,7 +6,7 @@ export default function TechnologiesPage() {
   return (
     <main className="min-h-screen py-10 pt-6">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {technologiesForCards.map((language) => (
             <TechnologyCard key={language.name} language={language} />
           ))}
@@ -15,4 +15,3 @@ export default function TechnologiesPage() {
     </main>
   )
 }
-

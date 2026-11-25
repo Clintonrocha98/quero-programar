@@ -134,39 +134,39 @@ export const mentoriaPages: Record<string, ContentItem<PageMeta>> = {
 
 export const fourNoobsData: Record<string, ContentItem<FourNoobsMeta>> = {
   linguagens: {
-    meta: { ...linguagens4NoobsMeta, id: 'linguagens', color: 'bg-blue-500/10 text-blue-500' },
+    meta: { ...linguagens4NoobsMeta, id: 'linguagens', color: 'bg-blue-500' },
     Content: Linguagens4Noobs,
   },
   frameworks: {
-    meta: { ...frameworks4NoobsMeta, id: 'frameworks', color: 'bg-green-500/10 text-green-500' },
+    meta: { ...frameworks4NoobsMeta, id: 'frameworks', color: 'bg-green-500' },
     Content: Frameworks4Noobs,
   },
   ferramentas: {
-    meta: { ...ferramentas4NoobsMeta, id: 'ferramentas', color: 'bg-orange-500/10 text-orange-500' },
+    meta: { ...ferramentas4NoobsMeta, id: 'ferramentas', color: 'bg-orange-500' },
     Content: Ferramentas4Noobs,
   },
   "banco-de-dados": {
-    meta: { ...bancoDeDados4NoobsMeta, id: 'banco-de-dados', color: 'bg-indigo-500/10 text-indigo-500' },
+    meta: { ...bancoDeDados4NoobsMeta, id: 'banco-de-dados', color: 'bg-indigo-500' },
     Content: BancoDeDados4Noobs,
   },
   "sistemas-operacionais": {
-    meta: { ...sistemasOperacionais4NoobsMeta, id: 'sistemas-operacionais', color: 'bg-stone-500/10 text-stone-500' },
+    meta: { ...sistemasOperacionais4NoobsMeta, id: 'sistemas-operacionais', color: 'bg-stone-500' },
     Content: SistemasOperacionais4Noobs,
   },
   design: {
-    meta: { ...design4NoobsMeta, id: 'design', color: 'bg-pink-500/10 text-pink-500' },
+    meta: { ...design4NoobsMeta, id: 'design', color: 'bg-pink-500' },
     Content: Design4Noobs,
   },
   paradigmas: {
-    meta: { ...paradigmas4NoobsMeta, id: 'paradigmas', color: 'bg-purple-500/10 text-purple-500' },
+    meta: { ...paradigmas4NoobsMeta, id: 'paradigmas', color: 'bg-purple-500' },
     Content: Paradigmas4Noobs,
   },
   diversos: {
-    meta: { ...diversos4NoobsMeta, id: 'diversos', color: 'bg-yellow-500/10 text-yellow-500' },
+    meta: { ...diversos4NoobsMeta, id: 'diversos', color: 'bg-yellow-500' },
     Content: Diversos4Noobs,
   },
   certificacoes: {
-    meta: { ...certificacoes4NoobsMeta, id: 'certificacoes', color: 'bg-cyan-500/10 text-cyan-500' },
+    meta: { ...certificacoes4NoobsMeta, id: 'certificacoes', color: 'bg-cyan-500' },
     Content: Certificacoes4Noobs,
   },
 }
@@ -196,7 +196,7 @@ export const fourNoobsForCards: TechnologyCardInfo[] = Object.values(fourNoobsDa
   name: t.meta.title,
   description: t.meta.description,
   icon: t.meta.icon,
-  color: t.meta.color || 'bg-gray-500/10 text-gray-500',
+  color: t.meta.color || 'bg-gray-500',
   url: `/he4rt/4noobs/${t.meta.id}`,
 }))
 
