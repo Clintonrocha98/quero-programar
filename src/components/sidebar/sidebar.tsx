@@ -29,7 +29,7 @@ export function Sidebar({ className, showLogo = false }: SidebarProps) {
     >
       {showLogo && (
         <Link to="/" className="flex items-center space-x-2 px-6 pb-4 mb-2 border-b border-metal-800">
-          <Code className="h-6 w-6 text-steel-blue-light" />
+          <Code className="h-6 w-6 shrink-0 text-steel-blue-light" />
           <span className="font-bold text-xl text-metal-100">QueroProgramar</span>
         </Link>
       )}
